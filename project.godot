@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Ratio"
+run/main_scene="res://scenes/Test/TestLevel.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -36,6 +37,12 @@ version_control_plugin_name="GitAPI"
 [gdnative]
 
 singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
+
+[global]
+
+Vers=false
+Version=false
+"Version Control"=false
 
 [gui]
 

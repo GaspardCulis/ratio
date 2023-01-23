@@ -3,7 +3,7 @@ extends KinematicBody2D
 export var MASS := 1000
 export var SPEED := 300
 export var ACCEL_TIME := 8
-export var JUMP_SPEED := 800
+export var JUMP_SPEED := 600
 
 onready var AnimationSprite = $AnimatedSprite
 onready var animationNames = AnimationSprite.frames.get_animation_names()
@@ -19,7 +19,6 @@ var velocity = Vector2.ZERO
 
 func _ready():
 	pass
-
 
 func _physics_process(delta):
 	var inputs := get_inputs()
