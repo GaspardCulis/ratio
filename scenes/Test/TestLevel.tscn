@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://scenes/Test/follow.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 519.5, 95 )
@@ -22,12 +21,4 @@ texture = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 436, 247 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2( 2, 2 )
-current = true
-process_mode = 0
-smoothing_enabled = true
-smoothing_speed = 10.0
-offset_h = 1.0
-script = ExtResource( 3 )

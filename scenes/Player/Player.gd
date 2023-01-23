@@ -3,7 +3,7 @@ extends KinematicBody2D
 export var MASS := 1000
 export var SPEED := 300
 export var ACCEL_TIME := 8
-export var JUMP_SPEED := 400
+export var JUMP_SPEED := 600
 
 onready var AnimationSprite = $AnimatedSprite
 onready var animationNames = AnimationSprite.frames.get_animation_names()

@@ -265,5 +265,6 @@ shape = SubResource( 1 )
 position = Vector2( 2, -19 )
 frames = SubResource( 20 )
 animation = "idle"
+frame = 4
 playing = true
 offset = Vector2( 10, 0 )
