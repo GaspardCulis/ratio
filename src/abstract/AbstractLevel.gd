@@ -3,7 +3,7 @@ extends TileMap
 export(NodePath) var WorldSpawn
 
 const PlayerScene = preload("res://scenes/Player/Player.tscn")
-onready var WorldSpawnNode = $WorldSpawn
+onready var WorldSpawnNode = WorldSpawn
 
 
 # Called when the node enters the scene tree for the first time.
