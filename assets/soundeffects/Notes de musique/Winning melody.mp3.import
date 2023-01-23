@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Winning melody.mp3-9e417f74d0854d49a59679f6e267afdf.mp3str"
+
+[deps]
+
+source_file="res://assets/soundeffects/Notes de musique/Winning melody.mp3"
+dest_files=[ "res://.import/Winning melody.mp3-9e417f74d0854d49a59679f6e267afdf.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
