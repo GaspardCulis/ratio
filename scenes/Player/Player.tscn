@@ -5,8 +5,8 @@
 [ext_resource path="res://assets/spritesheets/player/run.png" type="Texture" id=3]
 [ext_resource path="res://assets/spritesheets/player/jump.png" type="Texture" id=4]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7, 15.5 )
+[sub_resource type="RectangleShape2D" id=63]
+extents = Vector2( 5, 12.5 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
@@ -275,8 +275,8 @@ animations = [ {
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -15.5 )
-shape = SubResource( 1 )
+position = Vector2( 0, -12.5 )
+shape = SubResource( 63 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 2, -19 )
