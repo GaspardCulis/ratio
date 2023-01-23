@@ -44,9 +44,9 @@ func handle_inputs(inputs: Vector2, delta: float) -> void:
 	else:
 		velocity.x = lerp(float(velocity.x), float(SPEED*sign(inputs.x)), ACCEL_TIME * delta)
 		
-		if inputs.y>0:
-			if is_on_floor():
-				velocity.y = -JUMP_SPEED
+	if inputs.y>0:
+		if is_on_floor() and not is_landing():
+			velocity.y = -JUMP_SPEED
 
 func handle_animation(inputs: Vector2) -> void:
 	if AnimationSprite.animation == animationNames[animationStates.JUMP]:
