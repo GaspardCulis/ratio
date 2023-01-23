@@ -11,7 +11,8 @@ onready var animationNames = AnimationSprite.frames.get_animation_names()
 enum animationStates {
 	IDLE = 0,
 	JUMP = 1,
-	RUN = 2
+	LANDS = 2,
+	RUN = 3
 }
 
 var velocity = Vector2.ZERO
@@ -23,8 +24,8 @@ func _ready():
 func _physics_process(delta):
 	var inputs := get_inputs()
 	handle_physics(delta)
-	handle_inputs(inputs, delta)
 	handle_animation(inputs)
+	handle_inputs(inputs, delta)
 	
 	velocity = move_and_slide(velocity, Vector2.UP)
 
@@ -34,25 +35,26 @@ func get_inputs() -> Vector2:
 func handle_physics(delta: float) -> void:
 	if !is_on_floor():
 		velocity.y += MASS * delta
-	
-var old_double_jumped := false
-var has_double_jumped := false
-var double_jumped := false
+
 func handle_inputs(inputs: Vector2, delta: float) -> void:
-	if inputs.x:
-		velocity.x = lerp(float(velocity.x), float(SPEED*sign(inputs.x)), ACCEL_TIME * delta)
-	else:
+	if not inputs.x:
 		velocity.x = lerp(velocity.x, 0, ACCEL_TIME * delta * 2)
-	old_double_jumped = double_jumped
-	if inputs.y>0:
-		if is_on_floor():
-			double_jumped = false
-			has_double_jumped = false
-			
-			velocity.y = -JUMP_SPEED
+	elif is_landing():
+		velocity.x = lerp(velocity.x, 0, ACCEL_TIME * delta * 0.2)
+	else:
+		velocity.x = lerp(float(velocity.x), float(SPEED*sign(inputs.x)), ACCEL_TIME * delta)
+		
+		if inputs.y>0:
+			if is_on_floor():
+				velocity.y = -JUMP_SPEED
 
 func handle_animation(inputs: Vector2) -> void:
-	if (AnimationSprite.animation == animationNames[animationStates.JUMP] and !is_on_floor()) or (inputs.y > 0 and is_on_floor()):
+	if AnimationSprite.animation == animationNames[animationStates.JUMP]:
+		if is_on_floor():
+			AnimationSprite.animation = animationNames[animationStates.LANDS]
+	elif is_landing():
+		pass
+	elif (inputs.y > 0 and is_on_floor()):
 		AnimationSprite.animation = animationNames[animationStates.JUMP]
 	elif inputs.x:
 		AnimationSprite.animation = animationNames[animationStates.RUN]
@@ -61,3 +63,6 @@ func handle_animation(inputs: Vector2) -> void:
 	# Direction
 	if inputs.x:
 		AnimationSprite.scale.x = sign(inputs.x)
+
+func is_landing() -> bool:
+	return AnimationSprite.animation == animationNames[animationStates.LANDS] and AnimationSprite.frame < 3
