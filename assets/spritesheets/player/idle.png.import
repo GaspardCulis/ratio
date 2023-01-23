@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/test_mario.png-164b3ebb9c5b85fe92aa0d43f36f95df.stex"
+path="res://.import/idle.png-561c90bca08a939db3a64c910cfcc331.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/texture/test_mario.png"
-dest_files=[ "res://.import/test_mario.png-164b3ebb9c5b85fe92aa0d43f36f95df.stex" ]
+source_file="res://assets/spritesheets/player/idle.png"
+dest_files=[ "res://.import/idle.png-561c90bca08a939db3a64c910cfcc331.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/test_mario.png-164b3ebb9c5b85fe92aa0d43f36f95df.stex"
+path="res://.import/run.png-230c7d55ef7de86e695934276faef3be.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/texture/test_mario.png"
-dest_files=[ "res://.import/test_mario.png-164b3ebb9c5b85fe92aa0d43f36f95df.stex" ]
+source_file="res://assets/spritesheets/player/run.png"
+dest_files=[ "res://.import/run.png-230c7d55ef7de86e695934276faef3be.stex" ]
 
 [params]
 
