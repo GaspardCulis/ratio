@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Excitement audio.mp3-07a0637dca442efb6ec68e6e0d5f73f8.mp3str"
+
+[deps]
+
+source_file="res://assets/soundtrack/Excitement audio.mp3"
+dest_files=[ "res://.import/Excitement audio.mp3-07a0637dca442efb6ec68e6e0d5f73f8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
