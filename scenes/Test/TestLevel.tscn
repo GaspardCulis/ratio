@@ -22,10 +22,12 @@ texture = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 436, 247 )
-<<<<<<< HEAD
 
 [node name="Camera2D" type="Camera2D" parent="."]
-script = ExtResource( 3 )
-=======
 scale = Vector2( 2, 2 )
->>>>>>> 9536e8d19bbfb7f7628403e5a7696121a760f5ab
+current = true
+process_mode = 0
+smoothing_enabled = true
+smoothing_speed = 10.0
+offset_h = 1.0
+script = ExtResource( 3 )
