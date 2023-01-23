@@ -11,13 +11,11 @@ var velocity = Vector2.ZERO
 func _ready():
 	pass # Replace with function body.
 
-
 func _physics_process(delta):
 	handle_physics(delta)
 	handle_inputs(delta)
 	
 	velocity = move_and_slide(velocity, Vector2.UP)
-
 
 func handle_physics(delta: float) -> void:
 	if !is_on_floor():
