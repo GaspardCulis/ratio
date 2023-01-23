@@ -27,7 +27,7 @@ func _physics_process(delta):
 	handle_animation(inputs)
 	handle_inputs(inputs, delta)
 	
-	velocity = move_and_slide(velocity, Vector2.UP)
+	velocity = move_and_slide(velocity, Vector2.UP, false, 4, PI/2 * 0.9)
 
 func get_inputs() -> Vector2:
 	return Vector2(Input.get_action_strength("droite") - Input.get_action_strength("gauche"), Input.get_action_strength("saut") - Input.get_action_strength("bas"))
