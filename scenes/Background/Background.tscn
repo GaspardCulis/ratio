@@ -6,6 +6,8 @@
 [ext_resource path="res://assets/parallax/city_ruins/3.png" type="Texture" id=4]
 
 [node name="Background" type="ParallaxBackground"]
+offset = Vector2( 0, -320 )
+transform = Transform2D( 1, 0, 0, 1, 0, -320 )
 scroll_limit_begin = Vector2( 0, 600 )
 scroll_limit_end = Vector2( 0, 600 )
 scroll_ignore_camera_zoom = true
