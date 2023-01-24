@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://assets/themes/button_style.tres" type="Theme" id=1]
 [ext_resource path="res://src/singleton/hud.gd" type="Script" id=2]
@@ -229,8 +229,38 @@ animations = [ {
 "frames": [ SubResource( 97 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 95 ), SubResource( 96 ) ],
 "loop": false,
 "name": "default",
-"speed": 5.0
+"speed": 10.0
 } ]
+
+[sub_resource type="Animation" id=104]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("OverlayFragments/HBoxContainer2/Animation_Watch:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 526, 302 ) ]
+}
+
+[sub_resource type="Animation" id=105]
+resource_name = "watch"
+tracks/0/type = "value"
+tracks/0/path = NodePath("OverlayFragments/HBoxContainer2/Animation_Watch:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 526, 302 ), Vector2( 954, 569 ) ]
+}
 
 [node name="HUD" type="CanvasLayer"]
 pause_mode = 2
@@ -424,7 +454,7 @@ margin_bottom = 40.0
 [node name="Animation_Watch" type="AnimatedSprite" parent="OverlayFragments/HBoxContainer2"]
 visible = false
 position = Vector2( 526, 302 )
-scale = Vector2( 3.18, 3.18 )
+scale = Vector2( 2.61, 2.61 )
 frames = SubResource( 98 )
 
 [node name="OverlayCode" type="CanvasLayer" parent="."]
@@ -449,6 +479,10 @@ margin_top = 92.0
 margin_right = 106.0
 margin_bottom = 112.0
 text = "Quit"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 104 )
+anims/watch = SubResource( 105 )
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
