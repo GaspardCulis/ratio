@@ -20,6 +20,10 @@ func _ready():
 func _input(event):
 	if Input.is_action_just_pressed("switch_dim"):
 		if (otherDim):
+			if (get_node("/root/Global").currentDimension == "Present"):
+				get_node("/root/Global").currentDimension = "Past"
+			else:
+				get_node("/root/Global").currentDimension = "Present"
 			Global.save_player_state(player_instance)
 			get_tree().change_scene(otherDim)
 		
