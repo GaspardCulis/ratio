@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Menus/menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/dynamicFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/themes/button_style.tres" type="Theme" id=3]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 21.0
+margin_top = -172.0
+margin_right = 146.0
+margin_bottom = -1.0
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+margin_right = 125.0
+margin_bottom = 36.0
+focus_neighbour_top = NodePath("../Exit")
+focus_neighbour_bottom = NodePath("../Options")
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
+text = "Start"
+align = 0
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+margin_top = 40.0
+margin_right = 125.0
+margin_bottom = 76.0
+focus_neighbour_top = NodePath("../Start")
+focus_neighbour_bottom = NodePath("../Credits")
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
+text = "Options"
+align = 0
+
+[node name="Credits" type="Button" parent="VBoxContainer"]
+margin_top = 80.0
+margin_right = 125.0
+margin_bottom = 116.0
+focus_neighbour_top = NodePath("../Options")
+focus_neighbour_bottom = NodePath("../Exit")
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
+text = "Credits"
+align = 0
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+margin_top = 120.0
+margin_right = 125.0
+margin_bottom = 156.0
+focus_neighbour_top = NodePath("../Credits")
+focus_neighbour_bottom = NodePath("../Start")
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
+text = "Quit"
+align = 0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -179.0
+margin_top = 85.0
+margin_right = 182.0
+margin_bottom = 151.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2"]
+margin_right = 361.0
+margin_bottom = 66.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer2/HBoxContainer"]
+margin_right = 361.0
+margin_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/mono_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 2 )
+text = "Rescue: A Sister's Journey"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
