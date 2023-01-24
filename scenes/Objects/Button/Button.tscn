@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/Objects/Button/Button.gd" type="Script" id=1]
 [ext_resource path="res://assets/spritesheets/level/stone-button.png" type="Texture" id=2]
 [ext_resource path="res://assets/soundeffects/Notes de musique/Winning melody.mp3" type="AudioStream" id=3]
+[ext_resource path="res://scenes/Objects/Button/Sprite.gd" type="Script" id=4]
+[ext_resource path="res://assets/spritesheets/level/Gerald's Keys/Keys/E-Key.png" type="Texture" id=5]
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
@@ -38,6 +40,12 @@ shape = SubResource( 1 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -42.6667 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 5 )
+script = ExtResource( 4 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
