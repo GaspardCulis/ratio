@@ -2,7 +2,8 @@
 
 [ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=2]
-[ext_resource path="res://scenes/Levels/Jump level/jump.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Levels/Jump/jump.gd" type="Script" id=3]
+
 
 [node name="TileMap2" type="TileMap"]
 scale = Vector2( 2, 2 )
