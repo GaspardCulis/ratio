@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "GitAPI",
 "language": "NativeScript",
 "path": "res://addons/godot-git-plugin/git_api.gdns"
+}, {
+"base": "TileMap",
+"class": "Level",
+"language": "GDScript",
+"path": "res://src/abstract/AbstractLevel.gd"
 } ]
 _global_script_class_icons={
-"GitAPI": ""
+"GitAPI": "",
+"Level": ""
 }
 
 [application]
@@ -27,8 +33,8 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://src/singleton/Global.gd"
-Hud="*res://scenes/Menus/HUD.tscn"
 MLG="*res://src/singleton/MusicLevelGlobal.gd"
+Hud="*res://scenes/Menus/HUD.tscn"
 
 [display]
 
