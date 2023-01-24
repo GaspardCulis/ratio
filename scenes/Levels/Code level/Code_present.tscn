@@ -3,8 +3,8 @@
 [ext_resource path="res://scenes/Levels/Code level/Code level.gd" type="Script" id=1]
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://assets/spritesheets/level/Big-sign-8.png" type="Texture" id=3]
-[ext_resource path="res://assets/spritesheets/level/Big-sign-3.png" type="Texture" id=4]
-[ext_resource path="res://assets/spritesheets/level/rock-0.png" type="Texture" id=5]
+[ext_resource path="res://assets/spritesheets/level/grass.png" type="Texture" id=4]
+[ext_resource path="res://assets/spritesheets/level/big-grass.png" type="Texture" id=5]
 [ext_resource path="res://assets/spritesheets/level/door.png" type="Texture" id=6]
 [ext_resource path="res://assets/spritesheets/level/rock-9.png" type="Texture" id=7]
 [ext_resource path="res://assets/spritesheets/level/rock.png" type="Texture" id=8]
@@ -28,6 +28,7 @@ animations = [ {
 } ]
 
 [node name="Level" type="TileMap"]
+self_modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )
 scale = Vector2( 2, 2 )
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 16, 16 )
@@ -39,141 +40,161 @@ WorldSpawn = NodePath("Position2D")
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 11.5, -167.375 )
 
-[node name="3" type="Sprite" parent="."]
-modulate = Color( 0.470588, 0.435294, 0.435294, 1 )
-position = Vector2( 172.5, 36 )
-scale = Vector2( 0.71875, 0.71875 )
-texture = ExtResource( 4 )
-
 [node name="rock-10" type="Sprite" parent="."]
-position = Vector2( 644, -327.375 )
-texture = ExtResource( 8 )
+position = Vector2( 557.5, -137.5 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, 1.5 )
+
+[node name="rock-11" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+position = Vector2( 455.5, -9.5 )
+scale = Vector2( 0.734375, 1 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, 1.5 )
+
+[node name="rock-22" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+position = Vector2( 408.5, -41 )
+scale = Vector2( 0.734375, 1 )
+texture = ExtResource( 5 )
+offset = Vector2( 0, 1.5 )
+
+[node name="rock-23" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+position = Vector2( 231, 38 )
+scale = Vector2( 0.734375, 1 )
+texture = ExtResource( 5 )
+offset = Vector2( 0, 1.5 )
+
+[node name="rock-24" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+position = Vector2( 198.5, 54 )
+scale = Vector2( 0.734375, 1 )
+texture = ExtResource( 5 )
+offset = Vector2( 0, 1.5 )
+
+[node name="rock-25" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+position = Vector2( 218.5, 38.5 )
+scale = Vector2( 0.734375, 1 )
+texture = ExtResource( 5 )
 offset = Vector2( 0, 1.5 )
 
 [node name="8" type="Sprite" parent="."]
-position = Vector2( 112, -208.875 )
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+position = Vector2( 221, -70 )
 scale = Vector2( 0.703124, 0.703124 )
 texture = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="9" type="Sprite" parent="."]
-position = Vector2( 243, -259 )
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+position = Vector2( 501.5, -16.5 )
 texture = ExtResource( 7 )
 offset = Vector2( 6, -5.5 )
 
-[node name="0" type="Sprite" parent="."]
-position = Vector2( 596, -144.5 )
-texture = ExtResource( 5 )
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 732.5, -44.5 )
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+position = Vector2( 563, -150.5 )
 scale = Vector2( 1.45313, 1.45313 )
 frames = SubResource( 3 )
 
-[node name="rock-02" type="Sprite" parent="."]
-position = Vector2( 501, -237.5 )
-texture = ExtResource( 8 )
-offset = Vector2( -13.5, 0 )
-
-[node name="rock-03" type="Sprite" parent="."]
-position = Vector2( 525, -267 )
-texture = ExtResource( 8 )
-offset = Vector2( -13.5, 0 )
-
-[node name="rock-04" type="Sprite" parent="."]
-position = Vector2( 518.5, -279.5 )
-texture = ExtResource( 8 )
-offset = Vector2( -13.5, 0 )
-
-[node name="rock-05" type="Sprite" parent="."]
-position = Vector2( 460.5, -259.5 )
-texture = ExtResource( 8 )
-offset = Vector2( 0, 1.5 )
-
-[node name="rock-09" type="Sprite" parent="."]
-position = Vector2( 490, -274.5 )
-texture = ExtResource( 8 )
-offset = Vector2( 0, 1.5 )
-
 [node name="rock-12" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
 position = Vector2( 505.5, 7 )
 scale = Vector2( 0.375, 0.5625 )
 texture = ExtResource( 8 )
 offset = Vector2( 0, 1.5 )
 
 [node name="rock-13" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
 position = Vector2( 517.5, 6 )
 scale = Vector2( 0.375, 0.5625 )
 texture = ExtResource( 8 )
 offset = Vector2( 0, 1.5 )
 
 [node name="rock-14" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
 position = Vector2( 488.5, -7 )
 scale = Vector2( 0.375, 0.5625 )
 texture = ExtResource( 8 )
 offset = Vector2( 0, 1.5 )
 
 [node name="rock-15" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
 position = Vector2( 520, -24.5 )
 scale = Vector2( 0.375, 0.5625 )
 texture = ExtResource( 8 )
 offset = Vector2( 0, 1.5 )
 
 [node name="rock-16" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
 position = Vector2( 517.5, -7.5 )
 scale = Vector2( 0.375, 0.5625 )
 texture = ExtResource( 8 )
 offset = Vector2( 0, 1.5 )
 
 [node name="rock-17" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
 position = Vector2( 521, -13 )
 scale = Vector2( 0.375, 0.5625 )
 texture = ExtResource( 8 )
 offset = Vector2( 0, 1.5 )
 
 [node name="rock-18" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
 position = Vector2( 519.5, -2.5 )
 scale = Vector2( 0.375, 0.5625 )
 texture = ExtResource( 8 )
 offset = Vector2( 0, 1.5 )
 
 [node name="rock-19" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
 position = Vector2( 506.5, -5 )
 scale = Vector2( 0.375, 0.5625 )
 texture = ExtResource( 8 )
 offset = Vector2( 0, 1.5 )
 
 [node name="rock-20" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
 position = Vector2( 494.5, -7 )
 scale = Vector2( 0.375, 0.5625 )
 texture = ExtResource( 8 )
 offset = Vector2( 0, 1.5 )
 
-[node name="rock-11" type="Sprite" parent="."]
-position = Vector2( 551.5, -257.5 )
-texture = ExtResource( 8 )
-offset = Vector2( 0, 1.5 )
-
-[node name="rock-06" type="Sprite" parent="."]
-position = Vector2( 537, -259 )
-texture = ExtResource( 8 )
-offset = Vector2( -13.5, 0 )
-
-[node name="rock-07" type="Sprite" parent="."]
-position = Vector2( 505.5, -253 )
-texture = ExtResource( 8 )
-offset = Vector2( -13.5, 0 )
-
 [node name="rock-08" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
 position = Vector2( 182, 51 )
 texture = ExtResource( 8 )
 offset = Vector2( -13.5, 0 )
 
+[node name="rock-21" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+position = Vector2( 149, 34 )
+texture = ExtResource( 8 )
+offset = Vector2( -13.5, 0 )
+
 [node name="bush_02" type="Sprite" parent="."]
-position = Vector2( 581.5, -149.5 )
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+position = Vector2( 215.75, -73 )
+scale = Vector2( 0.859375, 1 )
 texture = ExtResource( 10 )
 
 [node name="bush_03" type="Sprite" parent="."]
-position = Vector2( 178.5, 48 )
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+position = Vector2( 102.25, -110.5 )
+scale = Vector2( 0.820313, 1 )
+texture = ExtResource( 9 )
+
+[node name="bush_04" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+position = Vector2( 309.5, -17 )
+scale = Vector2( 0.820313, 1 )
+texture = ExtResource( 9 )
+
+[node name="bush_05" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+position = Vector2( 345.5, -17 )
+scale = Vector2( 0.820313, 1 )
 texture = ExtResource( 9 )
