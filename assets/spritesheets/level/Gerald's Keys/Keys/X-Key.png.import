@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/test_mario.png-164b3ebb9c5b85fe92aa0d43f36f95df.stex"
+path="res://.import/X-Key.png-70a3c2ce6d891e6f8a66d595ea387069.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/texture/test_mario.png"
-dest_files=[ "res://.import/test_mario.png-164b3ebb9c5b85fe92aa0d43f36f95df.stex" ]
+source_file="res://assets/spritesheets/level/Gerald's Keys/Keys/X-Key.png"
+dest_files=[ "res://.import/X-Key.png-70a3c2ce6d891e6f8a66d595ea387069.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

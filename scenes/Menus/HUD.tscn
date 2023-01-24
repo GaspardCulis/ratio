@@ -1,0 +1,143 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/themes/button_style.tres" type="Theme" id=1]
+[ext_resource path="res://src/singleton/hud.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/dynamicFont.tres" type="DynamicFont" id=3]
+
+[node name="HUD" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -184.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = 17.0
+theme = ExtResource( 1 )
+alignment = 2
+
+[node name="FPSContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 174.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/FPSContainer"]
+margin_left = 80.0
+margin_right = 151.0
+margin_bottom = 36.0
+text = "FPS: "
+
+[node name="FPS_Counter" type="Label" parent="VBoxContainer/FPSContainer"]
+margin_left = 155.0
+margin_right = 174.0
+margin_bottom = 36.0
+size_flags_vertical = 7
+text = "0"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 184.0
+margin_bottom = 39.0
+theme = ExtResource( 1 )
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2"]
+margin_right = 255.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer"]
+margin_right = 143.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Dimension:"
+
+[node name="Dimension" type="Label" parent="VBoxContainer2/HBoxContainer"]
+margin_left = 147.0
+margin_right = 255.0
+margin_bottom = 36.0
+text = "Present"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0, 0, 0.313726 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -354.0
+margin_top = 85.0
+margin_right = 357.0
+margin_bottom = 151.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer2"]
+margin_right = 711.0
+margin_bottom = 66.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer2/HBoxContainer"]
+margin_left = 304.0
+margin_top = 15.0
+margin_right = 407.0
+margin_bottom = 51.0
+theme = ExtResource( 1 )
+text = "Paused"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 21.0
+margin_top = -172.0
+margin_right = 146.0
+margin_bottom = -1.0
+
+[node name="Continue" type="Button" parent="CanvasLayer/VBoxContainer"]
+margin_right = 125.0
+margin_bottom = 36.0
+focus_neighbour_top = NodePath("../Exit")
+focus_neighbour_bottom = NodePath("../Options")
+theme = ExtResource( 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Continue"
+align = 0
+
+[node name="Options" type="Button" parent="CanvasLayer/VBoxContainer"]
+visible = false
+margin_top = 40.0
+margin_right = 125.0
+margin_bottom = 76.0
+focus_neighbour_top = NodePath("../Continue")
+theme = ExtResource( 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Options"
+align = 0
+
+[node name="Exit" type="Button" parent="CanvasLayer/VBoxContainer"]
+margin_top = 40.0
+margin_right = 125.0
+margin_bottom = 76.0
+focus_neighbour_bottom = NodePath("../Continue")
+theme = ExtResource( 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Quit"
+align = 0
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]

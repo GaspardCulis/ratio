@@ -6,7 +6,8 @@
 [sub_resource type="RectangleShape2D" id=63]
 extents = Vector2( 5, 12.5 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=["player"]]
+collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -16,11 +17,12 @@ shape = SubResource( 63 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 2, -19 )
 frames = ExtResource( 1 )
+animation = "lands"
+frame = 3
 playing = true
 offset = Vector2( 10, 0 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 109, -61 )
 current = true
 process_mode = 0
 smoothing_enabled = true

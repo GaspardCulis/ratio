@@ -1,6 +1,6 @@
 extends AnimatedSprite
 
-
+export var index: int
 export var sound: AudioStream
 
 signal activated
@@ -24,7 +24,8 @@ func activate():
 	if (self.frame != 1):
 		self.frame = 1
 		$AudioStreamPlayer2D.play()
-		emit_signal("activated")
+		$CPUParticles2D.restart()
+		emit_signal("activated", self.index)
 		
 
 
