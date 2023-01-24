@@ -22,8 +22,7 @@ func _ready():
 	$AnimationPlayer.play("nani")
 	yield($AnimationPlayer, "animation_finished")
 	$AnimationPlayer.play("exit")
-	yield($AnimationPlayer, "animation_finished")
-	get_tree().change_scene("res://scenes/Levels/WatchFragments/WatchFragmentsScene.tscn")
+	Global.change_scene("res://scenes/Levels/WatchFragments/WatchFragmentsScene.tscn")
 
 func display_text(text: String):
 	for i in range(text.length()):
