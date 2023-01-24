@@ -1,0 +1,6 @@
+diff a/res/main_tileset.tres b/res/main_tileset.tres	(rejected hunks)
+@@ -1,4 +0,3 @@
+-[gd_resource type="TileSet" load_steps=99 format=2]
+ [gd_resource type="TileSet" load_steps=98 format=2]
+ 
+ [ext_resource path="res://assets/spritesheets/level/textures-2.png" type="Texture" id=1]
