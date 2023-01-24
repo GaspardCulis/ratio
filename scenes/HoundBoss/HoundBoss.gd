@@ -128,5 +128,5 @@ func set_state(state):
 
 
 func _on_HagraZone_body_entered(body: PhysicsBody2D):
-	if body.has_method("kill"):
+	if body and body.has_method("kill"):
 		body.kill()

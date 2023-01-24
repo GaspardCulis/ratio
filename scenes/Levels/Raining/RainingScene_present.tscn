@@ -47,19 +47,19 @@ visible = false
 offset = Vector2( 0, -550 )
 transform = Transform2D( 1, 0, 0, 1, 0, -550 )
 
-[node name="Layer1" parent="Background" index="0"]
+[node name="Layer1" parent="Background" index="4"]
 modulate = Color( 0.572549, 0.819608, 0.92549, 1 )
 
-[node name="Layer2" parent="Background" index="1"]
+[node name="Layer2" parent="Background" index="5"]
 modulate = Color( 0.572549, 0.819608, 0.92549, 1 )
 
-[node name="Layer3" parent="Background" index="2"]
+[node name="Layer3" parent="Background" index="6"]
 modulate = Color( 0.572549, 0.819608, 0.92549, 1 )
 
-[node name="Layer4" parent="Background" index="3"]
+[node name="Layer4" parent="Background" index="7"]
 modulate = Color( 0.572549, 0.819608, 0.92549, 1 )
 
-[node name="Layer5" parent="Background" index="4"]
+[node name="Layer5" parent="Background" index="8"]
 modulate = Color( 0.572549, 0.819608, 0.92549, 1 )
 
 [node name="water" type="Node2D" parent="."]

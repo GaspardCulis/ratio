@@ -6,7 +6,10 @@ func _ready():
 
 func _on_Start_pressed():
 	get_node("/root/Global").onTitle = false
-	get_tree().change_scene("res://scenes/Levels/Music level/MusicScene.tscn")
+	if (get_node("/root/Global").currentDimension == "Present"):
+		get_tree().change_scene("res://scenes/Levels/WatchFragments/WatchFragmentsScene.tscn")
+	else:
+		get_tree().change_scene("res://scenes/Levels/MusicLevel/MusicScene_past.tscn")
 
 func _on_Options_pressed():
 	get_tree().change_scene("res://scenes/Menus/Options.tscn")
