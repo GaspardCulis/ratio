@@ -294,7 +294,6 @@ animations = [ {
 "speed": 5.0
 } ]
 
-
 [node name="TileMap" type="TileMap"]
 position = Vector2( 92, -15 )
 scale = Vector2( 2, 2 )
@@ -306,7 +305,7 @@ script = ExtResource( 1 )
 WorldSpawn = NodePath("Position2D")
 
 [node name="Position2D" type="Position2D" parent="."]
-position = Vector2( 107, -511 )
+position = Vector2( 1213, -61.5 )
 
 [node name="Sign" type="Sprite" parent="."]
 position = Vector2( 1478.5, -48 )
@@ -335,7 +334,7 @@ position = Vector2( 1394, -56 )
 texture = ExtResource( 5 )
 
 [node name="Animation_Door" type="AnimatedSprite" parent="."]
-position = Vector2( 106, -517 )
+position = Vector2( 108, -518 )
 scale = Vector2( 1.46875, 1.39063 )
 frames = SubResource( 3 )
 

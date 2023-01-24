@@ -12,20 +12,19 @@ func _ready() :
 	$"Animation_Door".frame = 0
 		
 func RetrieveAllFragments() : 
-	var isAllRetrieved:bool = false
+	#var isAllRetrieved:bool = false
 	var count = 0
-	
 	
 	for i in $Controller.get_children() :
 		if (i.visible == false) :
-			print(i.is_visible_in_tree())
+			#print(i.is_visible_in_tree())
 			count = count + 1
 			$"Fragments-count".visible = true
 			$"Fragments-count".frame = count - 1
-			print(count)
+			#print(count)
 	
 	if count == 5 :
-		isAllRetrieved = true 
+		#isAllRetrieved = true 
 		$"Animation_Watch".play("default")
 		$"Animation_Watch".visible = false
 		
