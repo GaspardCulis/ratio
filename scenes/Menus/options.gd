@@ -12,7 +12,7 @@ var Res:Dictionary = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	AddRes()
+	#AddRes()
 	getFPS()
 
 func AddRes():

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/D-Key.png-75e8fa8f06b7dd1216a327c9947cfd50.stex"
+path="res://.import/light1.png-ecd96cb0b914bd0d217526223751ede3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/spritesheets/level/Gerald's Keys/Keys/D-Key.png"
-dest_files=[ "res://.import/D-Key.png-75e8fa8f06b7dd1216a327c9947cfd50.stex" ]
+source_file="res://assets/images/light1.png"
+dest_files=[ "res://.import/light1.png-ecd96cb0b914bd0d217526223751ede3.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
