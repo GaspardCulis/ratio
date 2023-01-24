@@ -15,7 +15,7 @@ func _ready():
 	if Global.has_saved:
 		Global.load_saved_player_state(player_instance)
 	else:
-		player_instance.global_position = Global.player_pos_save
+		player_instance.global_position = WorldSpawnNode.global_position
 	
 func _input(event):
 	if Input.is_action_just_pressed("switch_dim"):
