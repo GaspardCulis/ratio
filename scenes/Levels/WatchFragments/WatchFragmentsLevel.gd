@@ -1,33 +1,23 @@
 extends  "res://src/abstract/AbstractLevel.gd"
 #extends TileMap
 
+var count = 0
 
 func _ready() :
 	for i in $Controller.get_children() :
 		i.connect("retrieved", self, "RetrieveAllFragments")
-	
-	$"Fragments-count".visible = false
 	$"Animation_Door".frame = 1
 	yield(get_tree().create_timer(1), "timeout")
 	$"Animation_Door".frame = 0
 		
-func RetrieveAllFragments() : 
-	var isAllRetrieved:bool = false
-	var count = 0
+func RetrieveAllFragments(index: int) :
+	if ($Controller.get_child(index).visible == true) :
+		Hud.show_or_increment_counter()
+		count = count + 1
 	
-	
-	for i in $Controller.get_children() :
-		if (i.visible == false) :
-			print(i.is_visible_in_tree())
-			count = count + 1
-			$"Fragments-count".visible = true
-			$"Fragments-count".frame = count - 1
-			print(count)
-	
-	if count == 5 :
-		isAllRetrieved = true 
-		$"Animation_Watch".play("default")
-		$"Animation_Watch".visible = false
+	if (count == 5) :
+		Hud.close_counter_overlay()
+		Hud.show_and_animate_watch()
 		
 #rajouter petit son a chaque fois que morceau recupere
 #rajouter porte fin niveau

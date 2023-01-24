@@ -8,6 +8,7 @@ export var JUMP_SPEED := 500
 onready var AnimationSprite = $AnimatedSprite
 onready var animationNames = AnimationSprite.frames.get_animation_names()
 onready var Cam = $Camera2D
+var bouger = true
 var DEAD = false
 
 enum animationStates {
@@ -25,7 +26,7 @@ func _ready():
 	pass
 
 func _physics_process(delta):
-	if(!DEAD):
+	if(!DEAD and bouger):
 		var inputs := get_inputs()
 		handle_physics(inputs, delta)
 		handle_animation(inputs)
@@ -78,7 +79,7 @@ func get_camera() -> Camera2D:
 	return Cam
 	
 func kill():
-	if(!DEAD):
+	if(!DEAD and bouger):
 		DEAD = true
 		AnimationSprite.animation = animationNames[animationStates.DEATH]
 		yield(get_tree().create_timer(0.75), "timeout")

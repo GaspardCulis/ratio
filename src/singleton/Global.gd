@@ -48,6 +48,7 @@ func change_scene(path: String):
 	tween.play()
 	yield(tween, "finished")
 	tween.kill()
+	sprite.queue_free()
 	get_tree().change_scene(path)
 	var sprite2 = Sprite.new()
 	sprite2.texture = transTexture
@@ -65,6 +66,7 @@ func change_scene(path: String):
 	tween2.play()
 	yield(tween2, "finished")
 	tween2.kill()
+	sprite2.queue_free()
 	
 	
 	

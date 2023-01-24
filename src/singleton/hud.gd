@@ -18,6 +18,20 @@ func _process(delta):
 	
 	$VBoxContainer2/HBoxContainer/Dimension.text = str(get_node("/root/Global").currentDimension)
 
+func show_or_increment_counter():
+	if (!$"OverlayFragments/HBoxContainer/Fragments-count".visible) :
+		$"OverlayFragments/HBoxContainer/Fragments-count".visible = true
+	else :
+		$"OverlayFragments/HBoxContainer/Fragments-count".frame = $"OverlayFragments/HBoxContainer/Fragments-count".frame + 1
+
+func close_counter_overlay():
+	$"OverlayFragments/HBoxContainer/Fragments-count".visible = false
+
+func show_and_animate_watch():
+	$"OverlayFragments/HBoxContainer2/Animation_Watch".visible = true
+	$"OverlayFragments/HBoxContainer2/Animation_Watch".play()
+	$"OverlayFragments/HBoxContainer2/Animation_Watch".visible = false
+
 func set_music_tile_pressed(index: int):
 	$MusicLayer/HBoxContainer.get_child(5 - index).frame = 1
 	
