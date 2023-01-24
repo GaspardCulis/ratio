@@ -113,3 +113,5 @@ offset = Vector2( -13.5, 0 )
 position = Vector2( 390.5, 144 )
 texture = ExtResource( 8 )
 offset = Vector2( -13.5, 0 )
+
+[node name="Sprite" type="Sprite" parent="."]

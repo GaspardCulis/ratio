@@ -15,9 +15,11 @@ func _process(delta):
 	$VBoxContainer2/HBoxContainer/Dimension.text = str(get_node("/root/Global").currentDimension)
 
 func _input(ev):
-	if ev is InputEventKey and ev.scancode == KEY_ESCAPE:
-		$CanvasLayer.visible = true
-		get_tree().paused = true
+	if (!get_node("/root/Global").onTitle):
+		if ev is InputEventKey and ev.scancode == KEY_ESCAPE:
+			$CanvasLayer/VBoxContainer/Continue.grab_focus()
+			$CanvasLayer.visible = true
+			get_tree().paused = true
 
 
 func _on_Continue_pressed():
