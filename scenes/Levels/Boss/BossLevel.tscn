@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Levels/Boss/BossLevel.gd" type="Script" id=2]
 [ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/HoundBoss/HoundBoss.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/soundtrack/Excitement audio.mp3" type="AudioStream" id=5]
 
 [node name="TileMap" type="TileMap"]
 scale = Vector2( 2, 2 )
@@ -16,7 +17,7 @@ script = ExtResource( 2 )
 WorldSpawn = NodePath("WorldSpawn")
 
 [node name="WorldSpawn" type="Position2D" parent="."]
-position = Vector2( 95, 191 )
+position = Vector2( 67.5, 206 )
 __meta__ = {
 "_gizmo_extents_": 20.0
 }
@@ -24,8 +25,12 @@ __meta__ = {
 [node name="Background" parent="." instance=ExtResource( 3 )]
 
 [node name="HoundBoss" parent="." instance=ExtResource( 4 )]
-position = Vector2( 243, 117 )
+position = Vector2( 435, 271 )
 scale = Vector2( 2, 2 )
 MASS = 3000
 WALK_SPEED = 150
 JUMP_SPEED = 1000
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
