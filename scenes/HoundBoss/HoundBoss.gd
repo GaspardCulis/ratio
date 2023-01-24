@@ -17,6 +17,7 @@ enum attackState {
 }
 
 var currentState = 0
+var currentAttackState = 0
 var lookingAt = 1
 var velocity := Vector2.ZERO
 
@@ -24,6 +25,7 @@ onready var AnimationSprite = $AnimatedSprite
 onready var Inputs = $Inputs
 onready var VoidRaycast = $Inputs/Void
 onready var GroundRaycast = $Inputs/Ground
+onready var WallRaycast = $Inputs/Wall
 onready var animationNames = AnimationSprite.frames.get_animation_names()
 
 func wait_random():
@@ -34,29 +36,48 @@ func _ready():
 	set_state(animationStates.IDLE)
 	yield(wait_random(), "completed")
 	change_state()
+	get_tree().connect("tree_changed", self, "_on_tree_changed")
+	
+	var nodes = get_tree().get_nodes_in_group("player")
+	if nodes.size() > 0:
+		player = nodes[0]
+
+var player: KinematicBody2D = null
+func _on_tree_changed():
+	if !get_tree():return
+	var nodes = get_tree().get_nodes_in_group("player")
+	if nodes.size() > 0:
+		player = nodes[0]
 
 func change_state():
 	# Logic
-	#Direction
-	set_direction(sign(randf() - 0.5))
 	# State
-	if randf() > 0.8:
-		set_state(animationStates.IDLE)
+	if currentAttackState:
+		handle_attack_state()
 	else:
-		set_state(animationStates.WALK)
-	
-	
+		set_direction(sign(randf() - 0.5))
+		if randf() > 0.8:
+			set_state(animationStates.IDLE)
+		else:
+			set_state(animationStates.WALK)
 	
 	# NExt
 	yield(wait_random(), "completed")
 	change_state()
+	
+func handle_attack_state():
+	set_state(animationStates.RUN)
+	set_direction(sign(self.global_position.x - player.global_position.x))
 
 func _physics_process(delta):
 	if !is_on_floor():
 		velocity.y += MASS * delta
 		
-	if self.currentState == animationStates.WALK:
-		velocity.x = -self.WALK_SPEED * self.lookingAt
+	if self.currentState in [animationStates.WALK, animationStates.RUN]:
+		if self.currentState == animationStates.WALK:
+			velocity.x = -self.WALK_SPEED * self.lookingAt
+		else:
+			velocity.x = -self.WALK_SPEED * self.lookingAt * 3
 		if !VoidRaycast.get_collider():
 			set_direction(-lookingAt)
 	elif self.currentState == animationStates.JUMP:
@@ -66,8 +87,16 @@ func _physics_process(delta):
 		
 	velocity = move_and_slide(velocity, Vector2.UP, false, 4, 0)
 	
-	if velocity.x == 0:
-		set_state(animationStates.IDLE)
+	if WallRaycast.get_collider():
+		if currentAttackState:
+			set_direction(-lookingAt)
+		else:
+			set_state(animationStates.IDLE)
+		
+	if player and self.global_position.distance_to(player.global_position) < 1500 :
+		currentAttackState = attackState.ATTACK
+	else:
+		currentAttackState = attackState.CHILL
 	
 		
 		
