@@ -1,6 +1,7 @@
 extends Node
 
 onready var ResOptionBox = $VBoxContainer/VBoxContainer2/HBoxContainer3/OptionButton
+onready var ShowFPSCheck = $VBoxContainer/VBoxContainer2/HBoxContainer/ShowFPSCheckbox
 
 var Res:Dictionary = {
 	"2560x1440":Vector2(2560,1440),
@@ -12,6 +13,7 @@ var Res:Dictionary = {
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	AddRes()
+	getFPS()
 
 func AddRes():
 	var CurrentRes = get_viewport().get_size()
@@ -22,6 +24,8 @@ func AddRes():
 			ResOptionBox._select_int(index)
 		index += 1
 
+func getFPS():
+	ShowFPSCheck.pressed = get_node("/root/Global").showFPS
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/Menus/StartMenu.tscn")
@@ -35,3 +39,7 @@ func _on_OptionButton_item_selected(index):
 	var size = Res.get(ResOptionBox.get_item_text(index))
 	OS.set_window_size(size)
 	get_tree().set_screen_stretch(SceneTree.STRETCH_MODE_VIEWPORT, SceneTree.STRETCH_ASPECT_KEEP, size)
+
+
+func _on_ShowFPSCheckbox_pressed():
+	get_node("/root/Global").showFPS = !get_node("/root/Global").showFPS
