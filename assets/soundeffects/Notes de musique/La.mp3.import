@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/La.mp3-2a79da7cb13b810ed3c4ce46c2490ef8.mp3str"
+
+[deps]
+
+source_file="res://assets/soundeffects/Notes de musique/La.mp3"
+dest_files=[ "res://.import/La.mp3-2a79da7cb13b810ed3c4ce46c2490ef8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

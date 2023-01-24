@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ré.mp3-dc7eb9d897ef626baefd610d25727397.mp3str"
+
+[deps]
+
+source_file="res://assets/soundeffects/Notes de musique/Ré.mp3"
+dest_files=[ "res://.import/Ré.mp3-dc7eb9d897ef626baefd610d25727397.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
