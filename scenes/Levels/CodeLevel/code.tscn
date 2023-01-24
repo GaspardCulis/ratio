@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/themes/button_style.tres" type="Theme" id=1]
-[ext_resource path="res://scenes/Levels/Code level/code.gd" type="Script" id=2]
-[ext_resource path="res://scenes/Levels/Code level/Code_entré.gd" type="Script" id=4]
+[ext_resource path="res://scenes/Levels/CodeLevel/Code_entré.gd" type="Script" id=3]
+
+[sub_resource type="GDScript" id=1]
 
 [node name="Control" type="Control"]
 anchor_right = 0.413
@@ -11,7 +12,7 @@ margin_left = 291.0
 margin_top = 177.0
 margin_right = 291.088
 margin_bottom = 176.8
-script = ExtResource( 2 )
+script = SubResource( 1 )
 
 [node name="Pop-up" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -46,7 +47,7 @@ align = 1
 max_length = 4
 expand_to_text_length = true
 placeholder_text = "* * * *"
-script = ExtResource( 4 )
+script = ExtResource( 3 )
 
 [node name="Button" type="Button" parent="Pop-up/CenterContainer/VBoxContainer"]
 margin_top = 68.0

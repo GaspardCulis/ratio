@@ -1,6 +1,8 @@
 extends Area2D
 
-export(Resource) var nextLevel:Resource 
+signal openOverlay
+
+export(Resource) var nextLevel:Resource
 
 const Player = preload("res://scenes/Player/Player.gd")
 
@@ -22,3 +24,5 @@ func _on_Door_body_exited(body):
 func _input(event):
 	if penetration and Input.is_action_just_pressed("action"):
 		get_tree().change_scene(nextLevel.resource_path)
+	else :
+		emit_signal("openOverlay")

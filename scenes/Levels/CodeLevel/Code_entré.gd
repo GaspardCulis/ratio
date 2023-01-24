@@ -6,7 +6,8 @@ func _ready():
 
 func _on_verify_numbers():
 	if text == "1234":
-		get_tree().change_scene("res://scenes/Levels/Lab/Labo.tscn")
+		print("OK")
+		#ouvrir porte
 	else:
 		self.modulate = Color(1, 0, 0, 1)
 
