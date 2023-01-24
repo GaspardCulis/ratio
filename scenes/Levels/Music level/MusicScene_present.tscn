@@ -4,11 +4,8 @@
 [ext_resource path="res://scenes/Levels/Music level/MusicLevel.gd" type="Script" id=2]
 [ext_resource path="res://scenes/Objects/Plate/Plate.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/soundeffects/Notes de musique/La.mp3" type="AudioStream" id=4]
-[ext_resource path="res://assets/soundeffects/Notes de musique/Ré.mp3" type="AudioStream" id=5]
-[ext_resource path="res://assets/soundeffects/Notes de musique/Si bémol.mp3" type="AudioStream" id=6]
 [ext_resource path="res://assets/soundeffects/Notes de musique/Fa sup.mp3" type="AudioStream" id=7]
 [ext_resource path="res://scenes/Levels/Music level/Music controller.gd" type="Script" id=8]
-[ext_resource path="res://assets/soundeffects/Notes de musique/Fa.mp3" type="AudioStream" id=9]
 [ext_resource path="res://scenes/Objects/Button/Button.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=12]
 
@@ -36,26 +33,18 @@ __meta__ = {
 
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource( 8 )
+portePath = NodePath("../Node2D2")
 
 [node name="AnimatedSprite" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 423.5, 72 )
+index = 3
 sound = ExtResource( 7 )
-
-[node name="AnimatedSprite3" parent="Node2D" instance=ExtResource( 3 )]
-position = Vector2( 469.5, 72 )
-sound = ExtResource( 9 )
 
 [node name="AnimatedSprite4" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 343.5, 72 )
+index = 1
 sound = ExtResource( 4 )
-
-[node name="AnimatedSprite5" parent="Node2D" instance=ExtResource( 3 )]
-position = Vector2( 299.5, 72.5 )
-sound = ExtResource( 5 )
-
-[node name="AnimatedSprite2" parent="Node2D" instance=ExtResource( 3 )]
-position = Vector2( 385.5, 72 )
-sound = ExtResource( 6 )
 
 [node name="Node2D2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 198.5, 92.5 )
+controlerPath = NodePath("../Node2D")

@@ -77,8 +77,9 @@ position = Vector2( 388, 72 )
 index = 2
 sound = ExtResource( 6 )
 
-[node name="Node2D2" parent="." instance=ExtResource( 10 )]
+[node name="Caillou" parent="." instance=ExtResource( 10 )]
 position = Vector2( 276, 61 )
+controlerPath = NodePath("../Controller")
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 507, 58.5 )
