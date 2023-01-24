@@ -1,25 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/abstract/AbstractLevel.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Objects/Door/Door.tscn" type="PackedScene" id=3]
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=4]
-[ext_resource path="res://assets/spritesheets/level/door.png" type="Texture" id=5]
-
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 5 )
-region = Rect2( 32, 0, 32, 32 )
-
-[sub_resource type="SpriteFrames" id=3]
-animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
+[ext_resource path="res://scenes/Levels/Jump/Jump_ALL.tscn" type="PackedScene" id=5]
 
 [node name="TileMap" type="TileMap"]
 scale = Vector2( 2, 2 )
@@ -36,7 +21,7 @@ WorldSpawn = NodePath("WorldSpawn")
 otherDim = "res://scenes/Levels/Raining/RainingScene_present.tscn"
 
 [node name="WorldSpawn" type="Position2D" parent="."]
-position = Vector2( 202, 20.5 )
+position = Vector2( 4443, 31 )
 __meta__ = {
 "_gizmo_extents_": 20.0
 }
@@ -51,10 +36,9 @@ transform = Transform2D( 1, 0, 0, 1, 0, -550 )
 
 [node name="After Checkpoint" type="Node2D" parent="water"]
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 4532, 75 )
-scale = Vector2( 1.406, 1.406 )
-frames = SubResource( 3 )
-frame = 1
+[node name="Door" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4519, 95.5 )
+nextLevel = ExtResource( 5 )
 
 [editable path="Background"]
+[editable path="Door"]
