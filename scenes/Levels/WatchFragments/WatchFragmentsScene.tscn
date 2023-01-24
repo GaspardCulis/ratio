@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://scenes/Levels/Watch fragments level/WatchFragmentsLevel.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Levels/WatchFragments/WatchFragmentsLevel.gd" type="Script" id=1]
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://assets/spritesheets/level/sign.png" type="Texture" id=3]
 [ext_resource path="res://assets/spritesheets/level/PocketWatch5.png" type="Texture" id=4]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/spritesheets/level/PocketWatch3.png" type="Texture" id=7]
 [ext_resource path="res://assets/spritesheets/level/PocketWatch4.png" type="Texture" id=8]
 [ext_resource path="res://scenes/Objects/PocketWatchFragments/PocketWatchFragments.tscn" type="PackedScene" id=10]
+
 
 [node name="TileMap" type="TileMap"]
 position = Vector2( 92, -15 )
