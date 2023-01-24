@@ -9,7 +9,7 @@
 [ext_resource path="res://scenes/Objects/Plate/Plate.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/Objects/Button/Button.tscn" type="PackedScene" id=9]
 
-[node name="TileMap" type="TileMap"]
+[node name="TileMap2" type="TileMap"]
 self_modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )
 scale = Vector2( 2, 2 )
 tile_set = ExtResource( 3 )
