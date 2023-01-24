@@ -159,7 +159,7 @@ script = ExtResource( 5 )
 position = Vector2( 0, -16 )
 frames = SubResource( 1 )
 animation = "walk"
-frame = 6
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -181,11 +181,16 @@ shape = SubResource( 32 )
 [node name="Void" type="RayCast2D" parent="Inputs"]
 position = Vector2( -14, 2 )
 enabled = true
-cast_to = Vector2( 0, 56 )
+cast_to = Vector2( 0, 70 )
 
 [node name="Ground" type="RayCast2D" parent="Inputs"]
 position = Vector2( -8, 8 )
 enabled = true
 cast_to = Vector2( -6, 4 )
+
+[node name="Wall" type="RayCast2D" parent="Inputs"]
+position = Vector2( -8, -6 )
+enabled = true
+cast_to = Vector2( -5, 0 )
 
 [connection signal="body_entered" from="Inputs/FrontCollision" to="." method="_on_FrontCollision_body_entered"]
