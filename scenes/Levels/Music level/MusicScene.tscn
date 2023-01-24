@@ -32,17 +32,14 @@ script = ExtResource( 8 )
 
 [node name="AnimatedSprite" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 423.5, 72 )
-index = 3
 sound = ExtResource( 7 )
 
 [node name="AnimatedSprite3" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 459, 72 )
-index = 4
 sound = ExtResource( 9 )
 
 [node name="AnimatedSprite4" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 350.5, 72 )
-index = 1
 sound = ExtResource( 4 )
 
 [node name="AnimatedSprite5" parent="Node2D" instance=ExtResource( 3 )]
@@ -51,7 +48,6 @@ sound = ExtResource( 5 )
 
 [node name="AnimatedSprite2" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 388, 72 )
-index = 2
 sound = ExtResource( 6 )
 
 [node name="Node2D2" parent="." instance=ExtResource( 10 )]
