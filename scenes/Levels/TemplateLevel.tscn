@@ -27,4 +27,4 @@ __meta__ = {
 [node name="Background" parent="." instance=ExtResource( 3 )]
 
 [node name="HoundBoss" parent="." instance=ExtResource( 4 )]
-position = Vector2( 238.5, 223 )
+position = Vector2( 238.5, -3000 )
