@@ -24,6 +24,7 @@ func activate():
 	if (self.frame != 1):
 		self.frame = 1
 		$AudioStreamPlayer2D.play()
+		$CPUParticles2D.restart()
 		emit_signal("activated", self.index)
 		
 
