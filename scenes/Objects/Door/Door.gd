@@ -20,5 +20,5 @@ func _on_Door_body_exited(body):
 		$KeyHint.visible = false
 
 func _input(event):
-	if Input.is_action_just_pressed("action"):
+	if penetration and Input.is_action_just_pressed("action"):
 		get_tree().change_scene(nextLevel.resource_path)
