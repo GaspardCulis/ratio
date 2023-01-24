@@ -45,20 +45,21 @@ modulate = Color( 0.572549, 0.819608, 0.92549, 1 )
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1873, 383 )
+z_index = 0
 
 [node name="CableChallenge" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1776, 360 )
-BarrierePath = NodePath("../Barrière/CollisionShape2D")
+BarrierePath = NodePath("../StaticBody2D")
 
-[node name="Barrière" type="Area2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrière"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 1870, 326.5 )
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="Barrière"]
-position = Vector2( 1870, 336 )
-scale = Vector2( 3.125, 6.1875 )
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 1870, 327.75 )
+scale = Vector2( 3.125, 7.21875 )
 texture = ExtResource( 6 )
 hframes = 32
 vframes = 32
