@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/Levels/Music level/Music controller.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Levels/Music level/MusicLevel.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://scenes/Objects/Plate/Plate.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/Objects/Button/Button.tscn" type="PackedScene" id=9]
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=10]
+[ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=12]
 
 [node name="TileMap" type="TileMap"]
 modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )
@@ -22,6 +23,11 @@ tile_data = PoolIntArray( -1376208, 0, 196611, -917456, 0, 0, -917455, 0, 2, -85
 script = ExtResource( 2 )
 WorldSpawn = NodePath("WorldSpawn")
 otherDim = "res://scenes/Levels/Music level/MusicScene_present.tscn"
+
+[node name="Background" parent="." instance=ExtResource( 12 )]
+pause_mode = 2
+offset = Vector2( 0, -500 )
+transform = Transform2D( 1, 0, 0, 1, 0, -500 )
 
 [node name="WorldSpawn" type="Position2D" parent="."]
 position = Vector2( 64, -153 )
