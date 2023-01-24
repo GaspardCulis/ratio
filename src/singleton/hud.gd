@@ -30,7 +30,6 @@ func close_counter_overlay():
 func show_and_animate_watch():
 	$"OverlayFragments/HBoxContainer2/Animation_Watch".visible = true
 	$"OverlayFragments/HBoxContainer2/Animation_Watch".play()
-	$"OverlayFragments/HBoxContainer2/Animation_Watch".visible = false
 
 func set_music_tile_pressed(index: int):
 	$MusicLayer/HBoxContainer.get_child(5 - index).frame = 1
@@ -60,3 +59,7 @@ func _on_Continue_pressed():
 
 func _on_Exit_pressed():
 	get_tree().quit()
+
+
+func _on_Animation_Watch_animation_finished():
+	$"OverlayFragments/HBoxContainer2/Animation_Watch".visible = false
