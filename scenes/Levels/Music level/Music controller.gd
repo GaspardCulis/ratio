@@ -1,12 +1,9 @@
 extends Node2D
 
 var tilesArray = []
-signal puzzleValidated
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+export var portePath: NodePath
+onready var porte = get_node(portePath)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,8 +23,8 @@ func on_tile_activate(index: int) :
 	
 	if (isAllActivated):
 		if (tilesArray == [4, 1, 0, 2, 3]):
-			emit_signal("puzzleValidated")
 			print("Validated")
+			porte.frame = 1
 		else:
 			tilesArray = []
 			yield(get_tree().create_timer(0.5), "timeout")
