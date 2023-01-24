@@ -91,7 +91,7 @@ margin_bottom = 36.0
 size_flags_horizontal = 3
 text = "Show FPS"
 
-[node name="CheckButton" type="CheckButton" parent="VBoxContainer/VBoxContainer2/HBoxContainer"]
+[node name="ShowFPSCheckbox" type="CheckButton" parent="VBoxContainer/VBoxContainer2/HBoxContainer"]
 margin_left = 435.0
 margin_right = 499.0
 margin_bottom = 36.0
@@ -107,7 +107,6 @@ margin_bottom = 36.0
 text = "Return"
 
 [connection signal="pressed" from="VBoxContainer/VBoxContainer2/HBoxContainer2/FullScreen" to="." method="_on_FullScreen_pressed"]
-[connection signal="pressed" from="VBoxContainer/VBoxContainer2/HBoxContainer2/FullScreen" to="." method="_on_CheckButton_pressed"]
 [connection signal="item_selected" from="VBoxContainer/VBoxContainer2/HBoxContainer3/OptionButton" to="." method="_on_OptionButton_item_selected"]
-[connection signal="pressed" from="VBoxContainer/VBoxContainer2/HBoxContainer/CheckButton" to="." method="_on_CheckButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer2/HBoxContainer/ShowFPSCheckbox" to="." method="_on_ShowFPSCheckbox_pressed"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]

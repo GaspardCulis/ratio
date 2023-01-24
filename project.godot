@@ -33,6 +33,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://src/singleton/Global.gd"
+Hud="*res://scenes/Menus/HUD.tscn"
 
 [display]
 

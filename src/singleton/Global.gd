@@ -2,6 +2,10 @@ extends Node
 
 var has_saved := false
 var player_pos_save := Vector2.ZERO
+var onTitle = true
+var showFPS = false
+var currentDimension = "Present"
+
 var player_velocity_save := Vector2.ZERO
 var player_animation_state := ""
 var player_animation_frame := 0
