@@ -39,6 +39,13 @@ transform = Transform2D( 1, 0, 0, 1, 0, -550 )
 [node name="Door" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4519, 95.5 )
 nextLevel = ExtResource( 5 )
+opened = true
+
+[node name="Overlay" parent="Door" index="0"]
+frame = 1
+
+[node name="KeyHint" parent="Door" index="2"]
+visible = false
 
 [editable path="Background"]
 [editable path="Door"]

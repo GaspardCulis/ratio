@@ -1,26 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Background/WeatherRaining.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/abstract/AbstractLevel.gd" type="Script" id=4]
-[ext_resource path="res://assets/spritesheets/level/door.png" type="Texture" id=5]
-
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 5 )
-region = Rect2( 32, 0, 32, 32 )
-
-[sub_resource type="SpriteFrames" id=3]
-animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
+[ext_resource path="res://scenes/Objects/Door/Door.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Levels/Lab/LaboratoryScenePast.tscn" type="PackedScene" id=6]
 
 [node name="TileMap2" type="TileMap"]
 self_modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )
@@ -332,10 +317,9 @@ position = Vector2( 3855, -130 )
 [node name="Node2D45" parent="water/After Checkpoint" instance=ExtResource( 2 )]
 position = Vector2( 3835, -130 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 4532, 75 )
-scale = Vector2( 1.406, 1.406 )
-frames = SubResource( 3 )
-frame = 1
+[node name="Door" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4532, 100 )
+nextLevel = ExtResource( 6 )
+opened = true
 
 [editable path="Background"]
