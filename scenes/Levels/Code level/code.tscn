@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/themes/button_style.tres" type="Theme" id=1]
+[ext_resource path="res://scenes/Levels/Code level/code.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Levels/Code level/Code_entré.gd" type="Script" id=4]
+
+[node name="Control" type="Control"]
+anchor_right = 0.413
+anchor_bottom = 0.382
+margin_left = 291.0
+margin_top = 177.0
+margin_right = 291.088
+margin_bottom = 176.8
+script = ExtResource( 2 )
+
+[node name="Pop-up" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.168627, 0.109804, 0.109804, 0.498039 )
+
+[node name="CenterContainer" type="CenterContainer" parent="Pop-up"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pop-up/CenterContainer"]
+margin_left = 158.0
+margin_top = 70.0
+margin_right = 264.0
+margin_bottom = 158.0
+
+[node name="Label" type="Label" parent="Pop-up/CenterContainer/VBoxContainer"]
+margin_right = 106.0
+margin_bottom = 14.0
+text = "Entrez le code"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Pop-up/CenterContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 106.0
+margin_bottom = 64.0
+
+[node name="LineEdit" type="LineEdit" parent="Pop-up/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_right = 106.0
+margin_bottom = 46.0
+theme = ExtResource( 1 )
+align = 1
+max_length = 4
+expand_to_text_length = true
+placeholder_text = "* * * *"
+script = ExtResource( 4 )
+
+[node name="Button" type="Button" parent="Pop-up/CenterContainer/VBoxContainer"]
+margin_top = 68.0
+margin_right = 106.0
+margin_bottom = 88.0
+text = "Validate"
+
+[connection signal="pressed" from="Pop-up/CenterContainer/VBoxContainer/Button" to="Pop-up/CenterContainer/VBoxContainer/HBoxContainer/LineEdit" method="_on_verify_numbers"]
