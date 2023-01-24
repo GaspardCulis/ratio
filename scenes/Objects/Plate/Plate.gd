@@ -1,12 +1,14 @@
 extends AnimatedSprite
 
 
-export var son: AudioStream
+export var sound: AudioStream
+
+signal activated
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$AudioStreamPlayer2D.stream = son
+	$AudioStreamPlayer2D.stream = sound
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,12 +17,16 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	if (body is KinematicBody2D):
+	activate()
+		
+
+func activate():
+	if (self.frame != 1):
 		self.frame = 1
 		$AudioStreamPlayer2D.play()
+		emit_signal("activated")
 		
 
 
-
-func _on_Area2D_body_exited(body):
+func deactivate():
 	self.frame = 0
