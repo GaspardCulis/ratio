@@ -1,9 +1,28 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/Levels/Code level/Code level.gd" type="Script" id=1]
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://assets/spritesheets/level/Big-sign-8.png" type="Texture" id=3]
 [ext_resource path="res://assets/spritesheets/level/Big-sign-3.png" type="Texture" id=4]
+[ext_resource path="res://assets/spritesheets/level/rock-0.png" type="Texture" id=5]
+[ext_resource path="res://assets/spritesheets/level/door.png" type="Texture" id=6]
+[ext_resource path="res://assets/spritesheets/level/rock-9.png" type="Texture" id=7]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 6 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="Level" type="TileMap"]
 scale = Vector2( 2, 2 )
@@ -28,3 +47,16 @@ scale = Vector2( 0.703124, 0.703124 )
 texture = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D" parent="."]
+
+[node name="9" type="Sprite" parent="."]
+position = Vector2( 164, 147 )
+texture = ExtResource( 7 )
+
+[node name="0" type="Sprite" parent="."]
+position = Vector2( 385, 147 )
+texture = ExtResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 606, 138 )
+scale = Vector2( 1.45313, 1.45313 )
+frames = SubResource( 3 )
