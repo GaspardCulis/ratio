@@ -21,5 +21,3 @@ __meta__ = {
 }
 
 [node name="Background" parent="." instance=ExtResource( 3 )]
-offset = Vector2( 0, -320 )
-transform = Transform2D( 1, 0, 0, 1, 0, -320 )
