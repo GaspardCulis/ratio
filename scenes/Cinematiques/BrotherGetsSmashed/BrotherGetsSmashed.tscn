@@ -1236,6 +1236,7 @@ autowrap = true
 
 [node name="Boup" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 26 )
+volume_db = -24.0
 
 [node name="Explosions" type="Node2D" parent="."]
 
