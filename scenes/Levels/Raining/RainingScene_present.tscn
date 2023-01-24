@@ -22,7 +22,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="TileMap" type="TileMap"]
+[node name="TileMap2" type="TileMap"]
 self_modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )
 scale = Vector2( 2, 2 )
 tile_set = ExtResource( 1 )
@@ -35,6 +35,7 @@ __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
 WorldSpawn = NodePath("WorldSpawn")
+otherDim = "res://scenes/Levels/Raining/RainingScene.tscn"
 
 [node name="WorldSpawn" type="Position2D" parent="."]
 position = Vector2( 202, 20.5 )
@@ -43,7 +44,6 @@ __meta__ = {
 }
 
 [node name="Background" parent="." instance=ExtResource( 3 )]
-visible = false
 offset = Vector2( 0, -550 )
 transform = Transform2D( 1, 0, 0, 1, 0, -550 )
 
