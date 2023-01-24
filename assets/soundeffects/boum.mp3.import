@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/boum.mp3-99f48fc0885a4ce1564775daf2e8b5b1.mp3str"
+
+[deps]
+
+source_file="res://assets/soundeffects/boum.mp3"
+dest_files=[ "res://.import/boum.mp3-99f48fc0885a4ce1564775daf2e8b5b1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

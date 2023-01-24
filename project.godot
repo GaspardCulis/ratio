@@ -27,8 +27,8 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://src/singleton/Global.gd"
-MLG="*res://src/singleton/MusicLevelGlobal.gd"
 Hud="*res://scenes/Menus/HUD.tscn"
+MLG="*res://src/singleton/MusicLevelGlobal.gd"
 
 [display]
 
@@ -84,6 +84,11 @@ bas={
 switch_dim={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":70,"unicode":0,"echo":false,"script":null)
+ ]
+}
+action={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":69,"unicode":0,"echo":false,"script":null)
  ]
 }
 

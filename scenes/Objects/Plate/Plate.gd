@@ -9,7 +9,9 @@ signal activated
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AudioStreamPlayer2D.stream = sound
-
+	if (MLG.boolTilesArray[index]):
+		self.frame = 1
+		emit_signal("activated", self.index)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -26,6 +28,7 @@ func activate():
 		$AudioStreamPlayer2D.play()
 		$CPUParticles2D.restart()
 		emit_signal("activated", self.index)
+		Hud.set_music_tile_pressed(MLG.tilesCounter)
 		
 
 

@@ -11,13 +11,26 @@ func _process(delta):
 		$VBoxContainer/FPSContainer/FPS_Counter.text = str(Engine.get_frames_per_second())
 	else:
 		$VBoxContainer/FPSContainer.visible = false
+	if(get_node("/root/Global").isOnMusic) :
+		$MusicLayer.visible = true
+	else:
+		$MusicLayer.visible = false
 	
 	$VBoxContainer2/HBoxContainer/Dimension.text = str(get_node("/root/Global").currentDimension)
 
+func set_music_tile_pressed(index: int):
+	$MusicLayer/HBoxContainer.get_child(5 - index).frame = 1
+	
+func reset_music_tiles_pressed():
+	for i in $MusicLayer/HBoxContainer.get_children() :
+		i.frame = 0
+
 func _input(ev):
-	if ev is InputEventKey and ev.scancode == KEY_ESCAPE:
-		$CanvasLayer.visible = true
-		get_tree().paused = true
+	if (!get_node("/root/Global").onTitle):
+		if ev is InputEventKey and ev.scancode == KEY_ESCAPE:
+			$CanvasLayer/VBoxContainer/Continue.grab_focus()
+			$CanvasLayer.visible = true
+			get_tree().paused = true
 
 
 func _on_Continue_pressed():

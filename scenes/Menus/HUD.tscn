@@ -1,8 +1,25 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/themes/button_style.tres" type="Theme" id=1]
 [ext_resource path="res://src/singleton/hud.gd" type="Script" id=2]
 [ext_resource path="res://assets/fonts/dynamicFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/spritesheets/level/Overlay-dots.png" type="Texture" id=4]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 4 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="HUD" type="CanvasLayer"]
 pause_mode = 2
@@ -112,7 +129,7 @@ margin_bottom = -1.0
 margin_right = 125.0
 margin_bottom = 36.0
 focus_neighbour_top = NodePath("../Exit")
-focus_neighbour_bottom = NodePath("../Options")
+focus_neighbour_bottom = NodePath("../Exit")
 theme = ExtResource( 1 )
 custom_fonts/font = ExtResource( 3 )
 text = "Continue"
@@ -133,11 +150,48 @@ align = 0
 margin_top = 40.0
 margin_right = 125.0
 margin_bottom = 76.0
+focus_neighbour_top = NodePath("../Continue")
 focus_neighbour_bottom = NodePath("../Continue")
 theme = ExtResource( 1 )
 custom_fonts/font = ExtResource( 3 )
 text = "Quit"
 align = 0
+
+[node name="MusicLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MusicLayer"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -88.0
+margin_top = 15.0
+margin_right = 89.0
+margin_bottom = 90.0
+alignment = 1
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="MusicLayer/HBoxContainer"]
+position = Vector2( 9, 9 )
+scale = Vector2( 2.125, 2.125 )
+frames = SubResource( 3 )
+
+[node name="AnimatedSprite5" type="AnimatedSprite" parent="MusicLayer/HBoxContainer"]
+position = Vector2( 47, 9 )
+scale = Vector2( 2.125, 2.125 )
+frames = SubResource( 3 )
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="MusicLayer/HBoxContainer"]
+position = Vector2( 85, 9 )
+scale = Vector2( 2.125, 2.125 )
+frames = SubResource( 3 )
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="MusicLayer/HBoxContainer"]
+position = Vector2( 123, 9 )
+scale = Vector2( 2.125, 2.125 )
+frames = SubResource( 3 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="MusicLayer/HBoxContainer"]
+position = Vector2( 161, 9 )
+scale = Vector2( 2.125, 2.125 )
+frames = SubResource( 3 )
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
