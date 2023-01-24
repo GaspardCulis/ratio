@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/Levels/MusicLevel/MusicController.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Levels/MusicLevel/MusicLevel.gd" type="Script" id=2]
+[ext_resource path="res://res/main_tileset.tres" type="TileSet" id=3]
 [ext_resource path="res://assets/soundeffects/Notes de musique/Ré.mp3" type="AudioStream" id=4]
 [ext_resource path="res://assets/soundeffects/Notes de musique/Fa.mp3" type="AudioStream" id=6]
 [ext_resource path="res://assets/soundeffects/Notes de musique/Si bémol.mp3" type="AudioStream" id=7]
@@ -11,6 +12,7 @@
 [node name="TileMap" type="TileMap"]
 modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )
 scale = Vector2( 2, 2 )
+tile_set = ExtResource( 3 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
