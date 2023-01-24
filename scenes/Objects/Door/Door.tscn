@@ -21,25 +21,23 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 9, 15.5 )
+extents = Vector2( 11.5, 19.5 )
 
 [node name="Door" type="Area2D"]
 z_index = -1
 script = ExtResource( 2 )
 
 [node name="Overlay" type="AnimatedSprite" parent="."]
-modulate = Color( 1, 1, 1, 0.588235 )
-position = Vector2( 1, -16 )
-scale = Vector2( 0.916406, 1.08032 )
-z_index = 100
+position = Vector2( 1.33125, -20.3899 )
+scale = Vector2( 1.1457, 1.35063 )
 frames = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -15.5 )
+position = Vector2( 0.162495, -19.5649 )
 shape = SubResource( 1 )
 
 [node name="KeyHint" type="Sprite" parent="."]
-position = Vector2( 0, -44 )
+position = Vector2( 0, -51 )
 scale = Vector2( 0.59375, 0.59375 )
 texture = ExtResource( 3 )
 

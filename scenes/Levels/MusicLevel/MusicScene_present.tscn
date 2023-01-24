@@ -27,7 +27,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="TileMap2" type="TileMap"]
+[node name="TileMap" type="TileMap"]
 scale = Vector2( 2, 2 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
@@ -39,7 +39,7 @@ WorldSpawn = NodePath("WorldSpawn")
 otherDim = "res://scenes/Levels/MusicLevel/MusicScene_past.tscn"
 
 [node name="WorldSpawn" type="Position2D" parent="."]
-position = Vector2( 165.5, 35 )
+position = Vector2( 108, 50 )
 __meta__ = {
 "_gizmo_extents_": 20.0
 }
@@ -63,7 +63,8 @@ position = Vector2( 198.5, 92.5 )
 controlerPath = NodePath("../Node2D")
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
-position = Vector2( 110.5, 65 )
+position = Vector2( 109.5, 60 )
+scale = Vector2( 1.15625, 1.34448 )
 frames = SubResource( 6 )
 
 [node name="Door" parent="." instance=ExtResource( 9 )]

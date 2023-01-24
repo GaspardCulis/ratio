@@ -20,5 +20,6 @@ func _on_Door_body_exited(body):
 		$KeyHint.visible = false
 
 func _input(event):
-	if penetration and Input.is_action_just_pressed("action"):
+	if penetration and $Overlay.frame == 1 and Input.is_action_just_pressed("action"):
+		get_node("/root/Global").isOnMusic = false
 		get_tree().change_scene(nextLevel.resource_path)
