@@ -5,6 +5,11 @@ extends TileMap
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$AnimationPlayer.play("byebyelagadji")
+	yield(get_tree().create_timer(1.5), "timeout")
+	yield(display_text("Bonne soirée au travail frero."), "completed")
+	yield($AnimationPlayer, "animation_finished")
+	$Label.text = ""
 	$AnimationPlayer.play("jemedeplace")
 	$AnimationPlayer.playback_speed = 1
 	yield($AnimationPlayer, "animation_finished")
