@@ -28,7 +28,8 @@ current = true
 process_mode = 0
 smoothing_enabled = true
 
-[node name="Light2D" type="Light2D" parent="."]
+[node name="Light" type="Light2D" parent="."]
+visible = false
 position = Vector2( 0, -13.469 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 3 )
