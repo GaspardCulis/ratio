@@ -2,6 +2,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_node("/root/Global").onTitle = true
 	$VBoxContainer/Start.grab_focus()
 
 func _on_Start_pressed():
