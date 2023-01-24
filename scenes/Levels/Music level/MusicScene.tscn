@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Levels/Jump level/JumpLvl.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/soundeffects/Notes de musique/Fa sup.mp3" type="AudioStream" id=7]
 [ext_resource path="res://scenes/Levels/Music level/Music controller.gd" type="Script" id=8]
 [ext_resource path="res://assets/soundeffects/Notes de musique/Fa.mp3" type="AudioStream" id=9]
+[ext_resource path="res://scenes/Objects/Button/Button.tscn" type="PackedScene" id=10]
 
 
 [node name="TileMap" type="TileMap"]
@@ -32,14 +33,17 @@ script = ExtResource( 8 )
 
 [node name="AnimatedSprite" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 423.5, 72 )
+index = 3
 sound = ExtResource( 7 )
 
 [node name="AnimatedSprite3" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 459, 72 )
+index = 4
 sound = ExtResource( 9 )
 
 [node name="AnimatedSprite4" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 350.5, 72 )
+index = 1
 sound = ExtResource( 4 )
 
 [node name="AnimatedSprite5" parent="Node2D" instance=ExtResource( 3 )]
@@ -48,4 +52,8 @@ sound = ExtResource( 5 )
 
 [node name="AnimatedSprite2" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 388, 72 )
+index = 2
 sound = ExtResource( 6 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 276, 61 )

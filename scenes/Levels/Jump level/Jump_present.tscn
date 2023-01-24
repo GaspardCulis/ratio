@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://src/abstract/AbstractLevel.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Levels/Jump level/jump.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=3]
 
@@ -32,7 +32,7 @@ modulate = Color( 0.572549, 0.819608, 0.92549, 1 )
 modulate = Color( 0.572549, 0.819608, 0.92549, 1 )
 
 [node name="WorldSpawn" type="Position2D" parent="."]
-position = Vector2( 113, 199.5 )
+position = Vector2( 156.5, 152 )
 __meta__ = {
 "_gizmo_extents_": 20.0
 }
