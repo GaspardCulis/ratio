@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "",
+"base": "EditorVCSInterface",
 "class": "GitAPI",
 "language": "NativeScript",
 "path": "res://addons/godot-git-plugin/git_api.gdns"
@@ -33,8 +33,8 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://src/singleton/Global.gd"
-MLG="*res://src/singleton/MusicLevelGlobal.gd"
 Hud="*res://scenes/Menus/HUD.tscn"
+MLG="*res://src/singleton/MusicLevelGlobal.gd"
 
 [display]
 
