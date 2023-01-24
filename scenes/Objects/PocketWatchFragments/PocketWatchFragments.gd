@@ -7,4 +7,5 @@ func _on_Area2D_body_entered(body) :
 	
 func retrieve():
 	self.visible = false
+	$Area2D.monitoring = false
 	emit_signal("retrieved")

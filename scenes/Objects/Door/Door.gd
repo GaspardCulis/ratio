@@ -1,6 +1,8 @@
 extends Area2D
 
-export(Resource) var nextLevel:Resource 
+signal openOverlay
+
+export(Resource) var nextLevel:Resource
 
 const Player = preload("res://scenes/Player/Player.gd")
 
@@ -20,5 +22,8 @@ func _on_Door_body_exited(body):
 		$KeyHint.visible = false
 
 func _input(event):
-	if penetration and Input.is_action_just_pressed("action"):
+	if penetration and $Overlay.frame == 1 and Input.is_action_just_pressed("action"):
+		get_node("/root/Global").isOnMusic = false
 		get_tree().change_scene(nextLevel.resource_path)
+	elif penetration and Input.is_action_just_pressed("action") :
+		emit_signal("openOverlay")
