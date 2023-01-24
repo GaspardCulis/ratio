@@ -52,7 +52,6 @@ __meta__ = {
 
 [node name="Controller" type="Node2D" parent="."]
 script = ExtResource( 8 )
-portePath = NodePath("../AnimatedSprite")
 
 [node name="AnimatedSprite" parent="Controller" instance=ExtResource( 3 )]
 position = Vector2( 423.5, 72 )
