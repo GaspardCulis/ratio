@@ -1,12 +1,29 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Levels/Music level/MusicLevel.gd" type="Script" id=2]
 [ext_resource path="res://scenes/Objects/Plate/Plate.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/soundeffects/Notes de musique/La.mp3" type="AudioStream" id=4]
+[ext_resource path="res://assets/spritesheets/level/door.png" type="Texture" id=5]
 [ext_resource path="res://assets/soundeffects/Notes de musique/Fa sup.mp3" type="AudioStream" id=7]
 [ext_resource path="res://scenes/Levels/Music level/Music controller.gd" type="Script" id=8]
 [ext_resource path="res://scenes/Objects/Button/Button.tscn" type="PackedScene" id=10]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 5 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="TileMap" type="TileMap"]
 scale = Vector2( 2, 2 )
@@ -27,7 +44,7 @@ __meta__ = {
 
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource( 8 )
-portePath = NodePath("../Node2D2")
+portePath = NodePath("../AnimatedSprite")
 
 [node name="AnimatedSprite" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 423.5, 72 )
@@ -42,3 +59,7 @@ sound = ExtResource( 4 )
 [node name="Node2D2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 198.5, 92.5 )
 controlerPath = NodePath("../Node2D")
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 634.5, 17 )
+frames = SubResource( 3 )
