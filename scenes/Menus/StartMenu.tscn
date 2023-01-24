@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/fonts/dynamicFont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://assets/themes/button_style.tres" type="Theme" id=3]
 
-[node name="Menu" type="Control"]
+[node name="StartMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
@@ -63,27 +63,25 @@ align = 0
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -179.0
+margin_left = -354.0
 margin_top = 85.0
-margin_right = 182.0
+margin_right = 357.0
 margin_bottom = 151.0
+size_flags_horizontal = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2"]
-margin_right = 361.0
+margin_right = 711.0
 margin_bottom = 66.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 2
+alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer2/HBoxContainer"]
-margin_right = 361.0
-margin_bottom = 66.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/mono_font = ExtResource( 2 )
-custom_fonts/normal_font = ExtResource( 2 )
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer"]
+margin_left = 177.0
+margin_top = 15.0
+margin_right = 533.0
+margin_bottom = 51.0
+theme = ExtResource( 3 )
 text = "Rescue: A Sister's Journey"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]

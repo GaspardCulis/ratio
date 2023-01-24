@@ -45,9 +45,40 @@ margin_right = 499.0
 margin_bottom = 460.0
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer2"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/VBoxContainer2"]
 margin_right = 499.0
 margin_bottom = 36.0
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/VBoxContainer2/HBoxContainer2"]
+margin_right = 431.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+text = "Fullscreen"
+
+[node name="FullScreen" type="CheckButton" parent="VBoxContainer/VBoxContainer2/HBoxContainer2"]
+margin_left = 435.0
+margin_right = 499.0
+margin_bottom = 36.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/VBoxContainer2"]
+margin_top = 40.0
+margin_right = 499.0
+margin_bottom = 40.0
+alignment = 1
+
+[node name="ItemList" type="ItemList" parent="VBoxContainer/VBoxContainer2/HBoxContainer3"]
+margin_left = 247.0
+margin_right = 247.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/VBoxContainer2/HBoxContainer3"]
+margin_left = 251.0
+margin_right = 251.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer2"]
+margin_top = 44.0
+margin_right = 499.0
+margin_bottom = 80.0
 alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/VBoxContainer2/HBoxContainer"]
@@ -57,23 +88,6 @@ size_flags_horizontal = 3
 text = "Show FPS"
 
 [node name="CheckButton" type="CheckButton" parent="VBoxContainer/VBoxContainer2/HBoxContainer"]
-margin_left = 435.0
-margin_right = 499.0
-margin_bottom = 36.0
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/VBoxContainer2"]
-margin_top = 40.0
-margin_right = 499.0
-margin_bottom = 76.0
-alignment = 1
-
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/VBoxContainer2/HBoxContainer2"]
-margin_right = 431.0
-margin_bottom = 36.0
-size_flags_horizontal = 3
-text = "Fullscreen"
-
-[node name="CheckButton" type="CheckButton" parent="VBoxContainer/VBoxContainer2/HBoxContainer2"]
 margin_left = 435.0
 margin_right = 499.0
 margin_bottom = 36.0
@@ -88,4 +102,7 @@ margin_right = 499.0
 margin_bottom = 36.0
 text = "Return"
 
+[connection signal="pressed" from="VBoxContainer/VBoxContainer2/HBoxContainer2/FullScreen" to="." method="_on_FullScreen_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer2/HBoxContainer2/FullScreen" to="." method="_on_CheckButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer2/HBoxContainer/CheckButton" to="." method="_on_CheckButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]

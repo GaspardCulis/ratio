@@ -24,10 +24,6 @@ config/name="Ratio"
 run/main_scene="res://scenes/Menus/StartMenu.tscn"
 config/icon="res://icon.png"
 
-[autoload]
-
-StartMenu="*res://scenes/Menus/StartMenu.tscn"
-
 [display]
 
 window/stretch/mode="2d"
