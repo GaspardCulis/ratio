@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/abstract/AbstractLevel.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://res/main_tileset.tres" type="TileSet" id=3]
+
+[node name="Level" type="TileMap"]
+tile_set = ExtResource( 3 )
+format = 1
+script = ExtResource( 1 )
+WorldSpawn = NodePath("WorldSpawn")
+
+[node name="WorldSpawn" type="Position2D" parent="."]
+
+[node name="Background" parent="." instance=ExtResource( 2 )]
