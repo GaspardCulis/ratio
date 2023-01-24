@@ -21,9 +21,9 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 11.5, 19.5 )
+extents = Vector2( 9, 15.5 )
 
-[node name="Door" type="Area2D"]
+[node name="Door" type="Area2D" groups=["door"]]
 z_index = -1
 script = ExtResource( 2 )
 

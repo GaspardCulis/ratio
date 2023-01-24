@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Levels/CodeLevel/Code level.gd" type="Script" id=2]
@@ -10,9 +10,7 @@
 [ext_resource path="res://assets/spritesheets/level/little-bush.png" type="Texture" id=8]
 [ext_resource path="res://assets/spritesheets/level/grass.png" type="Texture" id=9]
 [ext_resource path="res://scenes/Objects/Door/Door.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/Levels/CodeLevel/code.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/Levels/TemplateLevel.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scenes/Levels/CodeLevel/CanvasLayer.gd" type="Script" id=13]
 
 [node name="Level" type="TileMap"]
 self_modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )
@@ -24,6 +22,7 @@ tile_data = PoolIntArray( -655359, 0, 3, -589823, 0, 65539, -589785, 0, 0, -5897
 script = ExtResource( 2 )
 WorldSpawn = NodePath("Position2D")
 otherDim = "res://scenes/Levels/CodeLevel/Code_past.tscn"
+portePath = NodePath("Door/Overlay")
 
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 11.5, -167.375 )
@@ -184,16 +183,5 @@ texture = ExtResource( 8 )
 [node name="Door" parent="." instance=ExtResource( 10 )]
 position = Vector2( 570.5, -127 )
 nextLevel = ExtResource( 12 )
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
-script = ExtResource( 13 )
-
-[node name="Control" parent="CanvasLayer" instance=ExtResource( 11 )]
-margin_left = 831.0
-margin_top = -479.0
-margin_right = 831.088
-margin_bottom = -479.2
-script = null
 
 [editable path="Door"]

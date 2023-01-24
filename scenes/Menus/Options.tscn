@@ -62,6 +62,7 @@ margin_right = 499.0
 margin_bottom = 36.0
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/VBoxContainer2"]
+visible = false
 margin_top = 40.0
 margin_right = 499.0
 margin_bottom = 76.0
@@ -80,9 +81,9 @@ margin_right = 499.0
 margin_bottom = 36.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer2"]
-margin_top = 80.0
+margin_top = 40.0
 margin_right = 499.0
-margin_bottom = 116.0
+margin_bottom = 76.0
 alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/VBoxContainer2/HBoxContainer"]

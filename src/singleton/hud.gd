@@ -46,6 +46,11 @@ func _input(ev):
 			$CanvasLayer.visible = true
 			get_tree().paused = true
 
+func open_code_overlay() :
+	$OverlayCode.visible = true
+	
+func close_code_overlay() :
+	$OverlayCode.visible = false
 
 func _on_Continue_pressed():
 	$VBoxContainer2/HBoxContainer.visible = true
