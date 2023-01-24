@@ -7,6 +7,7 @@ export var JUMP_SPEED := 500
 
 onready var AnimationSprite = $AnimatedSprite
 onready var animationNames = AnimationSprite.frames.get_animation_names()
+onready var Cam = $Camera2D
 
 enum animationStates {
 	IDLE = 0,
@@ -69,3 +70,6 @@ func handle_animation(inputs: Vector2) -> void:
 
 func is_landing() -> bool:
 	return AnimationSprite.animation == animationNames[animationStates.LANDS] and AnimationSprite.frame < 3
+
+func get_camera() -> Camera2D:
+	return Cam

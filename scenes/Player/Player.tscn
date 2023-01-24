@@ -23,7 +23,6 @@ playing = true
 offset = Vector2( 10, 0 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 109, -61 )
 current = true
 process_mode = 0
 smoothing_enabled = true
