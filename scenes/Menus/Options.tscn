@@ -64,21 +64,25 @@ margin_bottom = 36.0
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/VBoxContainer2"]
 margin_top = 40.0
 margin_right = 499.0
-margin_bottom = 40.0
+margin_bottom = 76.0
 alignment = 1
 
-[node name="ItemList" type="ItemList" parent="VBoxContainer/VBoxContainer2/HBoxContainer3"]
-margin_left = 247.0
-margin_right = 247.0
-
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/VBoxContainer2/HBoxContainer3"]
-margin_left = 251.0
-margin_right = 251.0
+margin_right = 481.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Resolution"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/VBoxContainer2/HBoxContainer3"]
+margin_left = 485.0
+margin_right = 499.0
+margin_bottom = 36.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer2"]
-margin_top = 44.0
+margin_top = 80.0
 margin_right = 499.0
-margin_bottom = 80.0
+margin_bottom = 116.0
 alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/VBoxContainer2/HBoxContainer"]
@@ -104,5 +108,6 @@ text = "Return"
 
 [connection signal="pressed" from="VBoxContainer/VBoxContainer2/HBoxContainer2/FullScreen" to="." method="_on_FullScreen_pressed"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer2/HBoxContainer2/FullScreen" to="." method="_on_CheckButton_pressed"]
+[connection signal="item_selected" from="VBoxContainer/VBoxContainer2/HBoxContainer3/OptionButton" to="." method="_on_OptionButton_item_selected"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer2/HBoxContainer/CheckButton" to="." method="_on_CheckButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
