@@ -21,8 +21,8 @@ tile_data = PoolIntArray( 1638399, 0, 0, 1572864, 0, 1, 1572865, 0, 1, 1572866, 
 
 [node name="Background" parent="." instance=ExtResource( 6 )]
 pause_mode = 2
-offset = Vector2( 0, -240.891 )
-transform = Transform2D( 1, 0, 0, 1, 0, -240.891 )
+offset = Vector2( 0, -168.7 )
+transform = Transform2D( 1, 0, 0, 1, 0, -168.7 )
 script = ExtResource( 7 )
 
 [node name="ColorRect" type="ColorRect" parent="."]

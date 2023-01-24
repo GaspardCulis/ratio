@@ -2,7 +2,7 @@ extends Node
 
 var has_saved := false
 var player_pos_save := Vector2.ZERO
-var onTitle = false
+var onTitle = true
 var showFPS = false
 var currentDimension = "Present"
 
