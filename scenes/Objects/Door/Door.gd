@@ -24,7 +24,6 @@ func _on_Door_body_exited(body):
 		$KeyHint.visible = false
 
 func _input(event):
-	print(penetration, opened)
 	if penetration and get_opened() and Input.is_action_just_pressed("action"):
 		get_node("/root/Global").isOnMusic = false
 		Global.change_scene(nextLevel.resource_path)
