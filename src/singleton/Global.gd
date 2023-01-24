@@ -11,6 +11,9 @@ var player_animation_state := ""
 var player_animation_frame := 0
 var player_flip := 1
 
+#Music
+var isOnMusic = false
+
 func load_saved_player_state(player: KinematicBody2D):
 	if has_saved:
 		player.global_position = player_pos_save
