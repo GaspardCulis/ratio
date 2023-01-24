@@ -1,9 +1,8 @@
-[gd_resource type="TileSet" load_steps=99 format=2]
+[gd_resource type="TileSet" load_steps=98 format=2]
 
 [ext_resource path="res://assets/spritesheets/level/textures-2.png" type="Texture" id=1]
 [ext_resource path="res://assets/spritesheets/level/textures-1.png" type="Texture" id=2]
 [ext_resource path="res://assets/spritesheets/level/labo.png" type="Texture" id=3]
-[ext_resource path="res://assets/texture/Labo/lab tileset finished transparent.png" type="Texture" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -1821,7 +1820,6 @@ points = PoolVector2Array( 0, 0, 0, 0, 16, 16, 0, 16 )
 56/shapes = [  ]
 56/z_index = 0
 57/name = "lab tileset finished transparent.png 57"
-57/texture = ExtResource( 4 )
 57/tex_offset = Vector2( 0, 0 )
 57/modulate = Color( 1, 1, 1, 1 )
 57/region = Rect2( 640, 480, 128, 32 )
@@ -1842,7 +1840,6 @@ points = PoolVector2Array( 0, 0, 0, 0, 16, 16, 0, 16 )
 57/shapes = [  ]
 57/z_index = 0
 58/name = "lab tileset finished transparent.png 58"
-58/texture = ExtResource( 4 )
 58/tex_offset = Vector2( 0, 0 )
 58/modulate = Color( 1, 1, 1, 1 )
 58/region = Rect2( 496, 368, 16, 16 )
@@ -1856,7 +1853,6 @@ points = PoolVector2Array( 0, 0, 0, 0, 16, 16, 0, 16 )
 58/shapes = [  ]
 58/z_index = 0
 59/name = "lab tileset finished transparent.png 59"
-59/texture = ExtResource( 4 )
 59/tex_offset = Vector2( 0, 0 )
 59/modulate = Color( 1, 1, 1, 1 )
 59/region = Rect2( 544, 368, 16, 16 )
