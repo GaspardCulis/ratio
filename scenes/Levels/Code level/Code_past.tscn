@@ -1,0 +1,115 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scenes/Levels/Code level/Code level.gd" type="Script" id=1]
+[ext_resource path="res://res/main_tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://assets/spritesheets/level/Big-sign-8.png" type="Texture" id=3]
+[ext_resource path="res://assets/spritesheets/level/Big-sign-3.png" type="Texture" id=4]
+[ext_resource path="res://assets/spritesheets/level/rock-0.png" type="Texture" id=5]
+[ext_resource path="res://assets/spritesheets/level/door.png" type="Texture" id=6]
+[ext_resource path="res://assets/spritesheets/level/rock-9.png" type="Texture" id=7]
+[ext_resource path="res://assets/spritesheets/level/rock.png" type="Texture" id=8]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 6 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Level" type="TileMap"]
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 65541, 0, 1, 655370, 0, 2, 655360, 0, 6, 655392, 0, 65536, 786433, 0, 65537, 917535, 0, 65538, 983039, 0, 65539, 1114143, 0, 65540, 1179649, 0, 131072, 983040, 0, 131073, 983070, 0, 131075, 1048607, 0, 131077, 1048576, 0, 196609, 1179679, 0, 196610, 786431, 0, 327680, 655390, 0, 327681, 655372, 0, 327682, 720897, 0, 327683, 983060, 0, 327702, 24, 0, 327703, 24, 0, 393237, 24, 0, 393238, 24, 0, 393239, 24, 0, 458773, 24, 0, 458774, 24, 0, 458775, 24, 0, 458776, 24, 0, 524307, 24, 0, 524308, 24, 0, 524309, 24, 0, 524310, 24, 0, 524311, 24, 0, 524312, 24, 0, 524313, 24, 0, 524314, 24, 0, 589843, 24, 0, 589844, 24, 0, 589845, 24, 0, 589846, 24, 0, 589847, 24, 0, 589848, 24, 0, 589849, 24, 0, 589850, 24, 0, 655360, 23, 0, 655361, 24, 0, 655362, 26, 0, 655363, 26, 0, 655364, 24, 0, 655365, 23, 0, 655366, 23, 0, 655367, 23, 0, 655368, 23, 0, 655369, 26, 0, 655370, 26, 0, 655371, 23, 0, 655372, 24, 0, 655373, 26, 0, 655374, 26, 0, 655375, 24, 0, 655376, 24, 0, 655377, 24, 0, 655378, 24, 0, 655379, 24, 0, 655380, 24, 0, 655381, 24, 0, 655382, 24, 0, 655383, 23, 0, 655384, 23, 0, 655385, 23, 0, 655386, 23, 0, 720896, 24, 0, 720897, 24, 0, 720898, 22, 0, 720899, 26, 0, 720900, 24, 0, 720901, 24, 0, 720902, 23, 0, 720903, 23, 0, 720904, 26, 0, 720905, 26, 0, 720906, 24, 0, 720907, 24, 0, 720908, 25, 0, 720909, 26, 0, 720910, 25, 0, 720911, 24, 0, 720912, 24, 0, 720913, 24, 0, 720914, 24, 0, 720915, 24, 0, 720916, 26, 0, 720917, 26, 0, 720918, 24, 0, 720919, 24, 0, 786432, 22, 0, 786433, 22, 0, 786434, 25, 0, 786435, 26, 0, 786436, 25, 0, 786437, 25, 0, 786438, 25, 0, 786439, 23, 0, 786440, 23, 0, 786441, 25, 0, 786442, 25, 0, 786443, 25, 0, 786444, 25, 0, 786445, 24, 0, 786446, 25, 0, 786447, 25, 0, 786448, 24, 0, 786449, 24, 0, 786450, 24, 0, 786451, 25, 0, 786452, 25, 0, 786453, 26, 0, 786454, 26, 0, 786455, 24, 0, 786456, 24, 0, 851969, 25, 0, 851970, 25, 0, 851971, 26, 0, 851972, 25, 0, 851973, 22, 0, 851974, 26, 0, 851975, 26, 0, 851976, 23, 0, 851977, 22, 0, 851978, 22, 0, 851979, 22, 0, 851980, 22, 0, 851981, 26, 0, 851982, 25, 0, 851983, 25, 0, 851984, 25, 0, 851985, 22, 0, 851986, 25, 0, 851987, 22, 0, 851988, 22, 0, 851989, 25, 0, 851990, 26, 0, 851991, 26, 0, 917505, 25, 0, 917510, 26, 0, 917513, 23, 0, 917516, 25, 0, 917518, 26, 0, 917519, 25, 0, 917520, 25, 0, 917521, 25, 0, 983057, 25, 0, 983058, 25, 0 )
+script = ExtResource( 1 )
+WorldSpawn = NodePath("Position2D")
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 16.5, 107 )
+
+[node name="3" type="Sprite" parent="."]
+modulate = Color( 0.470588, 0.435294, 0.435294, 1 )
+position = Vector2( 62, 138 )
+scale = Vector2( 0.71875, 0.71875 )
+texture = ExtResource( 4 )
+
+[node name="8" type="Sprite" parent="."]
+position = Vector2( 117, 65.5 )
+scale = Vector2( 0.703124, 0.703124 )
+texture = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="9" type="Sprite" parent="."]
+position = Vector2( 405.5, 149 )
+texture = ExtResource( 7 )
+offset = Vector2( 6, -5.5 )
+
+[node name="0" type="Sprite" parent="."]
+position = Vector2( 145, 144 )
+texture = ExtResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 606, 138 )
+scale = Vector2( 1.45313, 1.45313 )
+frames = SubResource( 3 )
+
+[node name="rock-02" type="Sprite" parent="."]
+position = Vector2( 362, 143 )
+texture = ExtResource( 8 )
+offset = Vector2( -13.5, 0 )
+
+[node name="rock-03" type="Sprite" parent="."]
+position = Vector2( 386, 113.5 )
+texture = ExtResource( 8 )
+offset = Vector2( -13.5, 0 )
+
+[node name="rock-04" type="Sprite" parent="."]
+position = Vector2( 379.5, 101 )
+texture = ExtResource( 8 )
+offset = Vector2( -13.5, 0 )
+
+[node name="rock-05" type="Sprite" parent="."]
+position = Vector2( 321.5, 121 )
+texture = ExtResource( 8 )
+offset = Vector2( 0, 1.5 )
+
+[node name="rock-09" type="Sprite" parent="."]
+position = Vector2( 351, 106 )
+texture = ExtResource( 8 )
+offset = Vector2( 0, 1.5 )
+
+[node name="rock-10" type="Sprite" parent="."]
+position = Vector2( 368, 87.5 )
+texture = ExtResource( 8 )
+offset = Vector2( 0, 1.5 )
+
+[node name="rock-11" type="Sprite" parent="."]
+position = Vector2( 412.5, 123 )
+texture = ExtResource( 8 )
+offset = Vector2( 0, 1.5 )
+
+[node name="rock-06" type="Sprite" parent="."]
+position = Vector2( 398, 121.5 )
+texture = ExtResource( 8 )
+offset = Vector2( -13.5, 0 )
+
+[node name="rock-07" type="Sprite" parent="."]
+position = Vector2( 366.5, 127.5 )
+texture = ExtResource( 8 )
+offset = Vector2( -13.5, 0 )
+
+[node name="rock-08" type="Sprite" parent="."]
+position = Vector2( 390.5, 144 )
+texture = ExtResource( 8 )
+offset = Vector2( -13.5, 0 )
