@@ -15,6 +15,7 @@ func _ready():
 
 func on_tile_activate(index: int) :
 	MLG.tilesArray.append(index)
+	print(MLG.tilesArray)
 	var isAllActivated:bool = true
 	for i in self.get_children() :
 		isAllActivated = isAllActivated and (i.frame == 1)
