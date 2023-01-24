@@ -7,7 +7,7 @@ extends TileMap
 func _ready():
 	$AnimationPlayer.play("byebyelagadji")
 	yield(get_tree().create_timer(1.5), "timeout")
-	yield(display_text("Bonne soirée au travail frero."), "completed")
+	yield(display_text("Bonne soiree au travail frero."), "completed")
 	yield($AnimationPlayer, "animation_finished")
 	$Label.text = ""
 	$AnimationPlayer.play("jemedeplace")
