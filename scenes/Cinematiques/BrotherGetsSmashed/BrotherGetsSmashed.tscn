@@ -1,0 +1,1177 @@
+[gd_scene load_steps=59 format=2]
+
+[ext_resource path="res://assets/texture/Labo/LAB_5B.png" type="Texture" id=1]
+[ext_resource path="res://assets/texture/Labo/LAB_3A.png" type="Texture" id=2]
+[ext_resource path="res://assets/texture/Labo/LAB_4A.png" type="Texture" id=3]
+[ext_resource path="res://assets/texture/Labo/LAB_2C.png" type="Texture" id=4]
+[ext_resource path="res://assets/texture/Labo/LAB_5A.png" type="Texture" id=5]
+[ext_resource path="res://assets/texture/Labo/LAB_2B.png" type="Texture" id=6]
+[ext_resource path="res://assets/texture/Labo/LAB_3B.png" type="Texture" id=7]
+[ext_resource path="res://assets/texture/Labo/LAB_4B.png" type="Texture" id=8]
+[ext_resource path="res://assets/texture/characters_32_24_16/characters_32_24_16_transparent.png" type="Texture" id=9]
+[ext_resource path="res://assets/texture/Labo/LAB_1C.png" type="Texture" id=10]
+[ext_resource path="res://assets/texture/Labo/LAB_2A.png" type="Texture" id=11]
+[ext_resource path="res://assets/texture/Labo/LAB_1A.png" type="Texture" id=12]
+[ext_resource path="res://assets/texture/Labo/FLOOR_1C.png" type="Texture" id=13]
+[ext_resource path="res://assets/texture/Labo/LAB_1B.png" type="Texture" id=14]
+[ext_resource path="res://assets/texture/Labo/FLOOR_1A.png" type="Texture" id=15]
+[ext_resource path="res://assets/texture/Labo/DOOR_2A.png" type="Texture" id=16]
+[ext_resource path="res://assets/texture/Labo/FLOOR_1B.png" type="Texture" id=17]
+[ext_resource path="res://assets/texture/Labo/CONSOLE_1B.png" type="Texture" id=18]
+[ext_resource path="res://assets/texture/Labo/CONSOLE_1C.png" type="Texture" id=19]
+[ext_resource path="res://assets/texture/Labo/CONSOLE_1D.png" type="Texture" id=20]
+[ext_resource path="res://assets/texture/Labo/CONSOLE_1A.png" type="Texture" id=21]
+[ext_resource path="res://scenes/Cinematiques/BrotherGetsSmashed/BrotherGetsSmashed.gd" type="Script" id=22]
+[ext_resource path="res://assets/texture/characters_32_24_16/werewolf_body.png" type="Texture" id=23]
+[ext_resource path="res://assets/texture/characters_32_24_16/werewolf_face.png" type="Texture" id=24]
+[ext_resource path="res://assets/fonts/GridkingRegular-77vw.ttf" type="DynamicFontData" id=25]
+[ext_resource path="res://assets/soundeffects/boup.wav" type="AudioStream" id=26]
+[ext_resource path="res://assets/texture/characters_32_24_16/nani.png" type="Texture" id=27]
+[ext_resource path="res://assets/soundeffects/nani.mp3" type="AudioStream" id=28]
+[ext_resource path="res://assets/texture/characters_32_24_16/lazer.png" type="Texture" id=29]
+[ext_resource path="res://assets/texture/characters_32_24_16/explosion.png" type="Texture" id=30]
+[ext_resource path="res://assets/texture/void.png" type="Texture" id=31]
+[ext_resource path="res://assets/soundeffects/boum.mp3" type="AudioStream" id=32]
+[ext_resource path="res://assets/texture/characters_32_24_16/ratioed.png" type="Texture" id=33]
+
+[sub_resource type="TileSet" id=1]
+0/name = "CONSOLE_1A.png 0"
+0/texture = ExtResource( 21 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "CONSOLE_1B.png 1"
+1/texture = ExtResource( 18 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "CONSOLE_1C.png 2"
+2/texture = ExtResource( 19 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "CONSOLE_1D.png 3"
+3/texture = ExtResource( 20 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 64, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "DOOR_2A.png 4"
+4/texture = ExtResource( 16 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 64, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "FLOOR_1A.png 5"
+5/texture = ExtResource( 15 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 64, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "FLOOR_1B.png 6"
+6/texture = ExtResource( 17 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 64, 64 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "FLOOR_1C.png 7"
+7/texture = ExtResource( 13 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 64, 64 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "LAB_1A.png 8"
+8/texture = ExtResource( 12 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 64, 64 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "LAB_1B.png 9"
+9/texture = ExtResource( 14 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 0, 64, 64 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "LAB_1C.png 10"
+10/texture = ExtResource( 10 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 64, 64 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "LAB_2A.png 11"
+11/texture = ExtResource( 11 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 64, 64 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "LAB_2B.png 12"
+12/texture = ExtResource( 6 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 0, 64, 64 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "LAB_2C.png 13"
+13/texture = ExtResource( 4 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 64, 64 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "LAB_3A.png 14"
+14/texture = ExtResource( 2 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 64, 64 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "LAB_3B.png 15"
+15/texture = ExtResource( 7 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 64, 64 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "LAB_4A.png 16"
+16/texture = ExtResource( 3 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 0, 64, 64 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "LAB_4B.png 17"
+17/texture = ExtResource( 8 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 0, 0, 64, 64 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "LAB_5A.png 18"
+18/texture = ExtResource( 5 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 0, 0, 64, 64 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "LAB_5B.png 19"
+19/texture = ExtResource( 1 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 0, 0, 64, 64 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Dude:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 53, 554 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 55, 544 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BadDude:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 295, 549 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("DudeFace:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 253, 464 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("WolfFace:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 414, 505 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("NaniEyes:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 359, 672 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("NaniEyes:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("NaniEyes/Lazer2:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.101042, 0.140741 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("NaniEyes/Lazer1:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.101042, 0.140741 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Explosions/AnimatedSprite:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Explosions/AnimatedSprite2:playing")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Explosions/AnimatedSprite3:frame")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Explosions/AnimatedSprite3:playing")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Explosions/AnimatedSprite2:frame")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Explosions/AnimatedSprite:frame")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("DudeFace:rotation_degrees")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Explosions/AudioStreamPlayer:playing")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Explosions/AudioStreamPlayer2:playing")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Explosions/AudioStreamPlayer3:playing")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Sprite:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 172, 470 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath(".:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "dialogue"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 262, 535 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BadDude:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 371, 529 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("DudeFace:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 227, 551 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("WolfFace:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 299, 550 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Dude:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 53, 554 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Camera2D:zoom")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ) ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "exit"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "jemedeplace"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Dude:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 53, 554 ), Vector2( 53, 558 ), Vector2( 250, 558 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ), Vector2( 0.08, 0.08 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 55, 544 ), Vector2( 56, 543 ), Vector2( 275, 543 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BadDude:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 295, 549 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "nani"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("NaniEyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 414, 498 ), Vector2( 300, 544 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NaniEyes:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2, 2.1, 3.2, 3.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 288, 548 ), Vector2( 288, 548 ), Vector2( 239, 548 ), Vector2( 239, 548 ), Vector2( 262, 535 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Camera2D:zoom")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2, 3.2, 3.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.06, 0.06 ), Vector2( 0.06, 0.06 ), Vector2( 0.06, 0.06 ), Vector2( 0.1, 0.1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("NaniEyes/Lazer2:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4.5, 4.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 0.141 ), Vector2( 1e-05, 0.141 ), Vector2( 0.101042, 0.140741 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("NaniEyes/Lazer1:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 4.5, 4.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 0.141 ), Vector2( 1e-05, 0.141 ), Vector2( 0.101042, 0.140741 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Explosions/AnimatedSprite:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 5.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Explosions/AnimatedSprite2:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 5.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Explosions/AnimatedSprite3:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Explosions/AnimatedSprite3:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 5.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Explosions/AnimatedSprite2:frame")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Explosions/AnimatedSprite:frame")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("DudeFace:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 6.7, 7.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 227, 551 ), Vector2( 159, 572 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("DudeFace:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 6.7, 7.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -135.0 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Explosions/AudioStreamPlayer:playing")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 5.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Explosions/AudioStreamPlayer2:playing")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 5.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Explosions/AudioStreamPlayer3:playing")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Sprite:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 5.1, 6.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 172, 470 ), Vector2( 172, 470 ), Vector2( 373, 591 ) ]
+}
+
+[sub_resource type="DynamicFont" id=5]
+size = 24
+font_data = ExtResource( 25 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 30 )
+region = Rect2( 1600, 0, 200, 282 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 30 )
+region = Rect2( 1800, 0, 200, 282 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 30 )
+region = Rect2( 2000, 0, 200, 282 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 30 )
+region = Rect2( 2200, 0, 200, 282 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 30 )
+region = Rect2( 2400, 0, 200, 282 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 30 )
+region = Rect2( 2600, 0, 200, 282 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 30 )
+region = Rect2( 2800, 0, 200, 282 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 30 )
+region = Rect2( 3000, 0, 200, 282 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 30 )
+region = Rect2( 3200, 0, 200, 282 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 30 )
+region = Rect2( 0, 0, 200, 282 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 30 )
+region = Rect2( 200, 0, 200, 282 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 30 )
+region = Rect2( 400, 0, 200, 282 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 30 )
+region = Rect2( 600, 0, 200, 282 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 30 )
+region = Rect2( 800, 0, 200, 282 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 30 )
+region = Rect2( 1000, 0, 200, 282 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 30 )
+region = Rect2( 1200, 0, 200, 282 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 30 )
+region = Rect2( 1400, 0, 200, 282 )
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ ExtResource( 31 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), ExtResource( 31 ) ],
+"loop": false,
+"name": "default",
+"speed": 24.0
+} ]
+
+[node name="Cinematic" type="TileMap"]
+tile_set = SubResource( 1 )
+format = 1
+tile_data = PoolIntArray( 65534, 5, 0, 65535, 5, 0, 0, 5, 0, 1, 5, 0, 2, 7, 0, 3, 5, 0, 4, 5, 0, 5, 5, 0, 6, 5, 0, 7, 5, 0, 8, 5, 0, 9, 5, 0, 10, 5, 0, 11, 5, 0, 12, 5, 0, 13, 5, 0, 14, 5, 0, 15, 5, 0, 16, 5, 0, 17, 5, 0, 18, 5, 0, 19, 5, 0, 131070, 5, 0, 131071, 5, 0, 65536, 5, 0, 65537, 5, 0, 65538, 7, 0, 65539, 5, 0, 65540, 5, 0, 65541, 5, 0, 65542, 7, 0, 65543, 5, 0, 65544, 5, 0, 65545, 5, 0, 65546, 5, 0, 65547, 5, 0, 65548, 5, 0, 65549, 5, 0, 65550, 5, 0, 65551, 5, 0, 65552, 5, 0, 65553, 5, 0, 65554, 5, 0, 65555, 5, 0, 196606, 5, 0, 196607, 5, 0, 131072, 5, 0, 131073, 5, 0, 131074, 5, 0, 131075, 5, 0, 131076, 5, 0, 131077, 5, 0, 131078, 5, 0, 131079, 5, 0, 131080, 5, 0, 131081, 5, 0, 131082, 5, 0, 131083, 5, 0, 131084, 5, 0, 131085, 5, 0, 131086, 5, 0, 131087, 7, 0, 131088, 5, 0, 131089, 5, 0, 131090, 5, 0, 131091, 5, 0, 262142, 5, 0, 262143, 5, 0, 196608, 5, 0, 196609, 5, 0, 196610, 5, 0, 196611, 5, 0, 196612, 5, 0, 196613, 5, 0, 196614, 5, 0, 196615, 5, 0, 196616, 5, 0, 196617, 5, 0, 196618, 7, 0, 196619, 5, 0, 196620, 5, 0, 196621, 5, 0, 196622, 5, 0, 196623, 5, 0, 196624, 5, 0, 196625, 5, 0, 196626, 5, 0, 196627, 5, 0, 327678, 5, 0, 327679, 5, 0, 262144, 5, 0, 262145, 7, 0, 262146, 5, 0, 262147, 5, 0, 262148, 5, 0, 262149, 7, 0, 262150, 5, 0, 262151, 5, 0, 262152, 5, 0, 262153, 5, 0, 262154, 5, 0, 262155, 5, 0, 262156, 5, 0, 262157, 5, 0, 262158, 5, 0, 262159, 5, 0, 262160, 5, 0, 262161, 5, 0, 262162, 5, 0, 262163, 5, 0, 393214, 5, 0, 393215, 5, 0, 327680, 5, 0, 327681, 5, 0, 327682, 5, 0, 327683, 5, 0, 327684, 5, 0, 327685, 5, 0, 327686, 5, 0, 327687, 5, 0, 327688, 5, 0, 327689, 5, 0, 327690, 5, 0, 327691, 5, 0, 327692, 5, 0, 327693, 5, 0, 327694, 5, 0, 327695, 5, 0, 327696, 5, 0, 327697, 5, 0, 327698, 5, 0, 327699, 5, 0, 458750, 5, 0, 458751, 5, 0, 393216, 5, 0, 393217, 5, 0, 393218, 5, 0, 393219, 5, 0, 393220, 7, 0, 393221, 5, 0, 393222, 5, 0, 393223, 5, 0, 393224, 5, 0, 393225, 5, 0, 393226, 5, 0, 393227, 5, 0, 393228, 5, 0, 393229, 5, 0, 393230, 5, 0, 393231, 5, 0, 393232, 5, 0, 393233, 5, 0, 393234, 5, 0, 393235, 5, 0, 524286, 5, 0, 524287, 5, 0, 458752, 4, 0, 458753, 4, 0, 458754, 4, 0, 458755, 4, 0, 458756, 4, 0, 458757, 3, 0, 458758, 1, 0, 458759, 4, 0, 458760, 1, 0, 458761, 3, 0, 458762, 2, 0, 458763, 4, 0, 458764, 4, 0, 458765, 4, 0, 458766, 4, 0, 458767, 4, 0, 458768, 5, 0, 458769, 5, 0, 458770, 5, 0, 458771, 5, 0, 589822, 5, 0, 589823, 5, 0, 524288, 10, 0, 524289, 8, 0, 524290, 16, 0, 524291, 12, 0, 524292, 11, 0, 524293, 10, 0, 524294, 9, 0, 524295, 17, 0, 524296, 8, 0, 524297, 8, 0, 524298, 12, 0, 524299, 10, 0, 524300, 8, 0, 524301, 9, 0, 524302, 8, 0, 524303, 10, 0, 524304, 5, 0, 524305, 5, 0, 524306, 5, 0, 524307, 5, 0, 655358, 5, 0, 655359, 5, 0, 589824, 5, 0, 589825, 5, 0, 589826, 5, 0, 589827, 5, 0, 589828, 5, 0, 589829, 5, 0, 589830, 5, 0, 589831, 5, 0, 589832, 5, 0, 589833, 5, 0, 589834, 5, 0, 589835, 5, 0, 589836, 5, 0, 589837, 5, 0, 589838, 7, 0, 589839, 5, 0, 589840, 5, 0, 589841, 5, 0, 589842, 5, 0, 589843, 5, 0 )
+script = ExtResource( 22 )
+
+[node name="Dude" type="Sprite" parent="."]
+position = Vector2( 53, 554 )
+texture = ExtResource( 9 )
+region_enabled = true
+region_rect = Rect2( 0, 36, 32, 40 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 55, 544 )
+current = true
+zoom = Vector2( 0.1, 0.1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+anims/dialogue = SubResource( 4 )
+anims/exit = SubResource( 25 )
+anims/jemedeplace = SubResource( 3 )
+anims/nani = SubResource( 6 )
+
+[node name="BadDude" type="Sprite" parent="."]
+position = Vector2( 295, 549 )
+scale = Vector2( 0.884615, 0.903226 )
+texture = ExtResource( 23 )
+
+[node name="DudeFace" type="Sprite" parent="."]
+position = Vector2( 253, 464 )
+texture = ExtResource( 9 )
+region_enabled = true
+region_rect = Rect2( 40, 40, 40, 31 )
+
+[node name="WolfFace" type="Sprite" parent="."]
+position = Vector2( 414, 505 )
+texture = ExtResource( 24 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 222.0
+margin_top = 512.0
+margin_right = 607.0
+margin_bottom = 662.0
+rect_scale = Vector2( 0.2, 0.2 )
+custom_fonts/font = SubResource( 5 )
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Boup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 26 )
+
+[node name="Explosions" type="Node2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Explosions"]
+position = Vector2( 217, 547 )
+scale = Vector2( 0.15, 0.152482 )
+frames = SubResource( 24 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Explosions"]
+position = Vector2( 229, 552 )
+scale = Vector2( 0.15, 0.152482 )
+frames = SubResource( 24 )
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="Explosions"]
+position = Vector2( 233, 561 )
+scale = Vector2( 0.15, 0.152482 )
+frames = SubResource( 24 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Explosions"]
+stream = ExtResource( 32 )
+volume_db = 10.0
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Explosions"]
+stream = ExtResource( 32 )
+volume_db = 10.0
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Explosions"]
+stream = ExtResource( 32 )
+volume_db = 10.0
+
+[node name="NaniEyes" type="Node2D" parent="."]
+position = Vector2( 359, 672 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="NaniEyes"]
+position = Vector2( -5, 0 )
+rotation = -0.187919
+scale = Vector2( 0.0102213, 0.0135417 )
+texture = ExtResource( 27 )
+
+[node name="Sprite2" type="Sprite" parent="NaniEyes"]
+position = Vector2( 4, 2 )
+rotation = -0.22146
+scale = Vector2( 0.0102213, 0.0135417 )
+texture = ExtResource( 27 )
+
+[node name="Lazer1" type="Sprite" parent="NaniEyes"]
+position = Vector2( -1, -2 )
+rotation = 2.98451
+scale = Vector2( 0.101042, 0.140741 )
+texture = ExtResource( 29 )
+centered = false
+offset = Vector2( 0, -550 )
+region_enabled = true
+region_rect = Rect2( 320, 0, 1900, 1080 )
+region_filter_clip = true
+
+[node name="Lazer2" type="Sprite" parent="NaniEyes"]
+position = Vector2( 8, 0 )
+rotation = 2.90597
+scale = Vector2( 0.101042, 0.140741 )
+texture = ExtResource( 29 )
+centered = false
+offset = Vector2( 0, -550 )
+region_enabled = true
+region_rect = Rect2( 320, 0, 1900, 1080 )
+region_filter_clip = true
+
+[node name="nani" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
+volume_db = 10.0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 172, 470 )
+rotation = 0.509778
+scale = Vector2( 0.0925324, 0.108696 )
+texture = ExtResource( 33 )
