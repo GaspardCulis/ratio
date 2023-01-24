@@ -31,7 +31,9 @@ func _input(event):
 
 func _on_Area2D_body_entered(body):
 	isPlayerInside = true
+	$Sprite.visible = true
 
 
 func _on_Area2D_body_exited(body):
 	isPlayerInside = false
+	$Sprite.visible = false
