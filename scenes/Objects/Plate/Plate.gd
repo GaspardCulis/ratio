@@ -28,6 +28,7 @@ func activate():
 		$AudioStreamPlayer2D.play()
 		$CPUParticles2D.restart()
 		emit_signal("activated", self.index)
+		Hud.set_music_tile_pressed(MLG.tilesCounter)
 		
 
 
