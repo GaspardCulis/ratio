@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://res/PlayerAnimatedSprite.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://scenes/Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Player/light.tres" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=63]
 extents = Vector2( 5, 12.5 )
@@ -26,3 +27,9 @@ offset = Vector2( 10, 0 )
 current = true
 process_mode = 0
 smoothing_enabled = true
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 0, -13.469 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 3 )
+energy = 0.5
