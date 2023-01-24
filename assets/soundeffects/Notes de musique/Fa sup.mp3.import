@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Fa sup.mp3-b3ab3906d67f0f5e4a78d2f98a3ca5fa.mp3str"
+
+[deps]
+
+source_file="res://assets/soundeffects/Notes de musique/Fa sup.mp3"
+dest_files=[ "res://.import/Fa sup.mp3-b3ab3906d67f0f5e4a78d2f98a3ca5fa.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

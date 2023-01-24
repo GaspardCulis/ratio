@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Si bémol.mp3-1156cfebc22490e8d60e552995a20959.mp3str"
+
+[deps]
+
+source_file="res://assets/soundeffects/Notes de musique/Si bémol.mp3"
+dest_files=[ "res://.import/Si bémol.mp3-1156cfebc22490e8d60e552995a20959.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
