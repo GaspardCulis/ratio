@@ -12,4 +12,4 @@ dest_files=[ "res://.import/Excitement audio.mp3-07a0637dca442efb6ec68e6e0d5f73f
 [params]
 
 loop=true
-loop_offset=0
+loop_offset=1.2
