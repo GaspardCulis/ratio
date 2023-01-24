@@ -93,7 +93,7 @@ func _physics_process(delta):
 		else:
 			set_state(animationStates.IDLE)
 		
-	if player and self.global_position.distance_to(player.global_position) < 1500 :
+	if player and self.global_position.distance_to(player.global_position) < 8500 :
 		currentAttackState = attackState.ATTACK
 	else:
 		currentAttackState = attackState.CHILL
@@ -125,3 +125,8 @@ func set_state(state):
 		AnimationSprite.frame = 0
 	AnimationSprite.animation = animationNames[state]
 	currentState = state
+
+
+func _on_HagraZone_body_entered(body: PhysicsBody2D):
+	if body.has_method("kill"):
+		body.kill()
