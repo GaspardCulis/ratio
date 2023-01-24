@@ -1,7 +1,7 @@
 extends  "res://src/abstract/AbstractLevel.gd"
-#extends TileMap
 
 var count = 0
+var isWatchRetrieved = false
 
 func _ready() :
 	for i in $Controller.get_children() :
@@ -15,7 +15,8 @@ func RetrieveAllFragments(index: int) :
 		Hud.show_or_increment_counter()
 		count = count + 1
 	
-	if (count == 5) :
+	if (count == 5 and !isWatchRetrieved) :
+		isWatchRetrieved = true
 		Hud.close_counter_overlay()
 		Hud.show_and_animate_watch()
 		
