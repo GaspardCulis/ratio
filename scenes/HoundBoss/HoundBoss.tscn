@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://assets/spritesheets/hound/hell-hound-idle.png" type="Texture" id=1]
 [ext_resource path="res://assets/spritesheets/hound/hell-hound-walk.png" type="Texture" id=2]
@@ -151,6 +151,9 @@ extents = Vector2( 8, 8 )
 [sub_resource type="CircleShape2D" id=32]
 radius = 2.0
 
+[sub_resource type="RectangleShape2D" id=33]
+extents = Vector2( 12, 8 )
+
 [node name="HoundBoss" type="KinematicBody2D"]
 collision_layer = 2
 script = ExtResource( 5 )
@@ -159,7 +162,7 @@ script = ExtResource( 5 )
 position = Vector2( 0, -16 )
 frames = SubResource( 1 )
 animation = "walk"
-frame = 4
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -193,4 +196,11 @@ position = Vector2( -8, -6 )
 enabled = true
 cast_to = Vector2( -5, 0 )
 
+[node name="HagraZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HagraZone"]
+position = Vector2( 0, -8 )
+shape = SubResource( 33 )
+
 [connection signal="body_entered" from="Inputs/FrontCollision" to="." method="_on_FrontCollision_body_entered"]
+[connection signal="body_entered" from="HagraZone" to="." method="_on_HagraZone_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Levels/Music level/MusicLevel.gd" type="Script" id=2]
@@ -29,10 +29,21 @@ __meta__ = {
 }
 
 [node name="Node2D" type="Node2D" parent="."]
-script = ExtResource( 8 )
+script = ExtResource( 1 )
+portePath = NodePath("../Node2D2")
 
-[node name="AnimatedSprite" parent="Node2D" instance=ExtResource( 3 )]
-position = Vector2( 423.5, 72 )
+[node name="AnimatedSprite3" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 469.5, 72 )
+index = 4
+sound = ExtResource( 6 )
+
+[node name="AnimatedSprite5" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 299.5, 72 )
+sound = ExtResource( 4 )
+
+[node name="AnimatedSprite2" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 385.5, 72 )
+index = 2
 sound = ExtResource( 7 )
 
 [node name="AnimatedSprite3" parent="Node2D" instance=ExtResource( 3 )]
@@ -53,3 +64,4 @@ sound = ExtResource( 6 )
 
 [node name="Node2D2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 198.5, 92.5 )
+controlerPath = NodePath("../Node2D")
