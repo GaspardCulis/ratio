@@ -15,20 +15,21 @@ func _ready():
 
 func on_tile_activate(index: int) :
 	MLG.tilesArray.append(index)
+	MLG.boolTilesArray[index] = true
+	MLG.tilesCounter = MLG.tilesCounter + 1
 	print(MLG.tilesArray)
-	var isAllActivated:bool = true
-	for i in self.get_children() :
-		isAllActivated = isAllActivated and (i.frame == 1)
-	
-	if (isAllActivated):
+	print(MLG.tilesCounter)
+	if (MLG.tilesCounter == 5):
 		if (MLG.tilesArray == [4, 1, 0, 2, 3]):
 			print("Validated")
 			porte.frame = 1
 		else:
-			MLG.tilesArray = []
 			yield(get_tree().create_timer(0.5), "timeout")
 			reset_tiles()
 			
 func reset_tiles() :
+	MLG.tilesArray = []
+	MLG.tilesCounter = 0
+	MLG.boolTilesArray = [false, false, false, false, false]
 	for i in self.get_children() :
 				i.frame = 0
