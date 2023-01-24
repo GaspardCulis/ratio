@@ -11,6 +11,11 @@ enum animationStates {
 	WALK = 3
 }
 
+enum attackState {
+	CHILL = 0,
+	ATTACK = 1
+}
+
 var currentState = 0
 var lookingAt = 1
 var velocity := Vector2.ZERO
