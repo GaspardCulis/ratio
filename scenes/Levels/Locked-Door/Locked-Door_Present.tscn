@@ -3,7 +3,8 @@
 [ext_resource path="res://scenes/Levels/Locked-Door/Locked-Door_Present.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=4]
-[ext_resource path="res://scenes/Objects/Cables/Cables-Challenge.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Objects/Cables/CablesChallenge.tscn" type="PackedScene" id=6]
+
 
 [node name="TileMap" type="TileMap"]
 modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )

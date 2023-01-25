@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://src/abstract/AbstractLevel.gd" type="Script" id=2]
 [ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Objects/Door/Door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Objects/history/HistoryInformations.tscn" type="PackedScene" id=5]
 
 [node name="Level" type="TileMap"]
 tile_set = ExtResource( 1 )
@@ -20,5 +21,26 @@ position = Vector2( 226, 328 )
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2224, 0 )
+
+[node name="HistoryInformations" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2033, 358 )
+
+[node name="HistoryInformations2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2068, 356 )
+
+[node name="HistoryInformations3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2225, 332 )
+
+[node name="HistoryInformations4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2111, 180 )
+
+[node name="HistoryInformations5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2190, 161 )
+
+[node name="HistoryInformations6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2017, 82 )
+
+[node name="HistoryInformations7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2113, 36 )
 
 [editable path="Background"]
