@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Levels/Boss/BossLevel.gd" type="Script" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://scenes/HoundBoss/HoundBoss.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/soundtrack/Excitement audio.mp3" type="AudioStream" id=5]
 [ext_resource path="res://scenes/Objects/Door/Door.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/Levels/MusicLevel/MusicScene_present.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/Levels/Raining/AcidRain.tscn" type="PackedScene" id=8]
 
 [node name="TileMap" type="TileMap"]
@@ -23,7 +22,6 @@ PastTilesPath = NodePath("Past")
 
 [node name="Door" parent="." instance=ExtResource( 6 )]
 position = Vector2( 945, 256 )
-nextLevel = ExtResource( 7 )
 
 [node name="WorldSpawn" type="Position2D" parent="."]
 position = Vector2( 67.5, 206 )
