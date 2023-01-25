@@ -23,10 +23,11 @@ func on_tile_activate(index: int) :
 	if (MLG.tilesCounter == 5):
 		if (MLG.tilesArray == [4, 1, 0, 2, 3]):
 			print("Validated")
-			porte.frame = 1
+			porte.set_opened(true)
 		else:
 			yield(get_tree().create_timer(0.5), "timeout")
-			reset_tiles()
+			for c in get_tree().get_nodes_in_group("musicControler"):
+				c.reset_tiles()
 			
 func reset_tiles() :
 	Hud.reset_music_tiles_pressed()
@@ -34,4 +35,4 @@ func reset_tiles() :
 	MLG.tilesCounter = 0
 	MLG.boolTilesArray = [false, false, false, false, false]
 	for i in self.get_children() :
-				i.frame = 0
+		i.frame = 0

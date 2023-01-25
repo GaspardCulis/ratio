@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/Menus/menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/dynamicFont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://assets/themes/button_style.tres" type="Theme" id=3]
-[ext_resource path="res://assets/soundtrack/Main soundtrack.mp3" type="AudioStream" id=4]
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=5]
 [ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Menus/parallaxBackground.gd" type="Script" id=7]
@@ -107,10 +106,6 @@ margin_right = 533.0
 margin_bottom = 51.0
 theme = ExtResource( 3 )
 text = "Rescue: A Sister's Journey"
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 4 )
-autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_Options_pressed"]

@@ -2,7 +2,6 @@ extends Node2D
 
 var isPlayerInside = false
 export(NodePath) var controlerPath: NodePath
-onready var controler = get_node(controlerPath)
 
 
 # Declare member variables here. Examples:
@@ -25,7 +24,8 @@ func _input(event):
 		if (event is InputEventKey):
 			if (event.pressed and event.scancode == KEY_E):
 				self.frame = 1
-				controler.reset_tiles()
+				for c in get_tree().get_nodes_in_group("musicControler"):
+					c.reset_tiles()
 				$AudioStreamPlayer2D.play()
 				yield(get_tree().create_timer(2), "timeout")
 				self.frame = 0
