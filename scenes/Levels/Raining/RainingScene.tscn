@@ -24,7 +24,6 @@ __meta__ = {
 WorldSpawn = NodePath("WorldSpawn")
 PresentTilesPath = NodePath("PresentTiles")
 PastTilesPath = NodePath("PastTiles")
-currentDimension = 1
 
 [node name="Background" parent="." instance=ExtResource( 2 )]
 

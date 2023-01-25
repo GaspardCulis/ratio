@@ -4,8 +4,8 @@ export var portePath: NodePath
 onready var porte = get_node(portePath)
 
 func _ready():
-	$Door.connect("openOverlay", self, "open_overlay")
-	$Door.connect("closeOverlay", self, "close_overlay")
+	$Present/Door.connect("openOverlay", self, "open_overlay")
+	$Present/Door.connect("closeOverlay", self, "close_overlay")
 	
 	
 func open_overlay():
