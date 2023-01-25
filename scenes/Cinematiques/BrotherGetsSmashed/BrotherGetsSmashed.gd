@@ -7,10 +7,12 @@ extends TileMap
 func _ready():
 	Music.stop()
 	$FondNoirVoixOff.visible = true
+	$FondNoirVoixOff/Label.visible = true
 	$Camera2D2.current = true
 	$"Node2D/Intro-Alex".play()
 	yield(get_tree().create_timer(13.5), "timeout")
 	$Camera2D.current = true
+	$FondNoirVoixOff/Label.visible = false
 	$FondNoirVoixOff.visible = false
 	$AnimationPlayer.play("byebyelagadji")
 	yield(get_tree().create_timer(1.5), "timeout")
