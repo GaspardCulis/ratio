@@ -1,7 +1,6 @@
 extends "res://src/abstract/AbstractLevel.gd"
 
-export var portePath: NodePath
-onready var porte = get_node(portePath)
+onready var porte := $Door
 
 func _ready():
 	#yield(get_tree().create_timer(10),"timeout")
@@ -9,4 +8,4 @@ func _ready():
 	pass
 
 func _on_TileMap_boss_dead():
-	porte.frame = 1
+	porte.set_opened(true)

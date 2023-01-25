@@ -6,8 +6,11 @@ extends TileMap
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Music.stop()
+	$FondNoirVoixOff.visible = true
+	$Camera2D2.current = true
 	$"Node2D/Intro-Alex".play()
 	yield(get_tree().create_timer(13.5), "timeout")
+	$Camera2D.current = true
 	$FondNoirVoixOff.visible = false
 	$AnimationPlayer.play("byebyelagadji")
 	yield(get_tree().create_timer(1.5), "timeout")
@@ -23,9 +26,12 @@ func _ready():
 	yield($AnimationPlayer, "animation_finished")
 	yield(display_text("What are you up to Dr.B?\nI can see that the mutation experiment has worked ! You're looking sick... Can you hear me?"), "completed")
 	$Label.text = ""
+	$nani.play()
 	$AnimationPlayer.play("nani")
 	yield($AnimationPlayer, "animation_finished")
-	$AnimationPlayer.play("exit")
+	$FondNoirVoixOff.visible = true
+	$AnimationPlayer.play("final_dialog")
+	yield($AnimationPlayer, "animation_finished")
 	Global.change_scene("res://scenes/Levels/WatchFragments/WatchFragmentsScene.tscn")
 	
 

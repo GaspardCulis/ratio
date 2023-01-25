@@ -8,7 +8,8 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	Music.stop()
+	Music.play_music(Music.CREDITS)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

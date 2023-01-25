@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=2]
+[gd_scene load_steps=100 format=2]
 
 [ext_resource path="res://assets/texture/Labo/LAB_5B.png" type="Texture" id=1]
 [ext_resource path="res://assets/texture/Labo/LAB_3A.png" type="Texture" id=2]
@@ -40,6 +40,8 @@
 [ext_resource path="res://assets/soundeffects/Voice-Over/Inside-cinematic-2.mp3" type="AudioStream" id=38]
 [ext_resource path="res://assets/soundeffects/Voice-Over/Main-voice.mp3" type="AudioStream" id=39]
 [ext_resource path="res://scenes/Cinematiques/BrotherGetsSmashed/Node2D.gd" type="Script" id=40]
+[ext_resource path="res://assets/spritesheets/level/PocketWatchAnimation-Sheet.png" type="Texture" id=41]
+[ext_resource path="res://assets/soundeffects/nani.mp3" type="AudioStream" id=42]
 
 [sub_resource type="TileSet" id=1]
 0/name = "CONSOLE_1A.png 0"
@@ -637,6 +639,78 @@ tracks/25/keys = {
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
 }
+tracks/26/type = "value"
+tracks/26/path = NodePath("Camera2D2:current")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/27/type = "value"
+tracks/27/path = NodePath("Node2D/Main-voice:playing")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("FondNoirVoixOff/AnimatedSprite:frame")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/29/type = "value"
+tracks/29/path = NodePath("FondNoirVoixOff/AnimatedSprite:playing")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/30/type = "value"
+tracks/30/path = NodePath("FondNoirVoixOff/AnimatedSprite:animation")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "default" ]
+}
+tracks/31/type = "value"
+tracks/31/path = NodePath("FondNoirVoixOff/AnimatedSprite:modulate")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
 [sub_resource type="Animation" id=26]
 resource_name = "byebyelagadji"
@@ -767,6 +841,94 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "final_dialog"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D2:current")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("FondNoirVoixOff/Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node2D/Main-voice:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("FondNoirVoixOff/AnimatedSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 9, 15.3345 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("FondNoirVoixOff/AnimatedSprite:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 9, 9.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("FondNoirVoixOff/AnimatedSprite:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 9, 15.3345 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "default", "reverse" ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("FondNoirVoixOff/AnimatedSprite:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 15.4, 18.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -1174,6 +1336,128 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="AtlasTexture" id=30]
+flags = 4
+atlas = ExtResource( 31 )
+region = Rect2( 8, 8, 4, 4 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 41 )
+region = Rect2( 0, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 41 )
+region = Rect2( 50, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 41 )
+region = Rect2( 100, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 41 )
+region = Rect2( 150, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 41 )
+region = Rect2( 200, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 41 )
+region = Rect2( 250, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 41 )
+region = Rect2( 300, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 41 )
+region = Rect2( 350, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 41 )
+region = Rect2( 400, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 41 )
+region = Rect2( 450, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 41 )
+region = Rect2( 500, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 41 )
+region = Rect2( 550, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 41 )
+region = Rect2( 600, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 41 )
+region = Rect2( 600, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 41 )
+region = Rect2( 550, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 41 )
+region = Rect2( 450, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 41 )
+region = Rect2( 500, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 41 )
+region = Rect2( 400, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 41 )
+region = Rect2( 350, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 41 )
+region = Rect2( 300, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 41 )
+region = Rect2( 250, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 41 )
+region = Rect2( 200, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 41 )
+region = Rect2( 150, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 41 )
+region = Rect2( 100, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 41 )
+region = Rect2( 50, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 41 )
+region = Rect2( 0, 0, 50, 50 )
+
+[sub_resource type="SpriteFrames" id=44]
+animations = [ {
+"frames": [ SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ) ],
+"loop": false,
+"name": "reverse",
+"speed": 5.0
+} ]
+
 [node name="Cinematic" type="TileMap"]
 tile_set = SubResource( 1 )
 format = 1
@@ -1189,7 +1473,6 @@ region_rect = Rect2( 0, 36, 32, 40 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 55, 544 )
-current = true
 zoom = Vector2( 0.1, 0.1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -1197,6 +1480,7 @@ anims/RESET = SubResource( 2 )
 anims/byebyelagadji = SubResource( 26 )
 anims/dialogue = SubResource( 4 )
 anims/exit = SubResource( 25 )
+anims/final_dialog = SubResource( 29 )
 anims/jemedeplace = SubResource( 3 )
 anims/nani = SubResource( 6 )
 
@@ -1327,6 +1611,23 @@ position = Vector2( 190, 557 )
 scale = Vector2( 44.7813, 22.1875 )
 texture = ExtResource( 26 )
 
+[node name="Label" type="Label" parent="FondNoirVoixOff"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -3.0
+margin_top = -4.0
+margin_right = 17.0
+margin_bottom = 23.0
+rect_scale = Vector2( 0.2, 0.2 )
+custom_fonts/font = SubResource( 5 )
+align = 1
+valign = 1
+autowrap = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="FondNoirVoixOff"]
+position = Vector2( -1.04955, -1.30704 )
+scale = Vector2( 0.04, 0.08 )
+frames = SubResource( 44 )
+
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource( 40 )
 
@@ -1344,6 +1645,13 @@ stream = ExtResource( 38 )
 
 [node name="Main-voice" type="AudioStreamPlayer2D" parent="Node2D"]
 stream = ExtResource( 39 )
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+position = Vector2( 144, 526 )
+zoom = Vector2( 0.2, 0.2 )
+
+[node name="nani" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 42 )
 
 [connection signal="finished" from="Node2D/Intro-Alex" to="Node2D" method="_on_IntroAlex_finished"]
 [connection signal="finished" from="Node2D/Inside-cinematic-1" to="Node2D" method="_on_Insidecinematic1_finished"]
