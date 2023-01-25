@@ -20,7 +20,7 @@
 [ext_resource path="res://assets/spritesheets/level/Gerald's Keys/Keys/right-arrow-Key.png" type="Texture" id=18]
 [ext_resource path="res://assets/spritesheets/level/Gerald's Keys/Keys/Space-Key.png" type="Texture" id=19]
 [ext_resource path="res://assets/spritesheets/level/Gerald's Keys/Keys/Z-Key.png" type="Texture" id=20]
-[ext_resource path="res://scenes/Levels/CodeLevel/Code_present.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/Levels/CodeLevel/CodeLevel.tscn" type="PackedScene" id=21]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 9 )
@@ -140,5 +140,8 @@ text = "/"
 [node name="Door" parent="." instance=ExtResource( 11 )]
 position = Vector2( 2747.5, -192 )
 nextLevel = ExtResource( 21 )
+
+[node name="KeyHint" parent="Door" index="2"]
+visible = false
 
 [editable path="Door"]
