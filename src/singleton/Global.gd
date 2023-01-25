@@ -44,6 +44,10 @@ func change_scene(path: String):
 	tween2.kill()
 	sprite2.queue_free()
 	
+
+const PlayerType = preload("res://scenes/Player/Player.gd")
+func get_player() -> PlayerType:
+	return get_tree().get_nodes_in_group("player")[0]
 	
 	
 	
