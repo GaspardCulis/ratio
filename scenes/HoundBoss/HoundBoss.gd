@@ -1,9 +1,12 @@
 extends KinematicBody2D
 
+signal boss_dead
+
 export var MASS := 1500
 export var WALK_SPEED := 100
 export var JUMP_SPEED := 500
 export var HP := 100
+export var dead = false
 
 enum animationStates {
 	IDLE = 0,
@@ -142,3 +145,7 @@ func damage():
 	tween.stop()
 	tween.tween_property(self, "modulate", Color.white, 0.2)
 	tween.play()
+	
+d d	if (HP <= 0):
+		emit_signal("boss_dead")
+		self.queue_free()

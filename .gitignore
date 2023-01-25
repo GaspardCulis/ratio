@@ -6,6 +6,7 @@ assets/images/*.import
 assets/parallax/city_ruins/*.import
 assets/parallax/clouds/*.import
 assets/soundeffects/*.import
+assets/soundeffects/step/*.import
 assets/soundeffects/Notes de musique/*.import
 assets/soundtrack/*.import
 assets/spritesheets/*.import
