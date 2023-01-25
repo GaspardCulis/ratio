@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Levels/Sewer/Sewer.gd" type="Script" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://assets/texture/characters_32_24_16/potion/poção verde meio vazia.png" type="Texture" id=10]
 [ext_resource path="res://assets/texture/characters_32_24_16/potion/poção verde bem vazia.png" type="Texture" id=11]
 [ext_resource path="res://assets/spritesheets/level/labo.png" type="Texture" id=12]
+[ext_resource path="res://scenes/Levels/Boss/BossLevel.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 21.6667, 40.489 )
@@ -165,6 +166,7 @@ __meta__ = {
 [node name="Door" parent="." instance=ExtResource( 3 )]
 position = Vector2( 475, 240 )
 z_index = 0
+nextLevel = ExtResource( 13 )
 
 [node name="Blanchon" type="Sprite" parent="."]
 position = Vector2( 396.938, 220.563 )
@@ -212,7 +214,7 @@ zoom = Vector2( 0.15, 0.15 )
 position = Vector2( -1.22137, 20.3423 )
 frames = SubResource( 26 )
 animation = "full"
-frame = 5
+frame = 3
 playing = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Blanchon/BlanchonHd"]
