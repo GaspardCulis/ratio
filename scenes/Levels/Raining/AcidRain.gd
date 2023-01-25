@@ -12,6 +12,9 @@ func get_width() -> int:
 	return width
 
 const PlayerType := preload("res://scenes/Player/Player.gd")
+const BossType := preload("res://scenes/HoundBoss/HoundBoss.gd")
 func _on_Area2D_body_entered(body):
 	if body is PlayerType:
 		body.kill()
+	elif body is BossType:
+		body.damage()
