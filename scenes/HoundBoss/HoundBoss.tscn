@@ -154,7 +154,7 @@ radius = 2.0
 [sub_resource type="RectangleShape2D" id=33]
 extents = Vector2( 12, 8 )
 
-[node name="HoundBoss" type="KinematicBody2D"]
+[node name="HoundBoss" type="KinematicBody2D" groups=["boss"]]
 collision_layer = 2
 script = ExtResource( 5 )
 
@@ -162,7 +162,7 @@ script = ExtResource( 5 )
 position = Vector2( 0, -16 )
 frames = SubResource( 1 )
 animation = "walk"
-frame = 9
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

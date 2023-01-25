@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/stone6.ogg-6bb29bb6f351b94d93d0a1eda1d50883.oggstr"
+
+[deps]
+
+source_file="res://assets/soundeffects/step/stone6.ogg"
+dest_files=[ "res://.import/stone6.ogg-6bb29bb6f351b94d93d0a1eda1d50883.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

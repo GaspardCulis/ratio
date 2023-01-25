@@ -2,8 +2,6 @@ tool
 extends Area2D
 
 const Player = preload("res://scenes/Player/Player.gd")
-export(NodePath) var BarrierePath
-onready var Bariere = get_node(BarrierePath)
 
 var checkList = [false,false,false,false,false,false]
 var winnable = true
@@ -32,7 +30,7 @@ func setSymbolEnabled():
 	$Symbol3.disabled = (checkList[2] != false)
 	if(checkList[0] and checkList[1] and checkList[2]):
 		if(winnable):
-			Bariere.queue_free()
+			get_parent().get_node("Breakable-fence").queue_free()
 		else:
 			checkList = [false,false,false,false,false,false]
 	get_tree().get_nodes_in_group("player")[0].bouger = true

@@ -1,11 +1,12 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/themes/button_style.tres" type="Theme" id=1]
+[ext_resource path="res://assets/themes/button_style_black.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/Menus/credits.gd" type="Script" id=2]
 
 [node name="Credits" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -14,9 +15,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -255.0
-margin_top = -227.0
+margin_top = -282.0
 margin_right = 254.0
-margin_bottom = 225.0
+margin_bottom = 283.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 1 )
@@ -41,33 +42,40 @@ text = "Credits"
 [node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 40.0
 margin_right = 509.0
-margin_bottom = 412.0
+margin_bottom = 525.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer2"]
 margin_right = 509.0
-margin_bottom = 372.0
+margin_bottom = 485.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/VBoxContainer2/HBoxContainer"]
 margin_right = 509.0
-margin_bottom = 372.0
+margin_bottom = 485.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Jeu realise par l'equipe du BUT Informatique de Grenoble:
  - Jaufret Bourguet
  - Gaspard Culis
  - Muhamed Hodzic
  - Johaina Boudiaf
  - Samuel Billot
- - Milan Soragna"
+ - Milan Soragna
+
+Merci a:
+ - Jean-Pierre Chevallet
+ - Sophie Dupuy-Chessa
+ - Madison Odru"
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer"]
-margin_top = 416.0
+margin_top = 529.0
 margin_right = 509.0
-margin_bottom = 452.0
+margin_bottom = 565.0
 alignment = 1
 
 [node name="Button" type="Button" parent="VBoxContainer/VBoxContainer3"]

@@ -15,7 +15,7 @@ var penetration := false
 func _on_Area2D_body_entered(body):
 	if body is Player:
 		penetration = true
-		$KeyHint.visible = true
+		$KeyHint.visible = get_opened()
 
 
 func _on_Door_body_exited(body):
@@ -27,7 +27,7 @@ func _input(event):
 	if penetration and get_opened() and Input.is_action_just_pressed("action"):
 		get_node("/root/Global").isOnMusic = false
 		Global.change_scene(nextLevel.resource_path)
-	elif penetration and Input.is_action_just_pressed("action") :
+	elif penetration and Input.is_action_just_pressed("action") and get_opened():
 		emit_signal("openOverlay")
 
 func set_opened(opened: bool):
