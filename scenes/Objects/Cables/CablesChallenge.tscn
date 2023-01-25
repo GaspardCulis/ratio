@@ -4,7 +4,6 @@
 [ext_resource path="res://assets/texture/Labo/DOOR_2A.png" type="Texture" id=2]
 [ext_resource path="res://assets/spritesheets/level/Gerald's Keys/Keys/E-Key.png" type="Texture" id=3]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16.5, 17 )
 

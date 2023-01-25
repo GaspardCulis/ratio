@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Inside-cinematic-1.mp3-4c815f0ba7d6053a7a27be141f2c55bf.mp3str"
+
+[deps]
+
+source_file="res://assets/soundeffects/Voice-Over/Inside-cinematic-1.mp3"
+dest_files=[ "res://.import/Inside-cinematic-1.mp3-4c815f0ba7d6053a7a27be141f2c55bf.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

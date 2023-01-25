@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/abstract/AbstractLevel.gd" type="Script" id=1]
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Objects/Door/Door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/spritesheets/level/textures-1.png" type="Texture" id=6]
+[ext_resource path="res://scenes/Levels/MusicLevel/MusicScene.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 28, 58.5 )
@@ -33,6 +34,7 @@ tile_data = PoolIntArray( 983143, 27, 0, 983144, 30, 0, 983145, 30, 0, 983146, 3
 
 [node name="CableChallenge" parent="Present" instance=ExtResource( 3 )]
 position = Vector2( 1776, 360 )
+BarrierePath = NodePath("")
 
 [node name="Door" parent="Present" instance=ExtResource( 5 )]
 position = Vector2( 1873, 383 )
@@ -58,4 +60,16 @@ format = 1
 
 [node name="Background" parent="." instance=ExtResource( 4 )]
 
+[node name="Door" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1294, 351.5 )
+nextLevel = ExtResource( 7 )
+opened = true
+
+[node name="Overlay" parent="Door" index="0"]
+frame = 1
+
+[node name="KeyHint" parent="Door" index="2"]
+visible = false
+
 [editable path="Present/CableChallenge"]
+[editable path="Door"]

@@ -1,10 +1,27 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://scenes/Levels/Jump/jump.gd" type="Script" id=3]
 [ext_resource path="res://scenes/Objects/Door/Door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Levels/Sewer/Sewer_present.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/spritesheets/level/door.png" type="Texture" id=6]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 6 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="TileMap2" type="TileMap"]
 scale = Vector2( 2, 2 )
@@ -41,3 +58,9 @@ tile_data = PoolIntArray( -5635961, 0, 0, -5635960, 0, 1, -5635959, 0, 1, -56359
 position = Vector2( 3057, -1424.5 )
 nextLevel = ExtResource( 5 )
 opened = true
+
+[node name="Animation_Door" type="AnimatedSprite" parent="."]
+position = Vector2( 112.5, 220.5 )
+scale = Vector2( 1.30469, 1.30469 )
+frames = SubResource( 3 )
+frame = 1

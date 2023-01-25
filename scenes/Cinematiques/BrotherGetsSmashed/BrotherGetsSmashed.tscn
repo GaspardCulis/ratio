@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://assets/texture/Labo/LAB_5B.png" type="Texture" id=1]
 [ext_resource path="res://assets/texture/Labo/LAB_3A.png" type="Texture" id=2]
@@ -25,9 +25,8 @@
 [ext_resource path="res://assets/texture/characters_32_24_16/werewolf_body.png" type="Texture" id=23]
 [ext_resource path="res://assets/texture/characters_32_24_16/werewolf_face.png" type="Texture" id=24]
 [ext_resource path="res://assets/fonts/GridkingRegular-77vw.ttf" type="DynamicFontData" id=25]
-[ext_resource path="res://assets/soundeffects/boup.wav" type="AudioStream" id=26]
+[ext_resource path="res://assets/soundeffects/Voice-Over/Inside-cinematic-1.mp3" type="AudioStream" id=26]
 [ext_resource path="res://assets/texture/characters_32_24_16/nani.png" type="Texture" id=27]
-[ext_resource path="res://assets/soundeffects/nani.mp3" type="AudioStream" id=28]
 [ext_resource path="res://assets/texture/characters_32_24_16/lazer.png" type="Texture" id=29]
 [ext_resource path="res://assets/texture/characters_32_24_16/explosion.png" type="Texture" id=30]
 [ext_resource path="res://assets/texture/void.png" type="Texture" id=31]
@@ -35,7 +34,6 @@
 [ext_resource path="res://assets/texture/characters_32_24_16/ratioed.png" type="Texture" id=33]
 [ext_resource path="res://assets/spritesheets/player/idle.png" type="Texture" id=34]
 [ext_resource path="res://assets/texture/characters_32_24_16/pixelglasses.png" type="Texture" id=35]
-[ext_resource path="res://assets/spritesheets/level/black.png" type="Texture" id=36]
 
 [sub_resource type="TileSet" id=1]
 0/name = "CONSOLE_1A.png 0"
@@ -1236,7 +1234,6 @@ valign = 1
 autowrap = true
 
 [node name="Boup" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 26 )
 volume_db = -24.0
 
 [node name="Explosions" type="Node2D" parent="."]
@@ -1309,10 +1306,6 @@ region_enabled = true
 region_rect = Rect2( 320, 0, 1900, 1080 )
 region_filter_clip = true
 
-[node name="nani" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 28 )
-volume_db = 10.0
-
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 172, 470 )
 rotation = 0.509778
@@ -1322,12 +1315,3 @@ texture = ExtResource( 33 )
 [node name="Gadji" type="AnimatedSprite" parent="."]
 position = Vector2( 37, 551 )
 frames = SubResource( 28 )
-
-[node name="FondNoirVoixOff" type="Sprite" parent="."]
-modulate = Color( 0.00392157, 0, 0, 1 )
-self_modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 55, 777 )
-scale = Vector2( 14, -15 )
-texture = ExtResource( 36 )
-offset = Vector2( -0.5, -0.647059 )
-region_rect = Rect2( 0, 0, 100, 100 )

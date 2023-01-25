@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://scenes/Levels/WatchFragments/WatchFragmentsLevel.gd" type="Script" id=1]
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://assets/spritesheets/level/Gerald's Keys/Keys/Space-Key.png" type="Texture" id=19]
 [ext_resource path="res://assets/spritesheets/level/Gerald's Keys/Keys/Z-Key.png" type="Texture" id=20]
 [ext_resource path="res://scenes/Levels/CodeLevel/CodeLevel.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=22]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 9 )
@@ -150,9 +151,8 @@ scale = Vector2( 1.23697, 1.47504 )
 [node name="CollisionShape2D" parent="Door" index="1"]
 position = Vector2( -976.459, 58.6006 )
 
-[node name="KeyHint" parent="Door" index="2"]
-visible = false
-
 [node name="Sprite" type="Sprite" parent="."]
+
+[node name="Background" parent="." instance=ExtResource( 22 )]
 
 [editable path="Door"]
