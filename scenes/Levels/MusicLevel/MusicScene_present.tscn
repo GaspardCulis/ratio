@@ -71,4 +71,7 @@ frames = SubResource( 6 )
 position = Vector2( 630, 32 )
 nextLevel = ExtResource( 6 )
 
+[node name="KeyHint" parent="Door" index="2"]
+visible = false
+
 [editable path="Door"]

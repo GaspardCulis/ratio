@@ -20,8 +20,4 @@ func RetrieveAllFragments(index: int) :
 		Hud.close_counter_overlay()
 		Hud.show_and_animate_watch()
 		
-#rajouter petit son a chaque fois que morceau recupere
-#rajouter porte fin niveau
-#rajouter instructions lorsque perso devant sign ?
-#rajouter contour jaune autour des fragments
-#rajouter compteur de fragments dès que premier ramassé
+#rajouter instructions lorsque perso devant sign 
