@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/Levels/Raining/RainingScene.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=2]
@@ -7,6 +7,23 @@
 [ext_resource path="res://scenes/Levels/Jump/Jump_ALL.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/Objects/Checkpoint/Checkpoint.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Levels/Raining/AcidRain.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/spritesheets/level/door.png" type="Texture" id=8]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 8 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="TileMap" type="TileMap"]
 scale = Vector2( 2, 2 )
@@ -48,6 +65,9 @@ opened = true
 
 [node name="Overlay" parent="Door" index="0"]
 frame = 1
+
+[node name="KeyHint" parent="Door" index="2"]
+visible = false
 
 [node name="PastTiles" type="TileMap" parent="."]
 tile_set = ExtResource( 4 )
@@ -152,5 +172,10 @@ width = 80
 position = Vector2( 4312, -255 )
 emission_rect_extents = Vector2( 24, 1 )
 width = 24
+
+[node name="AnimatedDoor" type="AnimatedSprite" parent="."]
+position = Vector2( 106, 81.5 )
+frames = SubResource( 3 )
+frame = 1
 
 [editable path="Door"]

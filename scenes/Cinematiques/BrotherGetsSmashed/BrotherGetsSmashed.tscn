@@ -1612,13 +1612,17 @@ scale = Vector2( 44.7813, 22.1875 )
 texture = ExtResource( 26 )
 
 [node name="Label" type="Label" parent="FondNoirVoixOff"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = -3.0
-margin_top = -4.0
-margin_right = 17.0
-margin_bottom = 23.0
-rect_scale = Vector2( 0.2, 0.2 )
+visible = false
+margin_left = -2.99232
+margin_top = -3.15503
+margin_right = 484.008
+margin_bottom = 374.845
+rect_scale = Vector2( 0.008, 0.01 )
+custom_constants/line_spacing = 12
 custom_fonts/font = SubResource( 5 )
+text = "There was a young boy named Alex. He worked as a lab assistant for a brilliant but eccentric scientist named Dr.B. The doctor was always conducting experiments in the hopes of unlocking the secrets of the universe, but Alex never suspected that one of these experiments would lead to his death.
+Alex had a sister, Sara, to whom he was really close. 
+"
 align = 1
 valign = 1
 autowrap = true

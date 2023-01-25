@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/Levels/MusicLevel/MusicLevel.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Levels/MusicLevel/MusicController.gd" type="Script" id=2]
@@ -12,6 +12,23 @@
 [ext_resource path="res://assets/soundeffects/Notes de musique/Fa.mp3" type="AudioStream" id=10]
 [ext_resource path="res://assets/soundeffects/Notes de musique/Si bémol.mp3" type="AudioStream" id=11]
 [ext_resource path="res://scenes/Levels/Raining/RainingScene.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/spritesheets/level/door.png" type="Texture" id=13]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 13 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="TileMap2" type="TileMap"]
 scale = Vector2( 2, 2 )
@@ -26,7 +43,7 @@ PresentTilesPath = NodePath("Present")
 PastTilesPath = NodePath("Past")
 
 [node name="WorldSpawn" type="Position2D" parent="."]
-position = Vector2( 64, -153 )
+position = Vector2( 138, -35.5 )
 __meta__ = {
 "_gizmo_extents_": 20.0
 }
@@ -59,6 +76,9 @@ sound = ExtResource( 11 )
 position = Vector2( 630, 32 )
 nextLevel = ExtResource( 12 )
 
+[node name="KeyHint" parent="Present/Door" index="2"]
+visible = false
+
 [node name="Past" type="TileMap" parent="."]
 format = 1
 
@@ -75,5 +95,11 @@ sound = ExtResource( 4 )
 position = Vector2( 343.5, 72 )
 index = 1
 sound = ExtResource( 3 )
+
+[node name="AnimatedDoor" type="AnimatedSprite" parent="."]
+position = Vector2( 138.5, -54.5 )
+scale = Vector2( 1.45313, 1.45313 )
+frames = SubResource( 3 )
+frame = 1
 
 [editable path="Present/Door"]
