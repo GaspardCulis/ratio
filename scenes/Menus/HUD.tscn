@@ -614,9 +614,8 @@ value = 100.0
 percent_visible = false
 
 [node name="Background" parent="." instance=ExtResource( 4 )]
-layer = -101
-offset = Vector2( 0, -100 )
-transform = Transform2D( 1, 0, 0, 1, 0, -100 )
+offset = Vector2( 0, 0 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]

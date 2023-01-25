@@ -7,7 +7,6 @@
 [ext_resource path="res://assets/images/light5.png" type="Texture" id=5]
 
 [resource]
-flags = 4
 frames = 5
 fps = 5.0
 frame_0/texture = ExtResource( 1 )
