@@ -5,9 +5,8 @@
 [ext_resource path="res://scenes/Objects/Door/Door.tscn" type="PackedScene" id=3]
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=4]
 [ext_resource path="res://scenes/Levels/Jump/Jump_ALL.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/Objects/Cables/CablesInformations.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Objects/Cables/Cables-Informations.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Objects/Breakable-Fence/Breakable-fence.tscn" type="PackedScene" id=8]
-
 
 [node name="TileMap" type="TileMap"]
 scale = Vector2( 2, 2 )

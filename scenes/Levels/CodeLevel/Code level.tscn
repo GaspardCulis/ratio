@@ -24,7 +24,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Level" type="TileMap"]
+[node name="Level2" type="TileMap"]
 scale = Vector2( 2, 2 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
