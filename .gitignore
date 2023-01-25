@@ -1,6 +1,24 @@
 
 # Godot-specific ignores
 .import/
+assets/*.import
+assets/images/*.import
+assets/parallax/city_ruins/*.import
+assets/parallax/clouds/*.import
+assets/soundeffects/*.import
+assets/soundeffects/Notes de musique/*.import
+assets/soundtrack/*.import
+assets/spritesheets/*.import
+assets/spritesheets/hound/*.import
+assets/spritesheets/level/*.import
+assets/spritesheets/level/Gerald's Keys/*.import
+assets/spritesheets/level/Gerald's Keys/Keys/*.import
+assets/texture/*.import
+assets/texture/characters_32_24_26/*.import
+assets/texture/Labo/*.import
+assets/themes/*.import
+scenes/Background/*.import
+scenes/Test/*.import
 export.cfg
 export_presets.cfg
 
