@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/soundeffects/boup.wav" type="AudioStream" id=1]
+[ext_resource path="res://scenes/Cinematiques/CoolText.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/GridkingRegular-77vw.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=5]
+size = 24
+font_data = ExtResource( 3 )
+
+[node name="Label" type="Label"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 5 )
+autowrap = true
+script = ExtResource( 2 )
+
+[node name="Boup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -24.0
