@@ -6,6 +6,7 @@ extends TileMap
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Music.stop()
+	$FondNoirVoixOff.visible = false
 	$AnimationPlayer.play("byebyelagadji")
 	yield(get_tree().create_timer(1.5), "timeout")
 	yield(display_text("Bonne soiree au travail frero."), "completed")
