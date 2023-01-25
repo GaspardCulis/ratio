@@ -14,9 +14,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -255.0
-margin_top = -227.0
+margin_top = -282.0
 margin_right = 254.0
-margin_bottom = 225.0
+margin_bottom = 283.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 1 )
@@ -41,19 +41,19 @@ text = "Credits"
 [node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 40.0
 margin_right = 509.0
-margin_bottom = 412.0
+margin_bottom = 525.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer2"]
 margin_right = 509.0
-margin_bottom = 372.0
+margin_bottom = 485.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/VBoxContainer2/HBoxContainer"]
 margin_right = 509.0
-margin_bottom = 372.0
+margin_bottom = 485.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Jeu realise par l'equipe du BUT Informatique de Grenoble:
@@ -62,12 +62,17 @@ text = "Jeu realise par l'equipe du BUT Informatique de Grenoble:
  - Muhamed Hodzic
  - Johaina Boudiaf
  - Samuel Billot
- - Milan Soragna"
+ - Milan Soragna
+
+Merci a:
+ - Jean-Pierre Chevallet
+ - Sophie Dupuy-Chessa
+ - Madison Odru"
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer"]
-margin_top = 416.0
+margin_top = 529.0
 margin_right = 509.0
-margin_bottom = 452.0
+margin_bottom = 565.0
 alignment = 1
 
 [node name="Button" type="Button" parent="VBoxContainer/VBoxContainer3"]
