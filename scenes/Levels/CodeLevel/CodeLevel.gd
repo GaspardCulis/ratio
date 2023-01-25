@@ -6,6 +6,8 @@ onready var porte = get_node(portePath)
 func _ready():
 	$Present/Door.connect("openOverlay", self, "open_overlay")
 	$Present/Door.connect("closeOverlay", self, "close_overlay")
+	yield(get_tree().create_timer(1), "timeout")
+	$"Animated_Door".frame = 0
 	
 	
 func open_overlay():

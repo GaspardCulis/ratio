@@ -151,6 +151,9 @@ scale = Vector2( 1.23697, 1.47504 )
 [node name="CollisionShape2D" parent="Door" index="1"]
 position = Vector2( -976.459, 58.6006 )
 
+[node name="KeyHint" parent="Door" index="2"]
+visible = false
+
 [node name="Sprite" type="Sprite" parent="."]
 
 [node name="Background" parent="." instance=ExtResource( 22 )]
