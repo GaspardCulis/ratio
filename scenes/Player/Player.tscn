@@ -35,3 +35,7 @@ position = Vector2( 0, -13.469 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 3 )
 energy = 0.5
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
