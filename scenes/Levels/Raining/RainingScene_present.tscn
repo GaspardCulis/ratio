@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Background/WeatherRaining.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/abstract/AbstractLevel.gd" type="Script" id=4]
 [ext_resource path="res://scenes/Objects/Door/Door.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/Levels/Lab/LaboratoryScenePast.tscn" type="PackedScene" id=6]
 
 [node name="TileMap2" type="TileMap"]
 self_modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )
@@ -20,7 +19,6 @@ __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
 WorldSpawn = NodePath("WorldSpawn")
-otherDim = "res://scenes/Levels/Raining/RainingScene.tscn"
 
 [node name="WorldSpawn" type="Position2D" parent="."]
 position = Vector2( 202, 20.5 )
@@ -319,7 +317,6 @@ position = Vector2( 3835, -130 )
 
 [node name="Door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 4532, 100 )
-nextLevel = ExtResource( 6 )
 opened = true
 
 [editable path="Background"]

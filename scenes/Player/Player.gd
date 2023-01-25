@@ -10,6 +10,7 @@ onready var animationNames = AnimationSprite.frames.get_animation_names()
 onready var Cam = $Camera2D
 var bouger = true
 var DEAD = false
+var spawnpoint: Vector2
 
 enum animationStates {
 	DEATH = 0,
@@ -83,9 +84,6 @@ func kill():
 		DEAD = true
 		AnimationSprite.animation = animationNames[animationStates.DEATH]
 		yield(get_tree().create_timer(0.75), "timeout")
-		if($".".position.x >= 2277):
-			$".".position = Vector2(2465,20)
-		else:
-			$".".position = Vector2(202,60)
+		global_position = spawnpoint
 		AnimationSprite.animation = animationNames[animationStates.LANDS]
 		DEAD = false
