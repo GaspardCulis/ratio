@@ -2726,6 +2726,9 @@ texture = ExtResource( 7 )
 position = Vector2( 640.5, -144.5 )
 nextLevel = ExtResource( 2 )
 
+[node name="KeyHint" parent="Present/Door" index="2"]
+visible = false
+
 [node name="present" type="TileMap" parent="Present"]
 tile_set = SubResource( 104 )
 cell_size = Vector2( 16, 16 )
