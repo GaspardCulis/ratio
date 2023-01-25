@@ -27,22 +27,27 @@ animations = [ {
 } ]
 
 [sub_resource type="AtlasTexture" id=99]
+flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=100]
+flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 32, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=101]
+flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 64, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=102]
+flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 96, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=103]
+flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 128, 0, 32, 32 )
 
