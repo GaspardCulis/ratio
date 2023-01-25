@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=2]
+[gd_scene load_steps=100 format=2]
 
 [ext_resource path="res://assets/texture/Labo/LAB_5B.png" type="Texture" id=1]
 [ext_resource path="res://assets/texture/Labo/LAB_3A.png" type="Texture" id=2]
@@ -41,6 +41,7 @@
 [ext_resource path="res://assets/soundeffects/Voice-Over/Main-voice.mp3" type="AudioStream" id=39]
 [ext_resource path="res://scenes/Cinematiques/BrotherGetsSmashed/Node2D.gd" type="Script" id=40]
 [ext_resource path="res://assets/spritesheets/level/PocketWatchAnimation-Sheet.png" type="Texture" id=41]
+[ext_resource path="res://assets/soundeffects/nani.mp3" type="AudioStream" id=42]
 
 [sub_resource type="TileSet" id=1]
 0/name = "CONSOLE_1A.png 0"
@@ -1648,6 +1649,9 @@ stream = ExtResource( 39 )
 [node name="Camera2D2" type="Camera2D" parent="."]
 position = Vector2( 144, 526 )
 zoom = Vector2( 0.2, 0.2 )
+
+[node name="nani" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 42 )
 
 [connection signal="finished" from="Node2D/Intro-Alex" to="Node2D" method="_on_IntroAlex_finished"]
 [connection signal="finished" from="Node2D/Inside-cinematic-1" to="Node2D" method="_on_Insidecinematic1_finished"]
