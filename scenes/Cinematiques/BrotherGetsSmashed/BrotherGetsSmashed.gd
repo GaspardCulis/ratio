@@ -26,6 +26,7 @@ func _ready():
 	yield($AnimationPlayer, "animation_finished")
 	yield(display_text("What are you up to Dr.B?\nI can see that the mutation experiment has worked ! You're looking sick... Can you hear me?"), "completed")
 	$Label.text = ""
+	$nani.play()
 	$AnimationPlayer.play("nani")
 	yield($AnimationPlayer, "animation_finished")
 	$FondNoirVoixOff.visible = true
