@@ -178,7 +178,6 @@ script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blanchon/Area2D"]
 position = Vector2( -11.6666, -25.2812 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="Blanchon"]
