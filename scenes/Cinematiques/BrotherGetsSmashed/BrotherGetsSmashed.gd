@@ -8,10 +8,11 @@ func _ready():
 	Music.stop()
 	$"Node2D/Intro-Alex".play()
 	yield(get_tree().create_timer(13.5), "timeout")
+	$FondNoirVoixOff.visible = false
 	$AnimationPlayer.play("byebyelagadji")
 	yield(get_tree().create_timer(1.5), "timeout")
 	$"Node2D/Inside-cinematic-1".play()
-	yield(display_text("Bonne soiree au travail frero."), "completed")
+	yield(display_text("Have a nice day Alex !"), "completed")
 	yield($AnimationPlayer, "animation_finished")
 	$Label.text = ""
 	$AnimationPlayer.play("jemedeplace")
@@ -20,7 +21,7 @@ func _ready():
 	$AnimationPlayer.play("RESET")
 	$AnimationPlayer.play("dialogue")
 	yield($AnimationPlayer, "animation_finished")
-	yield(display_text("Que faites vous la professeur Blanchon ?\nJe vois que l'experience de mutation a marche ! Vous avez une sale tete... Vous m'entendez ?"), "completed")
+	yield(display_text("What are you up to Dr.B?\nI can see that the mutation experiment has worked ! You're looking sick... Can you hear me?"), "completed")
 	$Label.text = ""
 	$AnimationPlayer.play("nani")
 	yield($AnimationPlayer, "animation_finished")
