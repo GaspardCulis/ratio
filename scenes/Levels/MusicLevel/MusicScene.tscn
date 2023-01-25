@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/Levels/MusicLevel/MusicLevel.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Levels/MusicLevel/MusicController.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://assets/soundeffects/Notes de musique/Ré.mp3" type="AudioStream" id=9]
 [ext_resource path="res://assets/soundeffects/Notes de musique/Fa.mp3" type="AudioStream" id=10]
 [ext_resource path="res://assets/soundeffects/Notes de musique/Si bémol.mp3" type="AudioStream" id=11]
+[ext_resource path="res://scenes/Levels/Raining/RainingScene.tscn" type="PackedScene" id=12]
 
 [node name="TileMap2" type="TileMap"]
 scale = Vector2( 2, 2 )
@@ -56,6 +57,7 @@ sound = ExtResource( 11 )
 
 [node name="Door" parent="Present" instance=ExtResource( 8 )]
 position = Vector2( 630, 32 )
+nextLevel = ExtResource( 12 )
 
 [node name="KeyHint" parent="Present/Door" index="2"]
 visible = false
