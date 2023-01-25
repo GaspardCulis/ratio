@@ -27,12 +27,13 @@ func _ready():
 	pass
 
 func _physics_process(delta):
-	if(!DEAD and bouger):
+	if(!DEAD):
 		var inputs := get_inputs()
 		handle_physics(inputs, delta)
 		handle_animation(inputs)
 		handle_sounds(inputs)
-		handle_inputs(inputs, delta)
+		if (bouger):
+			handle_inputs(inputs, delta)
 		
 		velocity = move_and_slide(velocity, Vector2.UP, false, 4, PI/2 * 0.9)
 	
