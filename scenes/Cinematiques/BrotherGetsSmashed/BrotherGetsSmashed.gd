@@ -25,7 +25,8 @@ func _ready():
 	$Label.text = ""
 	$AnimationPlayer.play("nani")
 	yield($AnimationPlayer, "animation_finished")
-	$AnimationPlayer.play("exit")
+	$AnimationPlayer.play("final_dialog")
+	yield($AnimationPlayer, "animation_finished")
 	Global.change_scene("res://scenes/Levels/WatchFragments/WatchFragmentsScene.tscn")
 	
 
