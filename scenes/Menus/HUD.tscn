@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=88 format=2]
 
 [ext_resource path="res://assets/themes/button_style.tres" type="Theme" id=1]
 [ext_resource path="res://src/singleton/hud.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://assets/spritesheets/level/Fragments-counter-sheet.png" type="Texture" id=5]
 [ext_resource path="res://assets/spritesheets/level/PocketWatchAnimation-Sheet.png" type="Texture" id=6]
 [ext_resource path="res://scenes/Levels/CodeLevel/code.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/spritesheets/level/clock-hands.png" type="Texture" id=8]
+[ext_resource path="res://scenes/Menus/Watch.gd" type="Script" id=9]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 4 )
@@ -230,6 +232,102 @@ animations = [ {
 "loop": false,
 "name": "default",
 "speed": 10.0
+} ]
+
+[sub_resource type="AtlasTexture" id=106]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=107]
+atlas = ExtResource( 8 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=108]
+atlas = ExtResource( 8 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=109]
+atlas = ExtResource( 8 )
+region = Rect2( 48, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=110]
+atlas = ExtResource( 8 )
+region = Rect2( 64, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=111]
+atlas = ExtResource( 8 )
+region = Rect2( 80, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=112]
+atlas = ExtResource( 8 )
+region = Rect2( 96, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=113]
+atlas = ExtResource( 8 )
+region = Rect2( 112, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=114]
+atlas = ExtResource( 8 )
+region = Rect2( 128, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=115]
+atlas = ExtResource( 8 )
+region = Rect2( 144, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=116]
+atlas = ExtResource( 8 )
+region = Rect2( 160, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=117]
+atlas = ExtResource( 8 )
+region = Rect2( 176, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=118]
+atlas = ExtResource( 8 )
+region = Rect2( 192, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=119]
+atlas = ExtResource( 8 )
+region = Rect2( 208, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=120]
+atlas = ExtResource( 8 )
+region = Rect2( 224, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=121]
+atlas = ExtResource( 8 )
+region = Rect2( 240, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=122]
+atlas = ExtResource( 8 )
+region = Rect2( 256, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=123]
+atlas = ExtResource( 8 )
+region = Rect2( 272, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=124]
+atlas = ExtResource( 8 )
+region = Rect2( 288, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=125]
+atlas = ExtResource( 8 )
+region = Rect2( 304, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=126]
+atlas = ExtResource( 8 )
+region = Rect2( 320, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=127]
+atlas = ExtResource( 8 )
+region = Rect2( 336, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=128]
+animations = [ {
+"frames": [ SubResource( 106 ), SubResource( 107 ), SubResource( 108 ), SubResource( 109 ), SubResource( 110 ), SubResource( 111 ), SubResource( 112 ), SubResource( 113 ), SubResource( 114 ), SubResource( 115 ), SubResource( 116 ), SubResource( 117 ), SubResource( 118 ), SubResource( 119 ), SubResource( 120 ), SubResource( 121 ), SubResource( 122 ), SubResource( 123 ), SubResource( 124 ), SubResource( 125 ), SubResource( 126 ), SubResource( 127 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
 } ]
 
 [sub_resource type="Animation" id=104]
@@ -457,6 +555,13 @@ position = Vector2( 526, 302 )
 scale = Vector2( 2.61, 2.61 )
 frames = SubResource( 98 )
 
+[node name="Watch" type="AnimatedSprite" parent="OverlayFragments/HBoxContainer2"]
+position = Vector2( 966, 562 )
+scale = Vector2( 2.61, 2.61 )
+frames = SubResource( 128 )
+speed_scale = 1.5
+script = ExtResource( 9 )
+
 [node name="OverlayCode" type="CanvasLayer" parent="."]
 visible = false
 
@@ -488,5 +593,6 @@ anims/watch = SubResource( 105 )
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
 [connection signal="animation_finished" from="OverlayFragments/HBoxContainer2/Animation_Watch" to="." method="_on_Animation_Watch_animation_finished"]
 [connection signal="pressed" from="OverlayCode/Control/Pop-up/CenterContainer/VBoxContainer/Button2" to="OverlayCode/Control/Pop-up/CenterContainer/VBoxContainer/HBoxContainer/LineEdit" method="_on_button_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
 [editable path="OverlayCode/Control"]

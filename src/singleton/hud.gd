@@ -65,3 +65,8 @@ func _on_Animation_Watch_animation_finished():
 	$"OverlayFragments/HBoxContainer2/Animation_Watch".frame = 12
 	$"OverlayFragments/HBoxContainer2/Animation_Watch".stop()
 	$AnimationPlayer.play("watch")
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	$OverlayFragments/HBoxContainer2/Watch.visible = true
+	$OverlayFragments/HBoxContainer2/Animation_Watch.visible = false

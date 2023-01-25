@@ -1,5 +1,8 @@
 extends  "res://src/abstract/AbstractLevel.gd"
 
+export var portePath: NodePath
+onready var porte = get_node(portePath)
+
 var count = 0
 var isWatchRetrieved = false
 
@@ -19,6 +22,7 @@ func RetrieveAllFragments(index: int) :
 		isWatchRetrieved = true
 		Hud.close_counter_overlay()
 		Hud.show_and_animate_watch()
+		porte.frame = 1
 		
 #rajouter petit son a chaque fois que morceau recupere
 #rajouter porte fin niveau
