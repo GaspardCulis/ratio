@@ -9,19 +9,13 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "EditorVCSInterface",
+"base": "",
 "class": "GitAPI",
 "language": "NativeScript",
 "path": "res://addons/godot-git-plugin/git_api.gdns"
-}, {
-"base": "TileMap",
-"class": "Level",
-"language": "GDScript",
-"path": "res://src/abstract/AbstractLevel.gd"
 } ]
 _global_script_class_icons={
-"GitAPI": "",
-"Level": ""
+"GitAPI": ""
 }
 
 [application]
@@ -35,9 +29,11 @@ config/icon="res://icon.png"
 Global="*res://src/singleton/Global.gd"
 Hud="*res://scenes/Menus/HUD.tscn"
 MLG="*res://src/singleton/MusicLevelGlobal.gd"
+Music="*res://scenes/Global/Music/Music.tscn"
 
 [display]
 
+window/vsync/use_vsync=false
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
