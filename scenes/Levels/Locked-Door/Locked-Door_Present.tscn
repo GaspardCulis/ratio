@@ -45,12 +45,6 @@ modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )
 [node name="Layer5" parent="Background" index="8"]
 modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )
 
-[node name="water" type="Node2D" parent="."]
-
-[node name="before Checkpoint" type="Node2D" parent="water"]
-
-[node name="After Checkpoint" type="Node2D" parent="water"]
-
 [node name="Cables-Challenge" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3408, 32.5 )
 z_index = 0

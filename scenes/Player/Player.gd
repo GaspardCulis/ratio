@@ -34,6 +34,7 @@ func _physics_process(delta):
 		handle_inputs(inputs, delta)
 		
 		velocity = move_and_slide(velocity, Vector2.UP, false, 4, PI/2 * 0.9)
+	
 
 func get_inputs() -> Vector2:
 	return Vector2(Input.get_action_strength("droite") - Input.get_action_strength("gauche"), Input.get_action_strength("saut") - Input.get_action_strength("bas"))
@@ -87,3 +88,7 @@ func kill():
 		global_position = spawnpoint
 		AnimationSprite.animation = animationNames[animationStates.LANDS]
 		DEAD = false
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	kill()

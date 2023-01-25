@@ -589,8 +589,9 @@ anims/RESET = SubResource( 104 )
 anims/watch = SubResource( 105 )
 
 [node name="Background" parent="." instance=ExtResource( 4 )]
-offset = Vector2( 0, -300 )
-transform = Transform2D( 1, 0, 0, 1, 0, -300 )
+layer = -101
+offset = Vector2( 0, -100 )
+transform = Transform2D( 1, 0, 0, 1, 0, -100 )
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
