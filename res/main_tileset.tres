@@ -333,18 +333,12 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=106]
-<<<<<<< HEAD
-points = PoolVector2Array( 0, 0, 16, 0, 0, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=107]
-=======
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=121]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 0, 0, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=122]
->>>>>>> dd7bc816182b40b32102cbc2e0c405d73cf345f0
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=47]
@@ -1799,14 +1793,6 @@ points = PoolVector2Array( 0, 0, 0, 0, 16, 16, 0, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 69/z_index = 0
-<<<<<<< HEAD
-70/name = "textures-1.png 70"
-70/texture = ExtResource( 2 )
-70/tex_offset = Vector2( 0, 0 )
-70/modulate = Color( 1, 1, 1, 1 )
-70/region = Rect2( 16, 272, 16, 16 )
-70/tile_mode = 0
-=======
 70/name = "lab tileset finished transparent.png 70"
 70/texture = ExtResource( 4 )
 70/tex_offset = Vector2( 0, 0 )
@@ -1820,17 +1806,10 @@ points = PoolVector2Array( 0, 0, 0, 0, 16, 16, 0, 16 )
 70/autotile/navpoly_map = [  ]
 70/autotile/priority_map = [  ]
 70/autotile/z_index_map = [  ]
->>>>>>> dd7bc816182b40b32102cbc2e0c405d73cf345f0
 70/occluder_offset = Vector2( 0, 0 )
 70/navigation_offset = Vector2( 0, 0 )
 70/shape_offset = Vector2( 0, 0 )
 70/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-<<<<<<< HEAD
-70/shape = SubResource( 106 )
-70/shape_one_way = false
-70/shape_one_way_margin = 1.0
-70/shapes = [ {
-=======
 70/shape_one_way = false
 70/shape_one_way_margin = 0.0
 70/shapes = [  ]
@@ -1898,15 +1877,12 @@ points = PoolVector2Array( 0, 0, 0, 0, 16, 16, 0, 16 )
 73/shape_one_way = false
 73/shape_one_way_margin = 1.0
 73/shapes = [ {
->>>>>>> dd7bc816182b40b32102cbc2e0c405d73cf345f0
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 106 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-<<<<<<< HEAD
-=======
 "autotile_coord": Vector2( 16, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
@@ -3061,16 +3037,12 @@ points = PoolVector2Array( 0, 0, 0, 0, 16, 16, 0, 16 )
 128/shape_one_way = false
 128/shape_one_way_margin = 1.0
 128/shapes = [ {
->>>>>>> dd7bc816182b40b32102cbc2e0c405d73cf345f0
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 107 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-<<<<<<< HEAD
-70/z_index = 0
-=======
 128/z_index = 0
 129/name = "lab tileset finished transparent.png 129"
 129/texture = ExtResource( 4 )
@@ -3380,4 +3352,3 @@ points = PoolVector2Array( 0, 0, 0, 0, 16, 16, 0, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 143/z_index = 0
->>>>>>> dd7bc816182b40b32102cbc2e0c405d73cf345f0
