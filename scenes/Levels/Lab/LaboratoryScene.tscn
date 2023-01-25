@@ -34,7 +34,6 @@ tile_data = PoolIntArray( 983143, 27, 0, 983144, 30, 0, 983145, 30, 0, 983146, 3
 
 [node name="CableChallenge" parent="Present" instance=ExtResource( 3 )]
 position = Vector2( 1776, 360 )
-BarrierePath = NodePath("")
 
 [node name="Door" parent="Present" instance=ExtResource( 5 )]
 position = Vector2( 1873, 383 )
@@ -73,3 +72,4 @@ visible = false
 
 [editable path="Present/CableChallenge"]
 [editable path="Door"]
+
