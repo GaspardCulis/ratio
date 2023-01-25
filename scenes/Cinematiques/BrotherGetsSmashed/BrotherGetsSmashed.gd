@@ -23,6 +23,11 @@ func _ready():
 	yield($AnimationPlayer, "animation_finished")
 	$AnimationPlayer.play("exit")
 	Global.change_scene("res://scenes/Levels/WatchFragments/WatchFragmentsScene.tscn")
+	
+
+func _input(event):
+	if Input.is_action_just_pressed("ui_select"):
+		Global.change_scene("res://scenes/Levels/WatchFragments/WatchFragmentsScene.tscn")
 
 func display_text(text: String):
 	for i in range(text.length()):
