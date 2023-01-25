@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Levels/Sewer/Sewer.gd" type="Script" id=2]
 [ext_resource path="res://scenes/Levels/Sewer/tunnel.gd" type="Script" id=3]
 [ext_resource path="res://assets/spritesheets/level/Gerald's Keys/Keys/E-Key.png" type="Texture" id=4]
 [ext_resource path="res://assets/soundtrack/Excitement audio.mp3" type="AudioStream" id=5]
+[ext_resource path="res://scenes/Levels/Boss/BossLevel.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 22.75, 17.5 )
@@ -21,6 +22,7 @@ WorldSpawn = NodePath("WorldSpawn")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource( 3 )
+nextLevel = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 490.25, 224.5 )
