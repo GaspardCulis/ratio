@@ -9,5 +9,4 @@ func _ready():
 	pass
 
 func _on_TileMap_boss_dead():
-	print("Test")
 	porte.frame = 1
