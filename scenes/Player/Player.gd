@@ -31,6 +31,7 @@ func _physics_process(delta):
 		var inputs := get_inputs()
 		handle_physics(inputs, delta)
 		handle_animation(inputs)
+		handle_sounds(inputs)
 		handle_inputs(inputs, delta)
 		
 		velocity = move_and_slide(velocity, Vector2.UP, false, 4, PI/2 * 0.9)
@@ -73,6 +74,31 @@ func handle_animation(inputs: Vector2) -> void:
 	# Direction
 	if inputs.x:
 		AnimationSprite.scale.x = sign(inputs.x)
+
+const grass_sounds := [
+	preload("res://assets/soundeffects/step/grass1.ogg"),
+	preload("res://assets/soundeffects/step/grass2.ogg"),
+	preload("res://assets/soundeffects/step/grass3.ogg"),
+	preload("res://assets/soundeffects/step/grass4.ogg"),
+	preload("res://assets/soundeffects/step/grass5.ogg"),
+	preload("res://assets/soundeffects/step/grass6.ogg")
+]
+
+const stone_sounds := [
+	preload("res://assets/soundeffects/step/stone1.ogg"),
+	preload("res://assets/soundeffects/step/stone2.ogg"),
+	preload("res://assets/soundeffects/step/stone3.ogg"),
+	preload("res://assets/soundeffects/step/stone4.ogg"),
+	preload("res://assets/soundeffects/step/stone5.ogg"),
+	preload("res://assets/soundeffects/step/stone6.ogg")
+]
+
+var stepping_on_stone := false
+func handle_sounds(inputs: Vector2) -> void:
+	if not $AudioStreamPlayer2D.playing and is_on_floor() and inputs.x:
+		$AudioStreamPlayer2D.stream = [grass_sounds, stone_sounds][int(stepping_on_stone)][randi()%grass_sounds.size()]
+		$AudioStreamPlayer2D.play()
+		 
 
 func is_landing() -> bool:
 	return AnimationSprite.animation == animationNames[animationStates.LANDS] and AnimationSprite.frame < 3
