@@ -19,9 +19,13 @@ script = ExtResource( 2 )
 WorldSpawn = NodePath("WorldSpawn")
 PresentTilesPath = NodePath("Present")
 PastTilesPath = NodePath("Past")
+portePath = NodePath("Door/Overlay")
 
 [node name="Door" parent="." instance=ExtResource( 6 )]
 position = Vector2( 945, 256 )
+
+[node name="KeyHint" parent="Door" index="2"]
+visible = false
 
 [node name="WorldSpawn" type="Position2D" parent="."]
 position = Vector2( 67.5, 206 )
@@ -58,3 +62,5 @@ tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 1114148, 68, 0, 1114149, 68, 0, 1114150, 68, 0, 1114151, 68, 0, 1114152, 68, 0, 1114153, 68, 0, 1114154, 68, 0, 1179684, 9, 0, 1179685, 9, 0, 1179686, 9, 0, 1179687, 9, 0, 1179688, 9, 0, 1179689, 9, 0, 1179690, 9, 0, 1245220, 9, 0, 1245221, 9, 0, 1245222, 9, 0, 1245223, 9, 0, 1245224, 9, 0, 1245225, 9, 0, 1245226, 9, 0 )
+
+[editable path="Door"]
