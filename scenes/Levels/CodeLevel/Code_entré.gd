@@ -5,8 +5,7 @@ func _ready():
 
 
 func _on_verify_numbers():
-	if text == "1234":
-		print("OK")
+	if text == "3089":
 		get_tree().get_nodes_in_group("door")[0].get_child(0).frame = 1
 		self.modulate = Color(0, 0, 0, 0)
 		Hud.close_code_overlay()
