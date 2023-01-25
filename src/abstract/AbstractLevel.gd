@@ -46,6 +46,7 @@ func set_dimension(dimension: int):
 	PastTiles.scale.y = dimension
 	PastTiles.scale.x = dimension
 	self.modulate = [Color.white, Color.gray][currentDimension]
+	Global.currentDimension = ["Present", "Past"][currentDimension]
 	
 func get_dimension() -> int:
 	return currentDimension
