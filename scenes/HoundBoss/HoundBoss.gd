@@ -135,6 +135,7 @@ func _on_HagraZone_body_entered(body: PhysicsBody2D):
 func damage():
 	HP = max(0, HP - 10)
 	var tween := create_tween()
+	
 	tween.tween_property(self, "modulate", Color.red, 0.2)
 	tween.play()
 	yield(tween, "finished")

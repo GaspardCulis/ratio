@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=2]
+[gd_scene load_steps=89 format=2]
 
 [ext_resource path="res://assets/themes/button_style.tres" type="Theme" id=1]
 [ext_resource path="res://src/singleton/hud.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://scenes/Levels/CodeLevel/code.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/spritesheets/level/clock-hands.png" type="Texture" id=8]
 [ext_resource path="res://scenes/Menus/Watch.gd" type="Script" id=9]
+[ext_resource path="res://assets/themes/healthbar.tres" type="Theme" id=10]
 
 [sub_resource type="AtlasTexture" id=1]
 region = Rect2( 0, 0, 16, 16 )
@@ -587,6 +588,30 @@ text = "Quit"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 104 )
 anims/watch = SubResource( 105 )
+
+[node name="BossHealth" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BossHealth"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -158.0
+margin_top = -46.0
+margin_right = 159.0
+margin_bottom = -26.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="BossHealth/HBoxContainer"]
+margin_right = 317.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 10 )
+value = 100.0
+percent_visible = false
 
 [node name="Background" parent="." instance=ExtResource( 4 )]
 layer = -101
