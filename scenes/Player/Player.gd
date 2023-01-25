@@ -27,7 +27,7 @@ func _ready():
 	pass
 
 func _physics_process(delta):
-	if(!DEAD and bouger):
+	if(!DEAD):
 		var inputs := get_inputs()
 		handle_physics(inputs, delta)
 		handle_animation(inputs)
@@ -38,6 +38,8 @@ func _physics_process(delta):
 	
 
 func get_inputs() -> Vector2:
+	if not bouger:
+		return Vector2.ZERO
 	return Vector2(Input.get_action_strength("droite") - Input.get_action_strength("gauche"), Input.get_action_strength("saut") - Input.get_action_strength("bas"))
 
 func handle_physics(inputs: Vector2, delta: float) -> void:
