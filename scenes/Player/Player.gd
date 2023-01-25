@@ -27,7 +27,7 @@ func _ready():
 	pass
 
 func _physics_process(delta):
-	if(!DEAD):
+	if(!DEAD and bouger):
 		var inputs := get_inputs()
 		handle_physics(inputs, delta)
 		handle_animation(inputs)
@@ -38,8 +38,6 @@ func _physics_process(delta):
 	
 
 func get_inputs() -> Vector2:
-	if not bouger:
-		return Vector2.ZERO
 	return Vector2(Input.get_action_strength("droite") - Input.get_action_strength("gauche"), Input.get_action_strength("saut") - Input.get_action_strength("bas"))
 
 func handle_physics(inputs: Vector2, delta: float) -> void:
@@ -85,20 +83,9 @@ const grass_sounds := [
 	preload("res://assets/soundeffects/step/grass5.ogg"),
 	preload("res://assets/soundeffects/step/grass6.ogg")
 ]
-
-const stone_sounds := [
-	preload("res://assets/soundeffects/step/stone1.ogg"),
-	preload("res://assets/soundeffects/step/stone2.ogg"),
-	preload("res://assets/soundeffects/step/stone3.ogg"),
-	preload("res://assets/soundeffects/step/stone4.ogg"),
-	preload("res://assets/soundeffects/step/stone5.ogg"),
-	preload("res://assets/soundeffects/step/stone6.ogg")
-]
-
-var stepping_on_stone := false
 func handle_sounds(inputs: Vector2) -> void:
 	if not $AudioStreamPlayer2D.playing and is_on_floor() and inputs.x:
-		$AudioStreamPlayer2D.stream = [grass_sounds, stone_sounds][int(stepping_on_stone)][randi()%grass_sounds.size()]
+		$AudioStreamPlayer2D.stream = grass_sounds[randi()%grass_sounds.size()]
 		$AudioStreamPlayer2D.play()
 		 
 
