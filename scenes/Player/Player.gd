@@ -32,13 +32,14 @@ func _physics_process(delta):
 		handle_physics(inputs, delta)
 		handle_animation(inputs)
 		handle_sounds(inputs)
-		if (bouger):
-			handle_inputs(inputs, delta)
+		handle_inputs(inputs, delta)
 		
 		velocity = move_and_slide(velocity, Vector2.UP, false, 4, PI/2 * 0.9)
 	
 
 func get_inputs() -> Vector2:
+	if not bouger:
+		return Vector2.ZERO
 	return Vector2(Input.get_action_strength("droite") - Input.get_action_strength("gauche"), Input.get_action_strength("saut") - Input.get_action_strength("bas"))
 
 func handle_physics(inputs: Vector2, delta: float) -> void:
