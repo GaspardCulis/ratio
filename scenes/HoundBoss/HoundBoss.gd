@@ -145,7 +145,6 @@ func damage():
 	tween.stop()
 	tween.tween_property(self, "modulate", Color.white, 0.2)
 	tween.play()
-	
-d d	if (HP <= 0):
+	if (HP <= 0):
 		emit_signal("boss_dead")
 		self.queue_free()

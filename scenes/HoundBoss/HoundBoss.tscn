@@ -157,17 +157,12 @@ extents = Vector2( 12, 8 )
 [node name="HoundBoss" type="KinematicBody2D" groups=["boss"]]
 collision_layer = 2
 script = ExtResource( 5 )
-MASS = null
-WALK_SPEED = null
-JUMP_SPEED = null
-HP = null
-dead = null
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -16 )
 frames = SubResource( 1 )
 animation = "walk"
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
