@@ -15,7 +15,12 @@ func _process(delta):
 		$MusicLayer.visible = true
 	else:
 		$MusicLayer.visible = false
-	
+		
+	if(get_tree().get_nodes_in_group("boss")):
+		$BossHealth.visible = true
+		$BossHealth/HBoxContainer/ProgressBar.value = get_tree().get_nodes_in_group("boss")[0].HP
+	else:
+		$BossHealth.visible = false
 	$VBoxContainer2/HBoxContainer/Dimension.text = str(get_node("/root/Global").currentDimension)
 
 func show_or_increment_counter():
