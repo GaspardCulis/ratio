@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Intro-Sara.mp3-4905c9fd998c2249e3c9ee494ba7df0e.mp3str"
+
+[deps]
+
+source_file="res://assets/soundeffects/Voice-Over/Intro-Sara.mp3"
+dest_files=[ "res://.import/Intro-Sara.mp3-4905c9fd998c2249e3c9ee494ba7df0e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

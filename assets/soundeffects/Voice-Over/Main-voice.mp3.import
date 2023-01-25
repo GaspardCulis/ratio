@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Main-voice.mp3-60c01756e767b70830253a60c95602e5.mp3str"
+
+[deps]
+
+source_file="res://assets/soundeffects/Voice-Over/Main-voice.mp3"
+dest_files=[ "res://.import/Main-voice.mp3-60c01756e767b70830253a60c95602e5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

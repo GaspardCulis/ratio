@@ -6,8 +6,11 @@ extends TileMap
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Music.stop()
+	$"Node2D/Intro-Alex".play()
+	yield(get_tree().create_timer(13.5), "timeout")
 	$AnimationPlayer.play("byebyelagadji")
 	yield(get_tree().create_timer(1.5), "timeout")
+	$"Node2D/Inside-cinematic-1".play()
 	yield(display_text("Bonne soiree au travail frero."), "completed")
 	yield($AnimationPlayer, "animation_finished")
 	$Label.text = ""
@@ -18,7 +21,6 @@ func _ready():
 	$AnimationPlayer.play("dialogue")
 	yield($AnimationPlayer, "animation_finished")
 	yield(display_text("Que faites vous la professeur Blanchon ?\nJe vois que l'experience de mutation a marche ! Vous avez une sale tete... Vous m'entendez ?"), "completed")
-	$nani.play()
 	$Label.text = ""
 	$AnimationPlayer.play("nani")
 	yield($AnimationPlayer, "animation_finished")
