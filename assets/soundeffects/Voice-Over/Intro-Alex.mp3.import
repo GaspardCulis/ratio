@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Intro-Alex.mp3-8f356dc61b2fffff5942715a8feb3dc4.mp3str"
+
+[deps]
+
+source_file="res://assets/soundeffects/Voice-Over/Intro-Alex.mp3"
+dest_files=[ "res://.import/Intro-Alex.mp3-8f356dc61b2fffff5942715a8feb3dc4.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
