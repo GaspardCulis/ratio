@@ -134,7 +134,8 @@ func set_state(state):
 func _on_HagraZone_body_entered(body: PhysicsBody2D):
 	if body and body.has_method("kill"):
 		body.kill()
-		
+
+const boume = preload("res://scenes/Objects/Explosion/Explosion.tscn")
 func damage():
 	HP = max(0, HP - 10)
 	var tween := create_tween()
@@ -147,5 +148,12 @@ func damage():
 	tween.play()
 	
 	if (HP <= 0):
+		$HagraZone.monitoring = false
 		emit_signal("boss_dead")
+		for i in range(10):
+			var bou = boume.instance()
+			self.add_child(bou)
+			bou.position = Vector2((randf() - 0.5)*40, (randf() - 0.5)*40)
+			yield(get_tree().create_timer(randf() / 2), "timeout")
+			
 		self.queue_free()
