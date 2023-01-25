@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/Objects/Cables/Cables-Challenge.gd" type="Script" id=1]
+[ext_resource path="res://assets/texture/Labo/DOOR_2A.png" type="Texture" id=2]
+[ext_resource path="res://assets/spritesheets/level/Gerald's Keys/Keys/E-Key.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16.5, 17 )
+
+[node name="Cables-Challenge" type="Area2D" groups=["door"]]
+z_index = -1
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.162495, 0 )
+shape = SubResource( 1 )
+
+[node name="KeyHint" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -51 )
+scale = Vector2( 0.59375, 0.59375 )
+texture = ExtResource( 3 )
+
+[node name="CablesToSolve" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Symbol1" type="Button" parent="."]
+visible = false
+margin_left = -36.0
+margin_top = -84.0
+margin_right = -19.0
+margin_bottom = -64.0
+text = "/"
+
+[node name="Symbol2" type="Button" parent="."]
+visible = false
+margin_left = -36.0
+margin_top = -61.0
+margin_right = -18.0
+margin_bottom = -41.0
+text = "\""
+
+[node name="Symbol3" type="Button" parent="."]
+visible = false
+margin_left = -35.0
+margin_top = -37.0
+margin_right = -19.0
+margin_bottom = -17.0
+text = "["
+
+[node name="Value1" type="Button" parent="."]
+visible = false
+margin_left = 23.0
+margin_top = -83.0
+margin_right = 43.0
+margin_bottom = -63.0
+text = "1"
+
+[node name="Value2" type="Button" parent="."]
+visible = false
+margin_left = 23.0
+margin_top = -61.0
+margin_right = 43.0
+margin_bottom = -41.0
+text = "2"
+
+[node name="Value3" type="Button" parent="."]
+visible = false
+margin_left = 23.0
+margin_top = -38.0
+margin_right = 43.0
+margin_bottom = -18.0
+text = "3"
+
+[connection signal="body_entered" from="." to="." method="_on_CablesChallenge_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_CablesChallenge_body_exited"]
+[connection signal="pressed" from="Symbol1" to="." method="_on_Symbol1_pressed"]
+[connection signal="pressed" from="Symbol2" to="." method="_on_Symbol2_pressed"]
+[connection signal="pressed" from="Symbol3" to="." method="_on_Symbol3_pressed"]
+[connection signal="pressed" from="Value1" to="." method="_on_Value1_pressed"]
+[connection signal="pressed" from="Value2" to="." method="_on_Value2_pressed"]
+[connection signal="pressed" from="Value3" to="." method="_on_Value3_pressed"]

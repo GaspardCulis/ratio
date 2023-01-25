@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 14.5, 31.5 )
+
+[node name="Breakable-fence" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 4.5, -21.5 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
