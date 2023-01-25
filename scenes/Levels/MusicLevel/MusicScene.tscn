@@ -59,9 +59,6 @@ sound = ExtResource( 11 )
 position = Vector2( 630, 32 )
 nextLevel = ExtResource( 12 )
 
-[node name="KeyHint" parent="Present/Door" index="2"]
-visible = false
-
 [node name="Past" type="TileMap" parent="."]
 format = 1
 
