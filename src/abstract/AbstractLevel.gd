@@ -27,8 +27,7 @@ func _ready():
 	player_instance.spawnpoint = WorldSpawnNode.global_position
 	
 	if (PresentTiles and PastTiles): 
-		yield(get_tree(), "idle_frame")
-		set_dimension(D.PRESENT)
+		set_dimension(currentDimension)
 	
 func _input(event):
 	if Input.is_action_just_pressed("switch_dim"):
