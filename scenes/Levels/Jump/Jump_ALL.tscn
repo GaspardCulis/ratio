@@ -20,7 +20,7 @@ PastTilesPath = NodePath("PastTiles")
 [node name="Background" parent="." instance=ExtResource( 1 )]
 
 [node name="WorldSpawn" type="Position2D" parent="."]
-position = Vector2( 2975, -1470.5 )
+position = Vector2( 117, 196 )
 __meta__ = {
 "_gizmo_extents_": 20.0
 }
