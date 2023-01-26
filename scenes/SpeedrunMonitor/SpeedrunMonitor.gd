@@ -26,10 +26,13 @@ func start():
 
 func stop():
 	running = false
-	
-func create_checkpoint(name: String):
-	print("Create checkpoint for ", name)
-	_create_checkpoint(name, (randf() - 0.5)*5, globalTime)
+
+var lastTime = -1
+func create_checkpoint(name: String, secure := true):
+	if globalTime - lastTime > 0.5 or lastTime < 0:
+		print("Create checkpoint for ", name)
+		lastTime = globalTime
+		_create_checkpoint(name, (randf() - 0.5)*5, globalTime)
 
 func update_time():
 	var tts = time_to_string(globalTime)
