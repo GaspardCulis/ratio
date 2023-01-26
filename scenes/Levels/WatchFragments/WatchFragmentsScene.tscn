@@ -141,7 +141,7 @@ text = "/"
 
 [node name="Door" parent="." instance=ExtResource( 11 )]
 position = Vector2( 1769.5, -112 )
-z_index = 2
+z_index = 0
 nextLevel = ExtResource( 21 )
 
 [node name="Sprite" type="Sprite" parent="."]
