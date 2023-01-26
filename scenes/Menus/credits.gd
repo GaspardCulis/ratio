@@ -8,6 +8,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	SpeedrunMonitor.stop()
 	Music.stop()
 	Music.play_music(Music.CREDITS)
 	Hud.update()

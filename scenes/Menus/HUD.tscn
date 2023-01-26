@@ -614,7 +614,7 @@ value = 100.0
 percent_visible = false
 
 [node name="Background" parent="." instance=ExtResource( 4 )]
-scroll_offset = Vector2( -16330, 0 )
+scroll_offset = Vector2( -16419.1, 0 )
 autoscroll = true
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Continue" to="." method="_on_Continue_pressed"]

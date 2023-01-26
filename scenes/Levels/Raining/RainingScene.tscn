@@ -25,7 +25,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="TileMap" type="TileMap"]
+[node name="TileMap2" type="TileMap"]
 scale = Vector2( 2, 2 )
 tile_set = ExtResource( 4 )
 cell_size = Vector2( 16, 16 )
@@ -36,11 +36,14 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
+LevelName = "Acid Rain"
 WorldSpawn = NodePath("WorldSpawn")
 PresentTilesPath = NodePath("PresentTiles")
 PastTilesPath = NodePath("PastTiles")
 
 [node name="Background" parent="." instance=ExtResource( 2 )]
+offset = Vector2( 0, -320 )
+transform = Transform2D( 1, 0, 0, 1, 0, -320 )
 
 [node name="WorldSpawn" type="Position2D" parent="."]
 position = Vector2( 19.5, 55 )

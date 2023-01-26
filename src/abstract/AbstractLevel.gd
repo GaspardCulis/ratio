@@ -6,6 +6,7 @@ enum D {
 	PAST = 1
 }
 
+export (String) var LevelName
 export(NodePath) var WorldSpawn
 export(NodePath) var PresentTilesPath
 export(NodePath) var PastTilesPath
@@ -51,3 +52,11 @@ func set_dimension(dimension: int):
 	
 func get_dimension() -> int:
 	return currentDimension
+	
+func _notification(what: int) -> void:
+	match what:
+		NOTIFICATION_PREDELETE:
+			on_predelete()
+
+func on_predelete():
+	SpeedrunMonitor.create_checkpoint(LevelName)

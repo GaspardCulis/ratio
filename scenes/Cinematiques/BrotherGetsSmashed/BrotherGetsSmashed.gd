@@ -5,6 +5,7 @@ extends TileMap
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	SpeedrunMonitor.start()
 	Music.stop()
 	$FondNoirVoixOff.visible = true
 	$FondNoirVoixOff/Label.visible = true
@@ -34,12 +35,16 @@ func _ready():
 	$FondNoirVoixOff.visible = true
 	$AnimationPlayer.play("final_dialog")
 	yield($AnimationPlayer, "animation_finished")
-	Global.change_scene("res://scenes/Levels/WatchFragments/WatchFragmentsScene.tscn")
+	yeet()
 	
 
 func _input(event):
 	if Input.is_action_just_pressed("ui_select"):
-		Global.change_scene("res://scenes/Levels/WatchFragments/WatchFragmentsScene.tscn")
+		yeet()
+
+func yeet():
+	SpeedrunMonitor.create_checkpoint("Intro")
+	Global.change_scene("res://scenes/Levels/WatchFragments/WatchFragmentsScene.tscn")
 
 func display_text(text: String):
 	for i in range(text.length()):

@@ -43,3 +43,8 @@ func _on_OptionButton_item_selected(index):
 
 func _on_ShowFPSCheckbox_pressed():
 	get_node("/root/Global").showFPS = !get_node("/root/Global").showFPS
+
+
+func _on_SpeedrunmodeCheck_pressed():
+	Global.speedrun = not Global.speedrun
+	SpeedrunMonitor.visible = Global.speedrun

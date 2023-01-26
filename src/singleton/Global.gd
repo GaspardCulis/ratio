@@ -3,6 +3,7 @@ extends Node
 var onTitle = true
 var showFPS = false
 var currentDimension = "Present"
+var speedrun := false
 
 #Music
 var isOnMusic = false
