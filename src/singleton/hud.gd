@@ -22,6 +22,9 @@ func _process(delta):
 	else:
 		$BossHealth.visible = false
 	$VBoxContainer2/HBoxContainer/Dimension.text = str(get_node("/root/Global").currentDimension)
+	
+	# Background
+	$Background.scroll_offset.x += delta * 40
 
 func show_or_increment_counter():
 	if (!$"OverlayFragments/HBoxContainer/Fragments-count".visible) :
