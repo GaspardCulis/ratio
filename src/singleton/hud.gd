@@ -30,7 +30,11 @@ func update():
 	if count == 2:
 		$Background.queue_free()
 	elif count == 0:
-		add_child(backgroundScene.instance())
+		var back = backgroundScene.instance()
+		add_child(back)
+		back.autoscroll = true
+		back.set_deferred("offset", Vector2.ZERO)
+		Global.onTitle = true
 
 func show_or_increment_counter():
 	if (!$"OverlayFragments/HBoxContainer/Fragments-count".visible) :

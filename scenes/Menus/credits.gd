@@ -10,6 +10,7 @@ extends Node
 func _ready():
 	Music.stop()
 	Music.play_music(Music.CREDITS)
+	Hud.update()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
