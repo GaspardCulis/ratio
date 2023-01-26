@@ -22,6 +22,6 @@ func RetrieveAllFragments(index: int) :
 		isWatchRetrieved = true
 		Hud.close_counter_overlay()
 		Hud.show_and_animate_watch()
-		porte.frame = 1
+		porte.set_opened(true)
 		
 #rajouter instructions lorsque perso devant sign 
