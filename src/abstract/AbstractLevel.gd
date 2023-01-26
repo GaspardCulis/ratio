@@ -21,6 +21,7 @@ onready var PastTiles = get_node(PastTilesPath)
 
 var player_instance: KinematicBody2D
 func _ready():
+	Global.levelIdx += 1
 	if get_tree().has_method("is_editor_hint"): return
 	player_instance = PlayerScene.instance()
 	self.add_child(player_instance)
