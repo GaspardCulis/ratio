@@ -28,6 +28,8 @@ func _ready():
 	
 	if (PresentTiles and PastTiles): 
 		set_dimension(currentDimension)
+		
+	Hud.update()
 	
 func _input(event):
 	if Input.is_action_just_pressed("switch_dim"):

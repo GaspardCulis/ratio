@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/parallax/city_ruins/5.png" type="Texture" id=1]
 [ext_resource path="res://assets/parallax/city_ruins/2.png" type="Texture" id=2]
@@ -8,13 +8,14 @@
 [ext_resource path="res://assets/parallax/clouds/cloud1.png" type="Texture" id=6]
 [ext_resource path="res://assets/parallax/clouds/cloud5.png" type="Texture" id=7]
 [ext_resource path="res://assets/parallax/clouds/cloud7.png" type="Texture" id=8]
+[ext_resource path="res://scenes/Background/Background.gd" type="Script" id=9]
 
-[node name="Background" type="ParallaxBackground"]
-offset = Vector2( 0, -320 )
-transform = Transform2D( 1, 0, 0, 1, 0, -320 )
+[node name="Background" type="ParallaxBackground" groups=["background"]]
+scroll_offset = Vector2( 383.561, 0 )
 scroll_limit_begin = Vector2( 0, 600 )
 scroll_limit_end = Vector2( 0, 600 )
 scroll_ignore_camera_zoom = true
+script = ExtResource( 9 )
 
 [node name="Layer0" type="ParallaxLayer" parent="."]
 motion_scale = Vector2( 0.1, 0 )

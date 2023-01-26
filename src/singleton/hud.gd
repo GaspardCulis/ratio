@@ -23,8 +23,14 @@ func _process(delta):
 		$BossHealth.visible = false
 	$VBoxContainer2/HBoxContainer/Dimension.text = str(get_node("/root/Global").currentDimension)
 	
-	# Background
-	$Background.scroll_offset.x += delta * 40
+
+var backgroundScene = preload("res://scenes/Background/Background.tscn")
+func update():
+	var count = get_tree().get_nodes_in_group("background").size()
+	if count == 2:
+		$Background.queue_free()
+	elif count == 0:
+		add_child(backgroundScene.instance())
 
 func show_or_increment_counter():
 	if (!$"OverlayFragments/HBoxContainer/Fragments-count".visible) :
