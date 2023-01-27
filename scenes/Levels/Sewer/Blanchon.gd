@@ -52,5 +52,5 @@ func yeet():
 	Global.get_player().bouger = true
  
 func _input(event):
-	if Input.is_action_just_pressed("ui_select") and not coco:
+	if Input.is_action_just_pressed("ui_select") and coco:
 		yeet()
