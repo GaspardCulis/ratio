@@ -118,3 +118,8 @@ func kill():
 
 func _on_VisibilityNotifier2D_screen_exited():
 	kill()
+
+
+func _on_Suffocation_body_entered(body):
+	if body is TileMap:
+		kill()
