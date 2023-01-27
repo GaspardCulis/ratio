@@ -57,7 +57,7 @@ func reset_music_tiles_pressed():
 		i.frame = 0
 
 func _input(ev):
-	if (!get_node("/root/Global").onTitle):
+	if (get_tree().current_scene.filename.countn("/Menus/") == 0):
 		if ev is InputEventKey and ev.scancode == KEY_ESCAPE:
 			$CanvasLayer/VBoxContainer/Continue.grab_focus()
 			$CanvasLayer.visible = true
