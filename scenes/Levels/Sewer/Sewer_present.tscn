@@ -215,6 +215,7 @@ zoom = Vector2( 0.15, 0.15 )
 position = Vector2( -1.22137, 20.3423 )
 frames = SubResource( 26 )
 animation = "full"
+frame = 7
 playing = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Blanchon/BlanchonHd"]

@@ -30,8 +30,8 @@ func _on_Area2D_body_entered(body):
 		for i in ["full", "semi", "almost", "empty"]:
 			$BlanchonHd/AudioStreamPlayer2D.play()
 			yield($BlanchonHd/AudioStreamPlayer2D, "finished")
-			yield(get_tree().create_timer(randf()), "timeout")
 			$BlanchonHd/AnimatedSprite.animation = i
+			yield(get_tree().create_timer(randf()), "timeout")
 			
 		yield(get_tree().create_timer(2), "timeout")
 		$Camera2D.current = true
@@ -41,13 +41,14 @@ func _on_Area2D_body_entered(body):
 		tweene.tween_property(self, "offset:x", 100.0, 1.5)
 		tweene.play()
 		yield(tweene, "finished")
+		yeet()
 		
-		get_parent().get_node("Door").set_opened(true)
-		
-		self.queue_free()
-		Global.get_player().Cam.current = true
-		Global.get_player().bouger = true
-		
-		
-		
-		
+func yeet():
+	get_parent().get_node("Door").set_opened(true)
+	self.queue_free()
+	Global.get_player().Cam.current = true
+	Global.get_player().bouger = true
+ 
+func _input(event):
+	if Input.is_action_just_pressed("ui_select"):
+		yeet()
