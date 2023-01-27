@@ -70,7 +70,7 @@ text = "Game made by the Computer Science Departement team of Grenoble:
 Big thanks to:
  - Jean-Pierre Chevallet
  - Sophie Dupuy-Chessa
- - Madison Odru"
+ - Madisson Odru"
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 529.0
