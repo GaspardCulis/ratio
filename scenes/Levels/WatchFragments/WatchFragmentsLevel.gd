@@ -7,6 +7,8 @@ var count = 0
 var isWatchRetrieved = false
 
 func _ready() :
+	if Global.cringe:
+		Music.play_music(Music.CRINGE)
 	for i in $Controller.get_children() :
 		i.connect("retrieved", self, "RetrieveAllFragments")
 	$"Animation_Door".frame = 1

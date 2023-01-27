@@ -8,5 +8,6 @@ const CRINGE = "res://assets/soundtrack/Tobu - Candyland.mp3"
 
 
 func play_music(music: String):
+	stop()
 	self.stream = load(music)
 	play()
