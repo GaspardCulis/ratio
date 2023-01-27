@@ -1,9 +1,11 @@
 extends Sprite
 
 
+var coco := false
 const PlayerType = preload("res://scenes/Player/Player.gd")
 func _on_Area2D_body_entered(body):
 	if body is PlayerType:
+		coco = true
 		$Camera2D.current = true
 		Global.get_player().bouger = false
 		get_parent().get_node("CanvasModulate").visible = false
@@ -43,11 +45,12 @@ func _on_Area2D_body_entered(body):
 		yeet()
 		
 func yeet():
+	Music.stop()
 	get_parent().get_node("Door").set_opened(true)
 	self.queue_free()
 	Global.get_player().Cam.current = true
 	Global.get_player().bouger = true
  
 func _input(event):
-	if Input.is_action_just_pressed("ui_select"):
+	if Input.is_action_just_pressed("ui_select") and not coco:
 		yeet()
