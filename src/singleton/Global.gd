@@ -4,6 +4,7 @@ var onTitle = true
 var showFPS = false
 var currentDimension = "Present"
 var speedrun := false
+var cringe := false
 var levelIdx := 0
 
 #Music

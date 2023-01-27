@@ -48,3 +48,7 @@ func _on_ShowFPSCheckbox_pressed():
 func _on_SpeedrunmodeCheck_pressed():
 	Global.speedrun = not Global.speedrun
 	SpeedrunMonitor.visible = Global.speedrun
+
+
+func _on_CringeMode_toggled(button_pressed):
+	Global.cringe = button_pressed

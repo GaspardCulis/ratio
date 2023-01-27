@@ -1525,6 +1525,7 @@ autowrap = true
 
 [node name="Boup" type="AudioStreamPlayer" parent="."]
 volume_db = -24.0
+mix_target = 2
 
 [node name="Explosions" type="Node2D" parent="."]
 
@@ -1546,14 +1547,17 @@ frames = SubResource( 24 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Explosions"]
 stream = ExtResource( 32 )
 volume_db = 10.0
+mix_target = 2
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Explosions"]
 stream = ExtResource( 32 )
 volume_db = 10.0
+mix_target = 2
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Explosions"]
 stream = ExtResource( 32 )
 volume_db = 10.0
+mix_target = 2
 
 [node name="NaniEyes" type="Node2D" parent="."]
 position = Vector2( 359, 672 )
@@ -1635,16 +1639,16 @@ frames = SubResource( 44 )
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource( 40 )
 
-[node name="Intro-Alex" type="AudioStreamPlayer2D" parent="Node2D"]
+[node name="Intro-Alex" type="AudioStreamPlayer" parent="Node2D"]
 stream = ExtResource( 36 )
 
-[node name="Intro-Sara" type="AudioStreamPlayer2D" parent="Node2D"]
+[node name="Intro-Sara" type="AudioStreamPlayer" parent="Node2D"]
 stream = ExtResource( 28 )
 
-[node name="Inside-cinematic-1" type="AudioStreamPlayer2D" parent="Node2D"]
+[node name="Inside-cinematic-1" type="AudioStreamPlayer" parent="Node2D"]
 stream = ExtResource( 37 )
 
-[node name="Inside-cinematic-2" type="AudioStreamPlayer2D" parent="Node2D"]
+[node name="Inside-cinematic-2" type="AudioStreamPlayer" parent="Node2D"]
 stream = ExtResource( 38 )
 
 [node name="Main-voice" type="AudioStreamPlayer2D" parent="Node2D"]
