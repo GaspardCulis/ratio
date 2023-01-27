@@ -39,11 +39,13 @@ func _ready():
 	yeet()
 	
 
+var yeeted := false
 func _input(event):
-	if Input.is_action_just_pressed("ui_select"):
+	if Input.is_action_just_pressed("ui_select") and not yeeted:
 		yeet()
 
 func yeet():
+	yeeted = true
 	SpeedrunMonitor.create_checkpoint("Intro")
 	Global.change_scene("res://scenes/Levels/WatchFragments/WatchFragmentsScene.tscn")
 
