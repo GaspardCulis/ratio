@@ -29,9 +29,8 @@ func _on_Area2D_body_entered(body):
 		tween.kill()
 		for i in ["full", "semi", "almost", "empty"]:
 			$BlanchonHd/AudioStreamPlayer2D.play()
-			yield($BlanchonHd/AudioStreamPlayer2D, "finished")
 			$BlanchonHd/AnimatedSprite.animation = i
-			yield(get_tree().create_timer(randf()), "timeout")
+			yield(get_tree().create_timer(randf() + 0.5), "timeout")
 			
 		yield(get_tree().create_timer(2), "timeout")
 		$Camera2D.current = true
