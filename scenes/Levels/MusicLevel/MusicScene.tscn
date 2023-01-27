@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scenes/Levels/MusicLevel/MusicLevel.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Levels/MusicLevel/MusicController.gd" type="Script" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://assets/soundeffects/Notes de musique/Si bémol.mp3" type="AudioStream" id=11]
 [ext_resource path="res://scenes/Levels/Raining/RainingScene.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/spritesheets/level/door.png" type="Texture" id=13]
+[ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=14]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 13 )
@@ -102,5 +103,9 @@ position = Vector2( 138.5, -54.5 )
 scale = Vector2( 1.45313, 1.45313 )
 frames = SubResource( 3 )
 frame = 1
+
+[node name="Background" parent="." instance=ExtResource( 14 )]
+offset = Vector2( 0, -320 )
+transform = Transform2D( 1, 0, 0, 1, 0, -320 )
 
 [editable path="Present/Door"]
