@@ -30,7 +30,7 @@ Global="*res://src/singleton/Global.gd"
 Hud="*res://scenes/Menus/HUD.tscn"
 MLG="*res://src/singleton/MusicLevelGlobal.gd"
 Music="*res://scenes/Global/Music/Music.tscn"
-SpeedrunMonitor="*res://scenes/SpeedrunMonitor/SpeedrunMonitor.tscn"
+SpeedrunMonitor="*res://scenes/Global/SpeedrunMonitor/SpeedrunMonitor.tscn"
 
 [display]
 
