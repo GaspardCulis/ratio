@@ -58,6 +58,8 @@ tile_set = ExtResource( 2 )
 format = 1
 
 [node name="Background" parent="." instance=ExtResource( 4 )]
+offset = Vector2( 0, -320 )
+transform = Transform2D( 1, 0, 0, 1, 0, -320 )
 
 [node name="Door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1294, 351.5 )

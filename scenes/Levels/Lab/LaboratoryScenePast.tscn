@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/Objects/history/HistoryInformations.tscn" type="PackedScene" id=5]
 
 [node name="Level" type="TileMap"]
+self_modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )
 scale = Vector2( 2, 2 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
@@ -21,6 +22,33 @@ position = Vector2( 226, 328 )
 [node name="Background" parent="." instance=ExtResource( 3 )]
 offset = Vector2( 0, -320 )
 transform = Transform2D( 1, 0, 0, 1, 0, -320 )
+
+[node name="Layer0" parent="Background" index="0"]
+modulate = Color( 0.572549, 0.819608, 0.92549, 1 )
+
+[node name="Cloud0" parent="Background" index="1"]
+modulate = Color( 0.572549, 0.819608, 0.92549, 1 )
+
+[node name="Cloud1" parent="Background" index="2"]
+modulate = Color( 0.572549, 0.819608, 0.92549, 1 )
+
+[node name="Cloud2" parent="Background" index="3"]
+modulate = Color( 0.572549, 0.819608, 0.92549, 1 )
+
+[node name="Layer1" parent="Background" index="4"]
+modulate = Color( 0.572549, 0.819608, 0.92549, 1 )
+
+[node name="Layer2" parent="Background" index="5"]
+modulate = Color( 0.572549, 0.819608, 0.92549, 1 )
+
+[node name="Layer3" parent="Background" index="6"]
+modulate = Color( 0.572549, 0.819608, 0.92549, 1 )
+
+[node name="Layer4" parent="Background" index="7"]
+modulate = Color( 0.572549, 0.819608, 0.92549, 1 )
+
+[node name="Layer5" parent="Background" index="8"]
+modulate = Color( 0.572549, 0.819608, 0.92549, 1 )
 
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2224, 0 )

@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/Levels/Locked-Door/Locked-Door_Present.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Background/Background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=4]
-[ext_resource path="res://scenes/Objects/Cables/Cables-Challenge.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Objects/Cables/CablesChallenge.tscn" type="PackedScene" id=6]
 
 [node name="TileMap" type="TileMap"]
 modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )
@@ -27,23 +27,8 @@ __meta__ = {
 }
 
 [node name="Background" parent="." instance=ExtResource( 2 )]
-offset = Vector2( 0, -550 )
-transform = Transform2D( 1, 0, 0, 1, 0, -550 )
-
-[node name="Layer0" parent="Background" index="0"]
-modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )
-
-[node name="Layer2" parent="Background" index="5"]
-modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )
-
-[node name="Layer3" parent="Background" index="6"]
-modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )
-
-[node name="Layer4" parent="Background" index="7"]
-modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )
-
-[node name="Layer5" parent="Background" index="8"]
-modulate = Color( 0.0392157, 0.439216, 0.866667, 1 )
+offset = Vector2( 0, -320 )
+transform = Transform2D( 1, 0, 0, 1, 0, -320 )
 
 [node name="Cables-Challenge" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3408, 32.5 )

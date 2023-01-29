@@ -11,6 +11,8 @@
 [ext_resource path="res://scenes/Background/Background.gd" type="Script" id=9]
 
 [node name="Background" type="ParallaxBackground" groups=["background"]]
+offset = Vector2( 0, -320 )
+transform = Transform2D( 1, 0, 0, 1, 0, -320 )
 scroll_offset = Vector2( 383.561, 0 )
 scroll_limit_begin = Vector2( 0, 600 )
 scroll_limit_end = Vector2( 0, 600 )

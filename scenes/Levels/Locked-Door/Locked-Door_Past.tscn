@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/Objects/Door/Door.tscn" type="PackedScene" id=3]
 [ext_resource path="res://res/main_tileset.tres" type="TileSet" id=4]
 [ext_resource path="res://scenes/Levels/Jump/Jump_ALL.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/Objects/Cables/Cables-Informations.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Objects/Cables/CablesInformations.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Objects/Breakable-Fence/Breakable-fence.tscn" type="PackedScene" id=8]
 
 [node name="TileMap" type="TileMap"]
@@ -29,8 +29,8 @@ __meta__ = {
 }
 
 [node name="Background" parent="." instance=ExtResource( 2 )]
-offset = Vector2( 0, -550 )
-transform = Transform2D( 1, 0, 0, 1, 0, -550 )
+offset = Vector2( 0, -320 )
+transform = Transform2D( 1, 0, 0, 1, 0, -320 )
 
 [node name="Door" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4519, 95.5 )
