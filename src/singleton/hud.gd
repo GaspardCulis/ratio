@@ -27,13 +27,14 @@ func _process(delta):
 var backgroundScene = preload("res://scenes/Background/Background.tscn")
 func update():
 	var count = get_tree().get_nodes_in_group("background").size()
-	if count == 2:
+	print(count)
+	if count >= 2:
 		$Background.queue_free()
 	elif count == 0:
 		var back = backgroundScene.instance()
 		add_child(back)
 		back.autoscroll = true
-		back.set_deferred("offset", Vector2.ZERO)
+		back.set_deferred("offset", Vector2(383.561,-330))
 		Global.onTitle = true
 
 func show_or_increment_counter():
@@ -76,8 +77,20 @@ func _on_Continue_pressed():
 
 
 func _on_Exit_pressed():
-	get_tree().quit()
-
+	if(Global.get_scene_instance_load_placeholder()):
+		get_tree().quit()
+	else:
+		get_node("/root/Global").onTitle = true
+		SpeedrunMonitor.stop()
+		$VBoxContainer2/HBoxContainer.visible = true
+		$CanvasLayer.visible = false
+		get_tree().paused = false
+		Global.change_scene("res://scenes/Menus/StartMenu.tscn")
+		var back = backgroundScene.instance()
+		add_child(back)
+		back.autoscroll = true
+		back.set_deferred("offset", Vector2(383.561,-330))
+		Global.onTitle = true
 
 func _on_Animation_Watch_animation_finished():
 	$"OverlayFragments/HBoxContainer2/Animation_Watch".frame = 12

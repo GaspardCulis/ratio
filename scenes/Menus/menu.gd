@@ -8,7 +8,6 @@ func _ready():
 func _on_Start_pressed():
 	get_node("/root/Global").onTitle = false
 	Global.change_scene("res://scenes/Cinematiques/BrotherGetsSmashed/BrotherGetsSmashed.tscn")
-
 func _on_Options_pressed():
 	get_tree().change_scene("res://scenes/Menus/Options.tscn")
 

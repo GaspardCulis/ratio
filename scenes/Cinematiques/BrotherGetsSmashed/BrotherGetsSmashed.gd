@@ -6,7 +6,9 @@ extends TileMap
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.levelIdx += 1
-	SpeedrunMonitor.start()
+	if(Global.speedrun):
+		SpeedrunMonitor.reset()
+		SpeedrunMonitor.start()
 	Music.stop()
 	$FondNoirVoixOff.visible = true
 	$FondNoirVoixOff/Label.visible = true

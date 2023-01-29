@@ -14,7 +14,7 @@ func _ready():
 		offset.y = -320
 	else:
 		offset.y = 0
-
+	
 func _process(delta):
 	if autoscroll:
 		scroll_offset.x -= delta * 40

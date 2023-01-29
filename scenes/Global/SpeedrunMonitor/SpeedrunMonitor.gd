@@ -19,14 +19,19 @@ func _process(delta):
 		globalTime += delta
 		update_time()
 
+
 func start():
 	globalTime = 0.0
-	print("Staarting Speedrun")
 	running = true
 
 func stop():
 	running = false
 
+func reset():
+	var ite = get_node("Panel/VBoxContainer/Checkpoints/Vbox").get_child_count() - 1
+	while ite >=0:
+		get_node("Panel/VBoxContainer/Checkpoints/Vbox").get_child(ite).queue_free()
+		ite -= 1
 var lastTime = -1
 func create_checkpoint(name: String, secure := true):
 	if globalTime - lastTime > 0.5 or lastTime < 0:

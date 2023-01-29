@@ -83,4 +83,5 @@ margin_right = 563.0
 margin_bottom = 36.0
 text = "Return"
 
+[connection signal="focus_entered" from="VBoxContainer/VBoxContainer/HBoxContainer/Button" to="." method="_on_Button_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer3/Button" to="." method="_on_Button_pressed"]

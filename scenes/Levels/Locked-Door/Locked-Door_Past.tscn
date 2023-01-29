@@ -29,8 +29,6 @@ __meta__ = {
 }
 
 [node name="Background" parent="." instance=ExtResource( 2 )]
-offset = Vector2( 0, -320 )
-transform = Transform2D( 1, 0, 0, 1, 0, -320 )
 
 [node name="Door" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4519, 95.5 )
