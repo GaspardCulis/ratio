@@ -14,7 +14,13 @@ var Res:Dictionary = {
 func _ready():
 	#AddRes()
 	getFPS()
-
+	if(Global.speedrun):
+		get_node("VBoxContainer/VBoxContainer2/Speedrun/SpeedrunmodeCheck").pressed = true
+	if(Global.cringe):
+		get_node("VBoxContainer/VBoxContainer2/Cringe/CringeMode").pressed = true
+	if(OS.window_fullscreen):
+		get_node("VBoxContainer/VBoxContainer2/HBoxContainer2/FullScreen").pressed = true
+	get_node("VBoxContainer/VBoxContainer/Button").grab_focus()
 func AddRes():
 	var CurrentRes = get_viewport().get_size()
 	var index = 0
@@ -23,16 +29,17 @@ func AddRes():
 		if Res[r] == CurrentRes:
 			ResOptionBox._select_int(index)
 		index += 1
-
+	get_node("VBoxContainer/VBoxContainer/Button").grab_focus()
 func getFPS():
 	ShowFPSCheck.pressed = get_node("/root/Global").showFPS
+	get_node("VBoxContainer/VBoxContainer/Button").grab_focus()
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/Menus/StartMenu.tscn")
 
 func _on_FullScreen_pressed():
 	OS.window_fullscreen = !OS.window_fullscreen
-
+	get_node("VBoxContainer/VBoxContainer/Button").grab_focus()
 
 
 func _on_OptionButton_item_selected(index):
@@ -43,12 +50,16 @@ func _on_OptionButton_item_selected(index):
 
 func _on_ShowFPSCheckbox_pressed():
 	get_node("/root/Global").showFPS = !get_node("/root/Global").showFPS
-
+	get_node("VBoxContainer/VBoxContainer/Button").grab_focus()
 
 func _on_SpeedrunmodeCheck_pressed():
 	Global.speedrun = not Global.speedrun
 	SpeedrunMonitor.visible = Global.speedrun
-
+	get_node("VBoxContainer/VBoxContainer/Button").grab_focus()
 
 func _on_CringeMode_toggled(button_pressed):
 	Global.cringe = button_pressed
+	get_node("VBoxContainer/VBoxContainer/Button").grab_focus()
+
+func _on_Button_focus_entered():
+	get_node("VBoxContainer/VBoxContainer/Button").grab_focus()

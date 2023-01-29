@@ -7,10 +7,7 @@ func _ready():
 
 func _on_Start_pressed():
 	get_node("/root/Global").onTitle = false
-	if (get_node("/root/Global").currentDimension == "Present"):
-		Global.change_scene("res://scenes/Cinematiques/BrotherGetsSmashed/BrotherGetsSmashed.tscn")
-	else:
-		get_tree().change_scene("res://scenes/Levels/MusicLevel/MusicScene_past.tscn")
+	Global.change_scene("res://scenes/Cinematiques/BrotherGetsSmashed/BrotherGetsSmashed.tscn")
 
 func _on_Options_pressed():
 	get_tree().change_scene("res://scenes/Menus/Options.tscn")
